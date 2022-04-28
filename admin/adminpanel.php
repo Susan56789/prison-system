@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+
 <head>
 	<title>Prison Management System</title>
 	<link rel="stylesheet" href="./login.css">
@@ -110,5 +113,4 @@
           </tr>
 	</table>
 </body>
-</head>
 </html>
