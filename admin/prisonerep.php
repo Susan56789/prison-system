@@ -2,47 +2,47 @@
 
 // Database Connection
 
-$host="localhost";
-$uname="root";
-$pass="";
-$database = "prison_system";	
+$host = "localhost";
+$uname = "root";
+$pass = "";
+$database = "prison_system";
 
-$connection=mysqli_connect($host,$uname,$pass, $database); 
+$connection = mysqli_connect($host, $uname, $pass, $database);
 
-//echo mysqli_error();
+echo mysqli_connect_error();
 
 
 
-	
+
 // Fetch Record from Database
 
 $output			= "";
 $table 			= "registration"; // Enter Your Table Name
-$sql 			= mysqli_query($connection,"SELECT * from $table");
+$sql 			= mysqli_query($connection, "SELECT * from $table");
 $columns_total 	= mysqli_num_fields($sql);
 
 // Get The Field Name
 
 for ($i = 0; $i < $columns_total; $i++) {
 	$heading	=	mysqli_field_name($sql, $i);
-	$output		.= '"'.$heading.'",';
+	$output		.= '"' . $heading . '",';
 }
-$output .="\n";
+$output .= "\n";
 
 // Get Records from the table
 
 while ($row = mysqli_fetch_array($sql)) {
-for ($i = 0; $i < $columns_total; $i++) {
-$output .='"'.$row["$i"].'",';
-}
-$output .="\n";
+	for ($i = 0; $i < $columns_total; $i++) {
+		$output .= '"' . $row["$i"] . '",';
+	}
+	$output .= "\n";
 }
 
 // Download the file
 
 $filename =  "prisoner_report.csv";
 header('Content-type: application/csv');
-header('Content-Disposition: attachment; filename='.$filename);
+header('Content-Disposition: attachment; filename=' . $filename);
 
 echo $output;
 exit;

@@ -19,6 +19,8 @@ $connection=mysqli_connect($host,$uname,$pass, $database);
 $output			= "";
 $table 			= "transfer"; // Enter Your Table Name
 $sql 			= mysqli_query($connection,"SELECT * from $table");
+
+//get the number of fields in the result set
 $columns_total 	= mysqli_num_fields($sql);
 
 // Get The Field Name
@@ -46,9 +48,3 @@ header('Content-Disposition: attachment; filename='.$filename);
 
 echo $output;
 exit;
-	
-?>
-
-
-       
-        

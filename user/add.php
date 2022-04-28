@@ -1,6 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>registration form</title>
 	<link rel="stylesheet" media="screen" href="login.css">
 </head>
@@ -16,7 +20,7 @@
 		</tr>
 		<tr>
 			<td>
-				<h2 class="bg-primary" align="center">PRISONNER REGISTRATION FORM</h2>
+				<h2 class="bg-primary" align="center">PRISONER REGISTRATION FORM</h2>
 				<div id="content">
 					<form action="validateadd.php" method="post">
 						<table bgcolor="white" height="450" border="0" align="center" width="55%">
@@ -41,7 +45,7 @@
 									<option>Ongatta</option>
 									<option>Bussia</option>
 									<option>Homabay</option>
-									</seclect> *
+									</seclect>
 									</br></br>
 
 

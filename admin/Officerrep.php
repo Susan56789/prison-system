@@ -9,7 +9,7 @@ $database = "prison_system";
 
 $connection=mysqli_connect($host,$uname,$pass, $database); 
 
-echo mysqli_error($connection);
+echo mysqli_connect_error();
 
 
 	
@@ -52,9 +52,3 @@ header('Content-Disposition: attachment; filename='.$filename);
 
 echo $output;
 exit;
-	
-?>
-
-
-       
-       

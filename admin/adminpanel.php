@@ -80,7 +80,9 @@
 								<br>
 								<li><a href='viewvis.php'><b><button>Visitors Information</button></b></a></li>
 								<br>
-								<li><a href='viewnewprison.php'><b><button>New Prison</button></b></a></li>
+								<li><a href='newprison.php'><b><button>Add Prison</button></b></a></li>
+								<br>
+								<li><a href='viewnewprison.php'><b><button>View Prisons</button></b></a></li>
 								<br>
 								<li><a href='viewcourt.php'><b><button>Court Information</button></b></a></li>
 								<br>

@@ -70,6 +70,5 @@
     </tr>
   </table>
 </body>
-</head>
 
 </html>

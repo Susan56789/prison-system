@@ -1,14 +1,17 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <head>
 
-        <link href="style1.css" rel="stylesheet" type="text/css" />
-        <script src="jquery-1.7.1.min.js"></script>
-        <script src="registration_script.js"></script>
-        <link rel="stylesheet" media="screen" href="login.css">
-    </head>
+    <link href="style1.css" rel="stylesheet" type="text/css" />
+    <script src="jquery-1.7.1.min.js"></script>
+    <script src="registration_script.js"></script>
+    <link rel="stylesheet" media="screen" href="login.css">
+</head>
 
 <body>
 
@@ -152,7 +155,9 @@
                                             <option>Machakos</option>
                                             <option>Malindi</option>
                                             <option>Mandera</option>
-                                            <option>Meru</option>>
+                                            <option>Meru</option>
+                                            <option>Laikipia</option>
+                                            <option>Nyeri</option>
                                     </td>
                                 </tr>
                                 </select>
@@ -187,7 +192,7 @@
                     <select id="education" name="education" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
                         <option selected="selected">KCPE</option>
                         <option>Never</option>
-                        <option>O level</option>
+                        <option>KCSE</option>
                         <option>Certificate</option>
                         <option>Diploma</option>
                         <option>Bachelor Degree</option>
@@ -268,9 +273,9 @@
                             <?php
                             $con = mysqli_connect('localhost', 'root', '', 'prison_system');
 
-                            $msql = mysqli_query($con, "SELECT * FROM transfer");
+                            $msql = mysqli_query($con, "SELECT * FROM newprison");
                             while ($m_row = mysqli_fetch_array($msql))
-                                echo ("<option value = '" . $m_row['From_prison'] . "'>" . $m_row['From_prison'] . "</option>");
+                                echo ("<option value = '" . $m_row['pname'] . "'>" . $m_row['pname'] . "</option>");
                             ?>
                         </option>
                     </select>

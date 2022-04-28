@@ -1,9 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Delete Court </title>
-	<link rel="stylesheet" media="screen" href="login.css">
-</head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<head>
+		<title>Delete Court </title>
+		<link rel="stylesheet" media="screen" href="login.css">
+	</head>
 
 <body>
 	<table align='center' border='1' bgcolor='green' width='800' cellpadding='8' cellspacing='0' height='200'>

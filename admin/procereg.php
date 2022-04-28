@@ -1,6 +1,7 @@
 <?php
-//set up for mysql Connection
+//set up for mysqli Connection
 $dbhost = 'localhost';
+
 $dbuser = 'root';
 $dbpass = '';
 $dbname = 'prison_system';
@@ -9,15 +10,19 @@ if (!$conn) {
 	die("Connection failed: " . mysqli_connect_error());
 }
 ?>
-$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-//test if the connection is established successfully then it will proceed in next process else it will throw an error message
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
+
+//test if the connection is established successfully then it will proceed in next process
+// else it will throw an error message
+
 if(! $conn )
 {
-die('Could not connect: ' . mysql_error());
+die('Could not connect: ' . mysqli_error());
 }
 
 //we specify here the Database name we are using
-mysql_select_db('prison');
+
+mysqli_select_db('prison');
 $Nid=$_POST['Nid'];
 $Fname=$_POST['Fname'];
 $dob=$_POST['dob'];
@@ -29,6 +34,7 @@ $status=$_POST['status'];
 $offence=$_POST['offence'];
 $di=$_POST['di'];
 $Filenum=$_POST['Filenum'];
+
 //Protecting form submitting an empty data
 
 if (!$Nid || !$Fname || !$dob || !$address || !$county || !$Gender || !$education || !$status || !$offence || !$di || !$Filenum )
@@ -48,13 +54,15 @@ exit;
 }
 
 //It wiil insert a row to our prisoners`
+
 $sql = "INSERT INTO `prison`.`registration` (`id`,`Full_Name`, `DOB`, `Address`, `County`, `Gender`, `Education`, `Marital`, `Offence`, `Date_in`, `File_num`)
 VALUES ('{$Nid}', '{$Fname}', '{$dob}', '{$address}', '{$county}', '{$Gender}', '{$education}', '{$status}', '{$offence}','{$di}', '{$Filenum}');";
-//we are using mysql_query function. it returns a resource on true else False on error
-$retval = mysql_query( $sql, $conn );
+
+//we are using mysqli_query function. it returns a resource on true else False on error
+$retval = mysqli_query( $sql, $conn );
 if(! $retval )
 {
-die('The data is already: ' . mysql_error());
+die('The data is already: ' . mysqli_error());
 
 }
 

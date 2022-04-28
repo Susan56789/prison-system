@@ -1,5 +1,5 @@
 <?php
-//set up for mysql Connection
+//set up for mysqli Connection
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = '';
@@ -9,30 +9,30 @@ if (!$conn) {
 	die("Connection failed: " . mysqli_connect_error());
 }
 ?>
-$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 //test if the connection is established successfully then it will proceed in next process else it will throw an error message
 if(! $conn )
 {
-die('Could not connect: ' . mysql_error());
+die('Could not connect: ' . mysqli_error());
 }
 
 //we specify here the Database name we are using
-mysql_select_db('prison');
+mysqli_select_db('prison');
 $Nid=$_POST['Nid'];
 $Fname=$_POST['Fname'];
 $dob=$_POST['dob'];
 $address=$_POST['address'];
 $county=$_POST['county'];
 $
-$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 //test if the connection is established successfully then it will proceed in next process else it will throw an error message
 if(! $conn )
 {
-die('Could not connect: ' . mysql_error());
+die('Could not connect: ' . mysqli_error());
 }
 
 //we specify here the Database name we are using
-mysql_select_db('prison');
+mysqli_select_db('prison');
 $To=$_POST['To'];
 $id=$_POST['id'];
 $Subject=$_POST['Subject'];
@@ -40,11 +40,11 @@ $Message=$_POST['Message'];
 //It wiil insert a row to our leave details`
 $sql = "INSERT INTO `prison`.`announce` (`to`,`Id`,`subject`,`message`)
 VALUES ('{$To}','{$id}', '{$Subject}', '{$Message}');";
-//we are using mysql_query function. it returns a resource on true else False on error
-$retval = mysql_query( $sql, $conn );
+//we are using mysqli_query function. it returns a resource on true else False on error
+$retval = mysqli_query( $sql, $conn );
 if(! $retval )
 {
-die('Could not enter data: ' . mysql_error());
+die('Could not enter data: ' . mysqli_error());
 }
 ?>
 <script type="text/javascript">

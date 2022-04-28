@@ -46,7 +46,6 @@ CREATE TABLE  court (
 );
 
 
-
 /*Table For Prisons*/
 CREATE TABLE  newprison (
   pno int(25) NOT NULL AUTO_INCREMENT,
