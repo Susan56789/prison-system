@@ -39,12 +39,12 @@
             <nav class="navbar navbar-inverse">
               <div class="container-fluid">
                 <div class="navbar-header">
-                  <div class="container-brand" href="#">YOU CAN GET GENERATE REPORT OF ALL</a>
+                  <div class="container-brand" href="#">YOU CAN DOWNLOAD REPORT OF ALL</a>
                   </div>
                   <div>
                     <ul class="nav navbar-nav">
                       <td>
-                        <li class="active"><a href="prisonerep.php"><button>Prisonner Report</button></a></li>
+                        <li class="active"><a href="prisonerep.php"><button>Prisoners Report</button></a></li>
                       </td>
                       <td>
                         <li><a href="transferrep.php"><button>Transfer Report</button></a></li>
@@ -53,17 +53,17 @@
                         <li><a href="courtrep.php"><button>Court Report</button></a></li>
                       </td>
                       <td>
-                        <li><a href="../officer/visitorep.php"><button>Visitor Report</button></a></li>
+                        <li><a href="../officer/visitorep.php"><button>Visitors Report</button></a></li>
                       </td>
                       <td>
-                        <li><a href="Officerrep.php"><button>Officer Report</button></a></li>
+                        <li><a href="Officerrep.php"><button>Officers Report</button></a></li>
                       </td>
                       <td>
-                        <li><a href="newprisonrep.php"><button>New Prison Report</button></a></li>
+                        <li><a href="newprisonrep.php"><button>Prisons Report</button></a></li>
                       </td>
-                      <td>
+                      <!-- <td>
                         <li><a href="Officereport.php"><button>Officer details Report</button></a></li>
-                      </td>
+                      </td>--->
                     </ul>
                   </div>
                 </div>

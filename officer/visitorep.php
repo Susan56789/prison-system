@@ -12,7 +12,11 @@ $connection=mysqli_connect($host,$uname,$pass, $database);
 //echo mysqli_error();
 
 
-
+function mysqli_field_name($result, $field_offset)
+{
+    $properties = mysqli_fetch_field_direct($result, $field_offset);
+    return is_object($properties) ? $properties->name : false;
+}
 	
 // Fetch Record from Database
 
@@ -20,6 +24,7 @@ $output			= "";
 $table 			= "visitor"; // Enter Your Table Name
 $sql 			= mysqli_query($connection,"SELECT * from $table");
 $columns_total 	= mysqli_num_fields($sql);
+
 
 // Get The Field Name
 
@@ -46,5 +51,3 @@ header('Content-Disposition: attachment; filename='.$filename);
 
 echo $output;
 exit;
-	
-?>

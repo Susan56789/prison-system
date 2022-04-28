@@ -16,6 +16,11 @@ $selectdb=mysqli_select_db($connection,$database) or die("Database could not be 
 $result=mysqli_select_db($connection,$database)
 or die("database cannot be selected <br>");
 
+function mysqli_field_name($result, $field_offset)
+{
+    $properties = mysqli_fetch_field_direct($result, $field_offset);
+    return is_object($properties) ? $properties->name : false;
+}
 	
 // Fetch Record from Database
 
@@ -49,9 +54,3 @@ header('Content-Disposition: attachment; filename='.$filename);
 
 echo $output;
 exit;
-	
-?>
-
-
-       
-       
