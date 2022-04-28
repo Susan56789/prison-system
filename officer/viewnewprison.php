@@ -1,26 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <title>View new  prison </title>
-   <link rel="stylesheet" media="screen" href="login.css" >
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>View new prison </title>
+  <link rel="stylesheet" media="screen" href="login.css">
 </head>
+
 <body>
-	<table align='center' border='0' bgcolor='green' width='1300' cellpadding='8' cellspacing='0' height='200'>
+  <table align='center' border='0' bgcolor='green' width='1300' cellpadding='8' cellspacing='0' height='200'>
 
-          <tr>
-            <td bgcolor='#999999' valign='center'>
+    <tr>
+      <td bgcolor='#999999' valign='center'>
 
-<?php
+        <?php
 
-$host="localhost";
-$username="root";
-$password="";
-$db_name="prison_system";
-$tbl_name="newprison";
+        $host = "localhost";
+        $username = "root";
+        $password = "";
+        $db_name = "prison_system";
+        $tbl_name = "newprison";
 
-$con =mysqli_connect($host,$username,$password,$db_name);
+        $con = mysqli_connect($host, $username, $password, $db_name);
 
-$sel= mysqli_query($con,"SELECT * from $tbl_name ORDER BY pno DESC LIMIT 0,7");
-echo"<table align='center' width='100%' bgcolor='GREEN' border='0' bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
+        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY pno DESC LIMIT 0,7");
+        echo "<table align='center' width='100%' bgcolor='GREEN' border='0' bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
 <caption><h3>NEW PRISON INFORMATION</h3></caption>
 <tr bgcolor='#CCCCCC'>
 <th width='3%'>Prison Nunber</th>
@@ -34,40 +41,40 @@ echo"<table align='center' width='100%' bgcolor='GREEN' border='0' bgcolor='gree
 
 </tr>";
 
-   while($row=mysqli_fetch_array ($sel))
-{
-echo "<tr bgcolor='grey'>";
+        while ($row = mysqli_fetch_array($sel)) {
+          echo "<tr bgcolor='grey'>";
 
-echo  "<td width='3%'>".$row ['pno']."</td>";
-echo  "<td width='7%'>".$row ['pname']."</td>";
-echo  "<td width='10%'>".$row ['location']."</td>";
-echo  "<td width='10%'>".$row ['opendate']. "</td>";
-echo  "<td width='10%'>".$row ['contact']. "</td>";
-echo  "<td width='3%'>" .$row ['capacity']."</td>";
+          echo  "<td width='3%'>" . $row['pno'] . "</td>";
+          echo  "<td width='7%'>" . $row['pname'] . "</td>";
+          echo  "<td width='10%'>" . $row['location'] . "</td>";
+          echo  "<td width='10%'>" . $row['opendate'] . "</td>";
+          echo  "<td width='10%'>" . $row['contact'] . "</td>";
+          echo  "<td width='3%'>" . $row['capacity'] . "</td>";
 
-echo "</tr>";
-}
-echo"</table>";
+          echo "</tr>";
+        }
+        echo "</table>";
 
-?>
+        ?>
 
-<br/>
-			</td>
-          </tr>
-          <tr>
-			<td align="center" bgcolor='green'><a href="officerpanel.php" target="_parent">Officer  <b>|</b></a>
-     
-			<a href="../index.php" target="_parent">Log out</a></td>
-		
-          </tr>
-          <tr>
-            <td align='center' bgcolor='white' height='1'>
-					<?php
-           include("footer.php");
-                ?>
-            </td>
-          </tr>
-	</table>
+        <br />
+      </td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor='green'><a href="officerpanel.php" target="_parent">Officer <b>|</b></a>
+
+        <a href="../index.php" target="_parent">Log out</a>
+      </td>
+
+    </tr>
+    <tr>
+      <td align='center' bgcolor='white' height='1'>
+        <?php
+        include("footer.php");
+        ?>
+      </td>
+    </tr>
+  </table>
 </body>
-</head>
+
 </html>

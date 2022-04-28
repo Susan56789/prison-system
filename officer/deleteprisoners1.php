@@ -1,48 +1,54 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Delete prisoners</title>
-  <link rel="stylesheet" media="screen" href="login.css" >
+  <link rel="stylesheet" media="screen" href="login.css">
 </head>
+
 <body>
-	<table align='center' border='0' bgcolor='green' width='1250' cellpadding='8' cellspacing='0' height='200'>
-        
-          <tr>
-            <td colspan="3" bgcolor='#999999' valign='center'>
+  <table align='center' border='0' bgcolor='green' width='1250' cellpadding='8' cellspacing='0' height='200'>
 
-<?php
-ob_start();
-$link=mysqli_connect("localhost","root","","prison_system");
+    <tr>
+      <td colspan="3" bgcolor='#999999' valign='center'>
 
-$result=mysqli_query($link,"SELECT * from registration");
-?>
+        <?php
+        ob_start();
+        $link = mysqli_connect("localhost", "root", "", "prison_system");
+
+        $result = mysqli_query($link, "SELECT * from registration");
+        ?>
 
 
-<?php
+        <?php
 
-//To delete:
-if(isset($_POST["delete"])){
-$id=$_POST["id"];
-$delete=mysqli_query($link,"DELETE from registration where id='$_POST[id]'");
-if($delete){
-print "<script language=\"javascript\">
+        //To delete:
+        if (isset($_POST["delete"])) {
+          $id = $_POST["id"];
+          $delete = mysqli_query($link, "DELETE from registration where id='$_POST[id]'");
+          if ($delete) {
+            print "<script language=\"javascript\">
 	alert(\"Successfully deleted!...\")
 	location.href=\"deleteprisoners1.php\"
 	</script>";
-}
-else{
-print "<script language=\"javascript\">
+          } else {
+            print "<script language=\"javascript\">
 	alert(\"Not deleted!...\")
 	location.href=\"deleteprisoners1.php\"
 	</script>";
-}
-}
-?>
+          }
+        }
+        ?>
 
 
 
-<?php
+        <?php
 
-print "<table width='100%' bgcolor='GREEN' border='0' cellpadding='3' cellspacing='2' bgcolor='silver'>
+        print "<table width='100%' bgcolor='GREEN' border='0' cellpadding='3' cellspacing='2' bgcolor='silver'>
 <caption><b>DELETE PRISONER RECORD</b></caption>
 <tr bgcolor='#green'>
 <th>National id</th>
@@ -61,10 +67,10 @@ print "<table width='100%' bgcolor='GREEN' border='0' cellpadding='3' cellspacin
 
 
 </tr>";
-$i=1;
-while($row=mysqli_fetch_array($result)){
-print "<form method=POST>";
-print"<tr bgcolor='white'>
+        $i = 1;
+        while ($row = mysqli_fetch_array($result)) {
+          print "<form method=POST>";
+          print "<tr bgcolor='white'>
 <td>$i<input type=\"hidden\" name=\"id\" value=\"$row[id]\"></td>
 <td>$row[Full_Name]</td>
 <td>$row[DOB]</td>
@@ -81,30 +87,31 @@ print"<tr bgcolor='white'>
 
 <td align='center'><input type=submit name=delete value=delete></td>
 </tr>";
-print "</form>";
-$i++;
-}
-print"</table>";
-?>
+          print "</form>";
+          $i++;
+        }
+        print "</table>";
+        ?>
 
-<br/>
+        <br />
 
-			</td>
-          </tr>
-          <tr>
-		  <td align="center" bgcolor='green'><a href="officerpanel.php" target="_parent">Panel Panel <b>|</b></a>
-			<a href="viewprisoners1.php" target="_parent">View <b>|</b></a>
-			<a href="index.php" target="_parent">Log out</a></td>
-		
-          </tr>
-          <tr>
-            <td colspan='3' align='center' bgcolor='silver' height='1'><?php
-           include("footer.php");
-                ?>
-            </td>
-          </tr>
-	</table>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor='green'><a href="officerpanel.php" target="_parent">Panel Panel <b>|</b></a>
+        <a href="viewprisoners1.php" target="_parent">View <b>|</b></a>
+        <a href="index.php" target="_parent">Log out</a>
+      </td>
+
+    </tr>
+    <tr>
+      <td colspan='3' align='center' bgcolor='silver' height='1'><?php
+                                                                  include("footer.php");
+                                                                  ?>
+      </td>
+    </tr>
+  </table>
 </body>
 </head>
-</html>
 
+</html>

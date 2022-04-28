@@ -1,6 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Court form</title>
 	<link rel="stylesheet" media="screen" href="login.css">
 </head>
@@ -71,13 +76,9 @@
 		</tr>
 		<tr>
 			<td bgcolor="#FFFFFF"><b>Sentence:</b></td>
-			<td> <select name="sentence">
-					<option>2 Weeks</option>
-					<option>1 to 3 Months</option>
-					<option>1year</option>
-					<option>5 to 10 Years</option>
-					<option>15 Above</option>
-					<option>Life Sentence</option>
+			<td>
+				<input type="text" name="sentence" />
+
 			</td>
 		</tr>
 
