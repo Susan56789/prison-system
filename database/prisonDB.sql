@@ -172,6 +172,9 @@ CREATE TABLE newprison
 
 SELECT * FROM registration;
 
+
+
+
   CREATE TABLE inmates
   (
     AdmissionID varchar(30) PRIMARY KEY NOT NULL,

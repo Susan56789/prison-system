@@ -5,6 +5,19 @@ if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
+$filename = $_FILES["photo"]["name"];
+$tempname = $_FILES["photo"]["tmp_name"];
+$folder = "../uploads" . $filename;
+
+
+
+
+if (!file_exists($folder)) {
+    @mkdir($folder, 0777);
+}
+
+
+move_uploaded_file($tempname, $folder);
 //escape variable for security here or problem
 $Nid = $_POST['Nid'];
 $Fname = $_POST['Fname'];
@@ -37,22 +50,12 @@ $Filenum = $_POST['Filenum'];
 $prison = $_POST['prison'];
 
 
-$filename = $_FILES["photo"]["name"];
-$tempname = $_FILES["photo"]["tmp_name"];
-$folder = "../uploads" . $filename;
-
-
-if (move_uploaded_file($tempname, $folder)) {
-    $msg = "Image uploaded successfully";
-} else {
-    $msg = "Failed to upload image";
-}
 
 //we are using mysqli_query function. it returns a resource on true else False on error
 $sql = "INSERT into registration set
                     id = '$Nid',
                     category='$category',
-                    photo='$filename',
+                    photo='$folder',
                     Full_Name = '$Fname',  
                     DOB = '$dateofbirth', 
                     datein = '$datein',             

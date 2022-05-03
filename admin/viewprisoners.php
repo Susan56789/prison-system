@@ -17,6 +17,7 @@
 
         <?php
 
+
         $host = "localhost";
         $username = "root";
         $password = "";
@@ -24,6 +25,7 @@
         $tbl_name = "registration";
 
         $con = mysqli_connect($host, $username, $password, $db_name);
+
 
 
         $sel = mysqli_query($con, "SELECT * from $tbl_name");
@@ -53,8 +55,10 @@
         while ($row = mysqli_fetch_array($sel)) {
 
           echo "<tr bgcolor='grey'>";
+          $imageURL =  $row["photo"];
+          $folder = "/uploads" . $imageURL;
 
-          echo "<td width='3%'>", '<img src=' . $row['photo'] . '>';
+          echo "<td width='3%'>", '<img src=' . $imageURL . '>';
 
           "</td>";
           echo  "<td width='3%'>" . $row['id'] . "</td>";
