@@ -23,6 +23,8 @@ $dDay =  $_POST['TXtDay'];
 $dYear = $_POST['TXtYear'];
 $dateout = $month . '/' . $dDay . '/' . $dYear;
 
+$photo = $_POST['photo'];
+$category = $_POST['category'];
 $address = $_POST['address'];
 $county = $_POST['county'];
 $Gender = $_POST['Gender'];
@@ -35,9 +37,22 @@ $Filenum = $_POST['Filenum'];
 $prison = $_POST['prison'];
 
 
+$filename = $_FILES["photo"]["name"];
+$tempname = $_FILES["photo"]["tmp_name"];
+$folder = "../uploads" . $filename;
+
+
+if (move_uploaded_file($tempname, $folder)) {
+    $msg = "Image uploaded successfully";
+} else {
+    $msg = "Failed to upload image";
+}
+
 //we are using mysqli_query function. it returns a resource on true else False on error
 $sql = "INSERT into registration set
                     id = '$Nid',
+                    category='$category',
+                    photo='$filename',
                     Full_Name = '$Fname',  
                     DOB = '$dateofbirth', 
                     datein = '$datein',             
@@ -59,5 +74,5 @@ if (!mysqli_query($con, $sql)) {
 ?>
 <script type="text/javascript">
     alert("you have succefully add the record !thank you");
-    window.location = "adminpanel.php";
+    window.location = "viewprisoners.php";
 </script>

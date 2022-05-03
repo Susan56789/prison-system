@@ -144,11 +144,16 @@ CREATE TABLE newprison
     PRIMARY KEY (National_id)
   )
   ;
+  
+
+
 
   /*Table for New Prisoners Registration*/
   CREATE TABLE registration
   (
-    id int(12) NOT NULL DEFAULT '0',
+    id int(12) NOT NULL,
+    photo longblob,
+    category varchar(50) NOT NULL,
     Full_Name varchar(23) NOT NULL,
     DOB varchar(30) NOT NULL,
     datein varchar(12) NOT NULL,
@@ -165,14 +170,7 @@ CREATE TABLE newprison
     PRIMARY KEY (id)
   );
 
-
-  INSERT INTO registration
-    (id, Full_Name, DOB, datein, dateout, Address, County, Gender, Education, Marital, Offence, Sentence, File_num, prison)
-  VALUES
-    (6567, 'Thomas Owino Kamau', '1974-01-23', '01/24/2021', '10/12/2022', 'Kiserian', '02', '01', '01', '04', 'Fraud', '01', '09078766', 'LANGATA'),
-    (9786575, 'Owino Kamau', '1980-10-12', '01/24/2014', '10/12/2016', '', '', '01', '04', '01', 'Robbery', '05', '88999777', 'LANGATA'),
-    (89758536, 'WENJO', '2003-03-16', '2003-03-16', '2003-03-16', 'Kabamzqre', 'Nairobi', 'Male', 'Never', 'Divorced', 'Killing', '2 years', 'NBI-06654', '');
-
+SELECT * FROM registration;
 
   CREATE TABLE inmates
   (

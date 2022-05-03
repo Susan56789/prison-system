@@ -32,7 +32,9 @@
 <h3>PRISONER INFORMATION</h3>
 </caption>
 <tr bgcolor='green'>
+<th width='10%'>Photo</th>
 <th width='3%'>National id</th>
+<th width='10%'>Category</th>
 <th width='10%'>Full Name</th>
 <th width='10%'>Date of Birth</th>
 <th width='10%'>Date In</th>
@@ -49,9 +51,14 @@
 </tr>";
 
         while ($row = mysqli_fetch_array($sel)) {
+
           echo "<tr bgcolor='grey'>";
 
+          echo "<td width='3%'>", '<img src=' . $row['photo'] . '>';
+
+          "</td>";
           echo  "<td width='3%'>" . $row['id'] . "</td>";
+          echo  "<td width='3%'>" . $row['category'] . "</td>";
           echo  "<td width='7%'>" . $row['Full_Name'] . "</td>";
           echo  "<td width='5%'>" . $row['DOB'] . "</td>";
           echo  "<td width='5%'>" . $row['datein'] . "</td>";

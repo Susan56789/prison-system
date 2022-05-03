@@ -34,7 +34,13 @@
                     <form id="frmReg" method="POST" action="prisonerval.php">
                         <h2 id="hdr_title">Register Prisoner </h2>
                         <div class="control_input">
-                            <label for="Nid" class="label">National Id</label><input type="text" id="Nid" name="Nid" size=8 maxlength=8 class="reg_fields" placeholder="00001111" />
+                            <label for="photo">Photo</label>
+
+                            <input type="file" name="photo" id="photo" value="" />
+                        </div>
+                        <div class="control_input">
+                            <label for="Nid" class="label">National Id</label>
+                            <input type="text" id="Nid" name="Nid" size=8 maxlength=8 class="reg_fields" placeholder="00001111" />
                         </div>
                         <div class="control_input">
                             <label for="Fname" class="label">Full Name</label><input type="text" id="Fname" name="Fname" class="reg_fields" placeholder="Otienno jin" />
@@ -70,6 +76,27 @@
                                     </tr>
                                 </table>
                             </div>
+                        </div>
+                        <div class="control_input">
+                            <label for="">Category</label>
+                            <select id="category" name="category" class="reg_fields">
+
+                                <!--Have not yet been convicted--->
+                                <option>Remands</option>
+
+                                <!---First offenders and well behaved.-->
+                                <option>Star class</option>
+
+                                <option>Ordinary class</option>
+
+                                <!--Death row convicts.-->
+                                <option>Special </option>
+
+                                <!---Serving life sentences--->
+                                <option>Lifers</option>
+
+                                <option>Civil debtors</option>
+                            </select>
                         </div>
 
                         <div class="control_input">
@@ -147,20 +174,12 @@
                                         <label for="county" class="label">County</label>
                                     </td>
                                     <td style="margin: 0; padding: 0;">
-                                        <select id="county" name="county" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
-                                            <option selected="selected">Lamu</option>
-                                            <option>Nairobi</option>
-                                            <option>Nakuru</option>
-                                            <option>Mombassa</option>
-                                            <option>Machakos</option>
-                                            <option>Malindi</option>
-                                            <option>Mandera</option>
-                                            <option>Meru</option>
-                                            <option>Laikipia</option>
-                                            <option>Nyeri</option>
+                                        <input type="text" id="county" name="county" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;" />
+
+
                                     </td>
                                 </tr>
-                                </select>
+
             </td>
         </tr>
     </table>
