@@ -33,7 +33,7 @@
 			<td bgcolor="#FFFFFF"><b>File Number:</b>
 			</td>
 			<td bgcolor="#FFFFFF">
-				<select name="Filenum" size=6 maxlength=7 placeholder="NBI-9999">
+				<select name="Filenum"  placeholder="NBI-9999">
 					<option>-----Select -----</option>
 					<option>
 						<?php

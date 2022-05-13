@@ -23,7 +23,7 @@
     <td height="5" bgcolor="#FFFFFF">
       <tr>
         <td>
-          <h2 class="bg-primary" align="center">TRANSFER FORM FOR PRISONNER</h2>
+          <h2 class="bg-primary" align="center">TRANSFER FORM FOR PRISONER</h2>
           <form action="processprisoner.php" method="post">
             <table bgcolor="white" height="431" border="0" align="center" width="50%">
 
@@ -46,13 +46,15 @@
                 <td><b>File Number </b> </td>
                 <td><select name="Filenum">
                     <option value="">--Select your File--</option>
-                    <?php
-                    $con = mysqli_connect('localhost', 'root', '', 'prison_system');
+                    <option>
+                      <?php
+                      $con = mysqli_connect('localhost', 'root', '', 'prison_system');
 
-                    $msql = mysqli_query($con, "SELECT * FROM registration");
-                    while ($m_row = mysqli_fetch_array($msql))
-                      echo ("<option value = '" . $m_row['File_num'] . "'>" . $m_row['File_num'] . "</option>");
-                    ?>
+                      $msql = mysqli_query($con, "SELECT * FROM registration");
+                      while ($m_row = mysqli_fetch_array($msql))
+                        echo ("<option value = '" . $m_row['File_num'] . "'>" . $m_row['File_num'] . "</option>");
+                      ?>
+                    </option>
                   </select></td>
               </tr>
 
@@ -61,23 +63,40 @@
               <tr>
                 <td bgcolor="#FFFFFF"><b>From Prison:</b></td>
                 <td> <select name="From">
-                    <option>LANGATA</option>
-                    <option>KODIAGA</option>
-                    <option>SHIMOLATEWA</option>
+                    <option>---Select prison---</option>
+                    <option>
+                      <?php
+                      $con = mysqli_connect('localhost', 'root', '', 'prison_system');
+
+                      $msql = mysqli_query($con, "SELECT * FROM newprison");
+                      while ($m_row = mysqli_fetch_array($msql))
+                        echo ("<option value = '" . $m_row['pname'] . "'>" . $m_row['pname'] . "</option>");
+                      ?>
+                    </option>
                 </td>
               </tr>
               <tr>
                 <td bgcolor="#FFFFFF"><b>To Prison:</b></td>
                 <td> <select name="To">
-                    <option>LANGATA</option>
-                    <option>KODIAGA</option>
-                    <option>SHIMOLATEWA</option>
+                    <option>---Select prison---</option>
+                    <option>
+                      <?php
+                      $con = mysqli_connect('localhost', 'root', '', 'prison_system');
+
+                      $msql = mysqli_query($con, "SELECT * FROM newprison");
+                      while ($m_row = mysqli_fetch_array($msql))
+                        echo ("<option value = '" . $m_row['pname'] . "'>" . $m_row['pname'] . "</option>");
+                      ?>
+                    </option>
                 </td>
               </tr>
 
               <tr>
-                <td><label for="on"><b>Date of Transfer:</b></label>
-                <td><select name="month">
+                <td>
+                  <label for="on"><b>Date of Transfer:</b></label>
+                </td>
+                <td>
+                  <select name="month">
                     <option selected="selected" value="01">January</option>
                     <option value="02">February</option>
                     <option value="03">March</option>
@@ -90,17 +109,17 @@
                     <option value="10">October</option>
                     <option value="11">November</option>
                     <option value="12">December</option>
-                  </select></td>
-                <td>
-                  <input type="text" name="day" size=4 maxlength=2 placeholder="DD" />
-                </td>
+                  </select>
 
-                <td>
+                  <input type="text" name="day" size=4 maxlength=2 placeholder="DD" />
+
                   <select name="year">
                     <option selected="selected">2019</option>
                     <option>2020</option>
                     <option>2021</option>
                     <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
                 </td>
 
                 </select>

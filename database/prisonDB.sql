@@ -49,7 +49,7 @@ CREATE TABLE court
   FOREIGN KEY(id) REFERENCES registration
 );
 
-DROP TABLE court;
+
 
 /*Table For Prisons*/
 CREATE TABLE newprison
@@ -181,14 +181,12 @@ SELECT * FROM registration;
   (
     National_id int(16) NOT NULL,
     File_num varchar(16) NOT NULL,
-    From_prison varchar(17) NOT NULL,
-    To_prison varchar(18) NOT NULL,
-    Dateoftransfer date NOT NULL,
-    AdmissionID varchar(30),
-    FOREIGN KEY (AdmissionID) REFERENCES inmates
+    From_prison varchar(100) NOT NULL,
+    To_prison varchar(100) NOT NULL,
+    Dateoftransfer date NOT NULL
+
   );
 
-  DROP TABLE transfer;
 
   /*Table for the User*/
   CREATE TABLE user_tbl
