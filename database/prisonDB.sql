@@ -27,33 +27,29 @@ FROM admin_tbl;
 /*Comments Table*/
 CREATE TABLE announce
 (
-  Id varchar(13) NOT NULL PRIMARY KEY,
+  Id varchar(16) NOT NULL PRIMARY KEY,
+  Username varchar(50),
   to_ varchar(17) NOT NULL,
   subject varchar(14) NOT NULL,
   message varchar(100) NOT NULL
 );
 
-INSERT INTO announce
-  ( Id,to_, subject, message)
-VALUES
-  ('8882', 'adminstrator', 'complain', 'sms');
 
 
 /*Table for Court Details*/
 CREATE TABLE court
 (
-  National_id int(12) NOT NULL,
+  id int(12) NOT NULL,
   File_number varchar(25) NOT NULL,
   Dateoftrial date NOT NULL,
   Sentence varchar(14) NOT NULL,
   Location varchar(15) NOT NULL,
   judge varchar(50) NOT NULL,
-  AdmissionID varchar(30),
-  PRIMARY KEY (National_id),
-  FOREIGN KEY(AdmissionID) REFERENCES inmates
+  PRIMARY KEY (File_number),
+  FOREIGN KEY(id) REFERENCES registration
 );
 
-
+DROP TABLE court;
 
 /*Table For Prisons*/
 CREATE TABLE newprison
@@ -74,16 +70,8 @@ CREATE TABLE newprison
   (pno)
 );
 
-  INSERT INTO newprison
-    (pno, pname, location, opendate, contact, capacity)
-  VALUES
-    (7, 'LAMU', 'LAMU', '2015-02-12', 765546353, 500),
-    (23340, 'JNKIM', 'NAIROBI', '2015-02-12', 2147483647, 0),
-    (23344, 'JNKIM', 'NAIROBI', '2015-02-12', 2147483647, 0),
-    (23840, 'JNKIM', 'NAIROBI', '2015-02-12', 2147483647, 0);
 
-
-
+  
 
   /*Table to capture officer details*/
 

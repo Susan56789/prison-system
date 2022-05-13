@@ -32,7 +32,13 @@
                     <form id="frmReg" method="POST" action="prisonerval.php">
                         <h2 id="hdr_title">Register Prisoner </h2>
                         <div class="control_input">
-                            <label for="Nid" class="label">National Id</label><input type="text" id="Nid" name="Nid" size=8 maxlength=8 class="reg_fields" placeholder="00001111" />
+                            <label for="photo">Photo</label>
+
+                            <input type="file" name="photo" id="photo" value="" />
+                        </div>
+                        <div class="control_input">
+                            <label for="Nid" class="label">National Id</label>
+                            <input type="text" id="Nid" name="Nid" size=8 maxlength=8 class="reg_fields" placeholder="00001111" />
                         </div>
                         <div class="control_input">
                             <label for="Fname" class="label">Full Name</label><input type="text" id="Fname" name="Fname" class="reg_fields" placeholder="Otienno jin" />
@@ -62,12 +68,33 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <input type="text" id="txtDay" name="txtDay" style="width: 40px;" value="DD" class="reg_fields" />
-                                            <input type="text" id="txtYear" name="txtYear" style="width: 60px;" value="YYYY" class="reg_fields" />
+                                            <input type="text" id="txtDay" name="txtDay" style="width: 40px;" value="01" class="reg_fields" />
+                                            <input type="text" id="txtYear" name="txtYear" style="width: 60px;" value="2000" class="reg_fields" />
                                         </td>
                                     </tr>
                                 </table>
                             </div>
+                        </div>
+                        <div class="control_input">
+                            <label for="">Category</label>
+                            <select id="category" name="category" class="reg_fields">
+
+                                <!--Have not yet been convicted--->
+                                <option>Remands</option>
+
+                                <!---First offenders and well behaved.-->
+                                <option>Star class</option>
+
+                                <option>Ordinary class</option>
+
+                                <!--Death row convicts.-->
+                                <option>Special </option>
+
+                                <!---Serving life sentences--->
+                                <option>Lifers</option>
+
+                                <option>Civil debtors</option>
+                            </select>
                         </div>
 
                         <div class="control_input">
@@ -94,8 +121,8 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <input type="text" id="TxtDay" name="TxtDay" style="width: 40px;" value="DD" class="reg_fields" />
-                                            <input type="text" id="TxtYear" name="TxtYear" style="width: 60px;" value="YYYY" class="reg_fields" />
+                                            <input type="text" id="TxtDay" name="TxtDay" style="width: 40px;" value="01" class="reg_fields" />
+                                            <input type="text" id="TxtYear" name="TxtYear" style="width: 60px;" value="2000" class="reg_fields" />
                                         </td>
                                     </tr>
                                 </table>
@@ -145,18 +172,12 @@
                                         <label for="county" class="label">County</label>
                                     </td>
                                     <td style="margin: 0; padding: 0;">
-                                        <select id="county" name="county" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
-                                            <option selected="selected">Lamu</option>
-                                            <option>Nairobi</option>
-                                            <option>Nakuru</option>
-                                            <option>Mombassa</option>
-                                            <option>Machakos</option>
-                                            <option>Malindi</option>
-                                            <option>Mandera</option>
-                                            <option>Meru</option>>
+                                        <input type="text" id="county" name="county" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;" />
+
+
                                     </td>
                                 </tr>
-                                </select>
+
             </td>
         </tr>
     </table>
@@ -186,14 +207,14 @@
                 </td>
                 <td style="margin: 0; padding: 0;">
                     <select id="education" name="education" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
-                        <option selected="selected">KCSE</option>
+                        <option selected="selected">KCPE</option>
                         <option>Never</option>
-                        <option>O level</option>
+                        <option>KCSE</option>
                         <option>Certificate</option>
                         <option>Diploma</option>
                         <option>Bachelor Degree</option>
-                        <option>Masters</option>
                         <option>PHD</option>
+                        <option>Masters</option>
                 </td>
             </tr>
             </select>
@@ -244,6 +265,7 @@
 
                 </td>
             </tr>
+
             </td>
             </tr>
         </table>
@@ -251,10 +273,12 @@
 
 
     <div class="control_input">
-        <label for="Filenum" class="label">File Number</label><input type="text" id="Filenum" name="Filenum" size=8 maxlength=8 class="reg_fields" placeholder="xxx" />
+        <label for="Filenum" class="label">File Number</label>
+        <input type="text" id="Filenum" name="Filenum" size=8 maxlength=8 class="reg_fields" placeholder="xxx" />
     </div>
 
     <div class="control_input">
+
         <div style="display: inline-block;">
             <table>
                 <td>
@@ -267,12 +291,13 @@
                             <?php
                             $con = mysqli_connect('localhost', 'root', '', 'prison_system');
 
-                            $msql = mysqli_query($con, "SELECT * FROM transfer");
+                            $msql = mysqli_query($con, "SELECT * FROM newprison");
                             while ($m_row = mysqli_fetch_array($msql))
-                                echo ("<option value = '" . $m_row['From_prison'] . "'>" . $m_row['From_prison'] . "</option>");
+                                echo ("<option value = '" . $m_row['pname'] . "'>" . $m_row['pname'] . "</option>");
                             ?>
                         </option>
                     </select>
+
                 </td>
             </table>
         </div class="control_input">

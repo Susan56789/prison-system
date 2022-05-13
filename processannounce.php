@@ -16,10 +16,11 @@ $To = $_POST['To'];
 $id = $_POST['id'];
 $Subject = $_POST['Subject'];
 $Message = $_POST['Message'];
+$From = $_POST['From'];
 
 //It wiil insert a row to our leave details`
-$sql = "INSERT INTO `prison_system`.`announce` (`to_`,`Id`,`subject`,`message`) 
-	     VALUES ('{$To}','{$id}', '{$Subject}', '{$Message}');";
+$sql = "INSERT INTO `prison_system`.`announce` (`to_`,`Id`,`subject`,`message`,`Username`) 
+	     VALUES ('{$To}','{$id}', '{$Subject}', '{$Message}','{$From}');";
 
 //we are using mysqli_query function. it returns a resource on true else False on error
 $retval = mysqli_query($conn, $sql);

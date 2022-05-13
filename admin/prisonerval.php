@@ -21,15 +21,15 @@ move_uploaded_file($tempname, $folder);
 //escape variable for security here or problem
 $Nid = $_POST['Nid'];
 $Fname = $_POST['Fname'];
-$month = $_POST['lMonth'];
+$month1 = $_POST['1Month'];
 $dDay =  $_POST['txtDay'];
 $dYear = $_POST['txtYear'];
-$dateofbirth = $month . '/' . $dDay . '/' . $dYear;
+$dateofbirth = $month1 . '/' . $dDay . '/' . $dYear;
 
-$month = $_POST['2Month'];
+$month2 = $_POST['2Month'];
 $dDay =  $_POST['TxtDay'];
 $dYear = $_POST['TxtYear'];
-$datein = $month . '/' . $dDay . '/' . $dYear;
+$datein = $month2 . '/' . $dDay . '/' . $dYear;
 
 $month = $_POST['3Month'];
 $dDay =  $_POST['TXtDay'];
@@ -48,6 +48,7 @@ $offence = $_POST['offence'];
 $sentence = $_POST['sentence'];
 $Filenum = $_POST['Filenum'];
 $prison = $_POST['prison'];
+
 
 
 

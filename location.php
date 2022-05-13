@@ -1,34 +1,40 @@
 <html>
+
 <head>
-   
-  <link rel="stylesheet" media="screen" href="login.css" >
+
+  <link rel="stylesheet" media="screen" href="login.css">
 </head>
+
 <body>
   <table align="center" border="0" bgcolor="green" width="540" cellpadding="9" cellspacing="0" height="525">
-          <tr>
-            <td colspan="3" height="2"><img src="banner.gif" width="860"></td>
-          </tr>
-          <tr>
-            <td colspan="3" bgcolor="#FF0000" height="1" align="center">
+    <tr>
+      <td colspan="3" height="2"><img src="banner.gif" width="860"></td>
+    </tr>
+    <tr>
+      <td colspan="3" bgcolor="#FF0000" height="1" align="center">
         <font size="4">
-            <a href="index.php">HOME</a>  |
-            <a href="login2.php">LOGIN </a> |
-            <a href="announce.php">COMMENT</a> 
-          </font>
-            </td>
-          </tr>
-          <tr>
-            <td width="50%" align="center" bgcolor="#FFFFFF">
-       
-<div class="ex">
-       <h2 class="bg-primary">About The System </h2>
+          <a href="index.php">HOME</a> |
+          <a href="login2.php">LOGIN </a> |
+          <a href="announce.php">COMMENT</a>
+        </font>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" align="center" bgcolor="#FFFFFF">
 
-<tr>
-  <?php
-           include("footer.php");
-                ?>
-</tr>
+        <div class="ex">
+          <h2 class="bg-primary">About The System </h2>
+          <p>
+            The prisons system was introduced in Kenya by the British East Africa protectorate with the enactment of East Africa Prisons Regulations in April, 1902. At independence, the reforms in the penal system were strengthened with the enactment of chapters 90 and 92 to establish the Kenya Prisons, and Act (Cap 90) has since been reviewed, the last being 1977.
+            The Borstal Act has also been reviewed, the last being in 1967. Maximum Security Prisons in Kenya Currentl
+          </p>
+    <tr>
+      <?php
+      include("footer.php");
+      ?>
+    </tr>
 
-</table>
+  </table>
 </body>
+
 </html>

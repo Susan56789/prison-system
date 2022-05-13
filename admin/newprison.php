@@ -22,7 +22,7 @@
         <tr>
             <td colspan="3" bgcolor="#FF0000" height="1" align="center">
                 <font size="4">
-                    <a href="officerpanel.php">HOME</a> |
+                    <a href="adminpanel.php">HOME</a> |
                 </font>
             </td>
         </tr>

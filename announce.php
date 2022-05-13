@@ -21,12 +21,27 @@
           <td>
                <form action="processannounce.php" method="post">
                     <table bgcolor="white" height="190" border="0" align="center" width="52%">
-                         <td width="27%" height="46" bgcolor="#FFFFFF"><b>To:</b></td>
-                         <td width="73%" bgcolor="#FFFFFF"><input type="text" name="To" /></td>
+                         <tr>
+                              <td width="27%" height="46" bgcolor="#FFFFFF">
+                                   <b>Username:</b>
+                              </td>
+                              <td width="73%" bgcolor="#FFFFFF">
+                                   <input type="text" name="From" />
+                              </td>
+                         </tr>
+                         <tr>
+                              <td width="27%" height="46" bgcolor="#FFFFFF">
+                                   <b>To:</b>
+                              </td>
+                              <td width="73%" bgcolor="#FFFFFF">
+                                   <input type="text" name="To" />
+                              </td>
                          </tr>
                          <tr>
                               <td height="51" bgcolor="#FFFFFF"><b>Id:</b></td>
-                              <td bgcolor="#FFFFFF"><input type="text" name="id"></td>
+                              <td bgcolor="#FFFFFF">
+                                   <input type="text" name="id">
+                              </td>
                          </tr>
                          <tr>
                               <td height="51" bgcolor="#FFFFFF"><b>Subject:</b></td>

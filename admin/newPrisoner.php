@@ -66,8 +66,8 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <input type="text" id="txtDay" name="txtDay" style="width: 40px;" value="DD" class="reg_fields" />
-                                            <input type="text" id="txtYear" name="txtYear" style="width: 60px;" value="YYYY" class="reg_fields" />
+                                            <input type="text" id="txtDay" name="txtDay" style="width: 40px;" value="01" class="reg_fields" />
+                                            <input type="text" id="txtYear" name="txtYear" style="width: 60px;" value="2000" class="reg_fields" />
                                         </td>
                                     </tr>
                                 </table>
@@ -119,8 +119,8 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <input type="text" id="TxtDay" name="TxtDay" style="width: 40px;" value="DD" class="reg_fields" />
-                                            <input type="text" id="TxtYear" name="TxtYear" style="width: 60px;" value="YYYY" class="reg_fields" />
+                                            <input type="text" id="TxtDay" name="TxtDay" style="width: 40px;" value="01" class="reg_fields" />
+                                            <input type="text" id="TxtYear" name="TxtYear" style="width: 60px;" value="2000" class="reg_fields" />
                                         </td>
                                     </tr>
                                 </table>
@@ -276,6 +276,7 @@
     </div>
 
     <div class="control_input">
+
         <div style="display: inline-block;">
             <table>
                 <td>
@@ -294,6 +295,7 @@
                             ?>
                         </option>
                     </select>
+
                 </td>
             </table>
         </div class="control_input">

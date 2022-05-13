@@ -30,9 +30,21 @@
 						<td width="66%" bgcolor="#FFFFFF"><input type="text" name="Nationalid" size=4 maxlength=7 placeholder="99999" /></td>
 		</tr>
 		<tr>
-			<td bgcolor="#FFFFFF"><b>File Number:</b></td>
+			<td bgcolor="#FFFFFF"><b>File Number:</b>
+			</td>
 			<td bgcolor="#FFFFFF">
-				<input type="text" name="Filenum" size=6 maxlength=7 placeholder="NBI-9999" />
+				<select name="Filenum" size=6 maxlength=7 placeholder="NBI-9999">
+					<option>-----Select -----</option>
+					<option>
+						<?php
+						$con = mysqli_connect('localhost', 'root', '', 'prison_system');
+
+						$msql = mysqli_query($con, "SELECT * FROM registration");
+						while ($m_row = mysqli_fetch_array($msql))
+							echo ("<option value = '" . $m_row['File_num'] . "'>" . $m_row['File_num'] . "</option>");
+						?>
+					</option>
+				</select>
 			</td>
 		</tr>
 

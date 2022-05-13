@@ -41,7 +41,7 @@
         while ($row = mysqli_fetch_array($sel)) {
           echo "<tr bgcolor='grey'>";
 
-          echo  "<td width='3%'>" . $row['National_id'] . "</td>";
+          echo  "<td width='3%'>" . $row['id'] . "</td>";
           echo  "<td width='7%'>" . $row['File_number'] . "</td>";
           echo  "<td width='7%'>" . $row['Dateoftrial'] . "</td>";
           echo  "<td width='7%'>" . $row['Sentence'] . "</td>";

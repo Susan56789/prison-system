@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Comments </title>
+    <link rel="stylesheet" media="screen" href="login.css">
+</head>
+
+<body>
+    <table align='center' border='0' bgcolor='green' width='1000' cellpadding='8' cellspacing='0' height='400'>
+        <tr>
+            <td bgcolor='#999999' valign='center'>
+
+                <?php
+
+                $host = "localhost";
+                $username = "root";
+                $password = "";
+                $db_name = "prison_system";
+                $tbl_name = "announce";
+
+                $con = mysqli_connect($host, $username, $password, $db_name);
+
+                $sel = mysqli_query($con, "SELECT * from $tbl_name");
+                echo "<table align='center' bgcolor='GREEN' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='silver'>
+<caption><h3>COMMENTS</h3></caption>
+<tr bgcolor='#CCCCCC'>
+<th  width='15%'>From</th>
+<th width='10%'>To</th>
+<th width='10%'>Message Id</th>
+<th width='15%'>Subject</th>
+<th width='25%'>Message</th>
+</tr>";
+
+                while ($row = mysqli_fetch_array($sel)) {
+                    echo "<tr bgcolor='white'>";
+                    echo  "<td width='10%'>" . $row['Username'] . "</td>";
+                    echo  "<td width='3%'>" . $row['to_'] . "</td>";
+                    echo  "<td width='10%'>" . $row['Id'] . "</td>";
+                    echo  "<td width='10%'>" . $row['subject'] . "</td>";
+                    echo  "<td width='10%'>" . $row['message'] . "</td>";
+
+                    echo "</tr>";
+                }
+                echo "</table>";
+
+                ?>
+
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="announce.php" target="_parent">Add Comment <b>|</b></a>
+                <a href="index.php" target="_parent">Home</a>
+            </td>
+
+
+        </tr>
+        <tr>
+            <td align='center' bgcolor='GREY' height='1'><?php
+                                                            include("footer.php");
+                                                            ?>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
