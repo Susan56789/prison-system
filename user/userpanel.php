@@ -12,7 +12,7 @@
 <body>
   <table align='center' border='1' bgcolor='green' width='820' cellpadding='10' cellspacing='0' height='215'>
     <tr>
-      <td colspan='3' height='2'><img src='banner.gif' width="860" height="300"></td>
+      <td colspan='3' height='2'><img src='banner.gif' width="760" height="300"></td>
     </tr>
     <tr>
       <td height='1' colspan='3' align='right' bgcolor="#006600">&nbsp;</td>
@@ -45,11 +45,11 @@
                 <div id="menu">
                   <ul>
 
-                    <li><a href='prisoner.php'><b>Prisoner Reg</b></a></li>
+                    <li><a href='prisoner.php'><b>Register Prisoner</b></a></li>
                     <br>
                     <!--<li><a href='registration.php'><b>Register Form</b></a></li>
 		<br>--->
-                    <li><a href='visitors.php'><b>visitors registration </b></a></li>
+                    <li><a href='visitors.php'><b>Register Visitor</b></a></li>
                     <br>
                     <!--<li><a href='addofficer.php'><b>Officer registration </b></a></li>
     <br>-->

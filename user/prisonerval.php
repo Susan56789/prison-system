@@ -5,10 +5,11 @@ if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
+
 //escape variable for security here or problem
 $Nid = $_POST['Nid'];
 $Fname = $_POST['Fname'];
-$month = $_POST['lMonth'];
+$month = $_POST['1Month'];
 $dDay =  $_POST['txtDay'];
 $dYear = $_POST['txtYear'];
 $dateofbirth = $month . '/' . $dDay . '/' . $dYear;
@@ -33,11 +34,13 @@ $offence = $_POST['offence'];
 $sentence = $_POST['sentence'];
 $Filenum = $_POST['Filenum'];
 $prison = $_POST['prison'];
+$category = $_POST['category'];
 
 
 //we are using mysqli_query function. it returns a resource on true else False on error
 $sql = "INSERT into registration set
                     id = '$Nid',
+                    category='$category',
                     Full_Name = '$Fname',  
                     DOB = '$dateofbirth', 
                     datein = '$datein',             

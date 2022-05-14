@@ -52,6 +52,7 @@ $prison = $_POST['prison'];
 
 
 
+
 //we are using mysqli_query function. it returns a resource on true else False on error
 $sql = "INSERT into registration set
                     id = '$Nid',

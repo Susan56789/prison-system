@@ -38,10 +38,11 @@
                         </div>
                         <div class="control_input">
                             <label for="Nid" class="label">National Id</label>
-                            <input type="text" id="Nid" name="Nid" size=8 maxlength=8 class="reg_fields" placeholder="00001111" />
+                            <input type="text" id="Nid" name="Nid" class="reg_fields" placeholder="00001111" />
                         </div>
                         <div class="control_input">
-                            <label for="Fname" class="label">Full Name</label><input type="text" id="Fname" name="Fname" class="reg_fields" placeholder="Otienno jin" />
+                            <label for="Fname" class="label">Full Name</label>
+                            <input type="text" id="Fname" name="Fname" class="reg_fields" placeholder="Otienno jin" />
                         </div>
 
                         <div class="control_input">
@@ -80,7 +81,7 @@
                             <select id="category" name="category" class="reg_fields">
 
                                 <!--Have not yet been convicted--->
-                                <option>Remands</option>
+                                <option selected="selected" value="">Remands</option>
 
                                 <!---First offenders and well behaved.-->
                                 <option>Star class</option>
@@ -162,7 +163,8 @@
                         </div>
 
                         <div class="control_input">
-                            <label for="address" class="label">Address</label><input type="text" id="address" name="address" class="reg_fields" placeholder="Rongai" />
+                            <label for="address" class="label">Address</label>
+                            <input type="text" id="address" name="address" class="reg_fields" placeholder="Rongai" />
                         </div>
 
                         <div style="display: inline-block;">
