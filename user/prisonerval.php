@@ -36,12 +36,24 @@ $Filenum = $_POST['Filenum'];
 $prison = $_POST['prison'];
 $category = $_POST['category'];
 
+$filename = $_FILES["photo"]["name"];
+$tempname = $_FILES["photo"]["tmp_name"];
+$folder = "../uploads" . $filename;
+
+
+
+
+if (!file_exists($folder)) {
+  @mkdir($folder, 0777);
+}
+
 
 //we are using mysqli_query function. it returns a resource on true else False on error
 $sql = "INSERT into registration set
                     id = '$Nid',
                     category='$category',
-                    Full_Name = '$Fname',  
+                    Full_Name = '$Fname', 
+                    photo='$folder', 
                     DOB = '$dateofbirth', 
                     datein = '$datein',             
                     dateout = '$dateout',
