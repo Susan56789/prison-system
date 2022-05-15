@@ -1,23 +1,12 @@
 <?php
 $con = mysqli_connect("localhost", "root", "", "prison_system");
+
+
 // Check connection
 if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$filename = $_FILES["photo"]["name"];
-$tempname = $_FILES["photo"]["tmp_name"];
-$folder = "../uploads" . $filename;
-
-
-
-
-if (!file_exists($folder)) {
-    @mkdir($folder, 0777);
-}
-
-
-move_uploaded_file($tempname, $folder);
 //escape variable for security here or problem
 $Nid = $_POST['Nid'];
 $Fname = $_POST['Fname'];
@@ -36,7 +25,7 @@ $dDay =  $_POST['TXtDay'];
 $dYear = $_POST['TXtYear'];
 $dateout = $month . '/' . $dDay . '/' . $dYear;
 
-$photo = $_POST['photo'];
+
 $category = $_POST['category'];
 $address = $_POST['address'];
 $county = $_POST['county'];
@@ -50,6 +39,20 @@ $Filenum = $_POST['Filenum'];
 $prison = $_POST['prison'];
 
 
+// File upload path
+$targetDir = "uploads/";
+$fileName = basename($_POST["photo"]);
+$targetFilePath = $targetDir . $fileName;
+$fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+
+$allowTypes = array('jpg', 'png', 'jpeg', 'gif', 'pdf');
+
+
+$tempname = $_FILES["photo"]["tmp_name"];
+
+move_uploaded_file($tempname, $targetFilePath);
+
+
 
 
 
@@ -57,7 +60,7 @@ $prison = $_POST['prison'];
 $sql = "INSERT into registration set
                     id = '$Nid',
                     category='$category',
-                    photo='$folder',
+                    photo='$fileName',
                     Full_Name = '$Fname',  
                     DOB = '$dateofbirth', 
                     datein = '$datein',             
@@ -72,10 +75,13 @@ $sql = "INSERT into registration set
                     File_num = '$Filenum',
                     prison = '$prison'";
 
-
 if (!mysqli_query($con, $sql)) {
     die('Error: ' . mysqli_error($con));
 }
+
+
+
+
 ?>
 <script type="text/javascript">
     alert("you have succefully add the record !thank you");

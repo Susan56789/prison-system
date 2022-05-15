@@ -53,13 +53,16 @@
 <th width='10%'>Prison</th>
 </tr>";
 
+
         while ($row = mysqli_fetch_array($sel)) {
 
           echo "<tr bgcolor='grey'>";
-          $imageURL =  $row["photo"];
-          $folder = "/uploads" . $imageURL;
 
-          echo "<td width='3%'>", '<img src=' . $imageURL . '>';
+
+          $imageURL = 'uploads/' . $row["photo"];
+
+
+          echo "<td width='3%'>", '<img src=' . $imageURL . "  > ";
 
           "</td>";
           echo  "<td width='10%'>" . $row['id'] . "</td>";

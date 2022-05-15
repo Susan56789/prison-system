@@ -36,16 +36,23 @@ $Filenum = $_POST['Filenum'];
 $prison = $_POST['prison'];
 $category = $_POST['category'];
 
-$filename = $_FILES["photo"]["name"];
+// File upload path
+$targetDir = "uploads/";
+$fileName = basename($_POST["photo"]);
+$targetFilePath = $targetDir . $fileName;
+$fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+
+$allowTypes = array('jpg', 'png', 'jpeg', 'gif', 'pdf');
+
+
 $tempname = $_FILES["photo"]["tmp_name"];
-$folder = "../uploads" . $filename;
+
+move_uploaded_file($tempname, $targetFilePath);
 
 
 
 
-if (!file_exists($folder)) {
-  @mkdir($folder, 0777);
-}
+
 
 
 //we are using mysqli_query function. it returns a resource on true else False on error
@@ -53,7 +60,7 @@ $sql = "INSERT into registration set
                     id = '$Nid',
                     category='$category',
                     Full_Name = '$Fname', 
-                    photo='$folder', 
+                    photo='$fileName', 
                     DOB = '$dateofbirth', 
                     datein = '$datein',             
                     dateout = '$dateout',

@@ -140,9 +140,9 @@ CREATE TABLE newprison
   CREATE TABLE registration
   (
     id int(12) NOT NULL,
-    photo longblob,
+    photo varchar(300),
     category varchar(50) NOT NULL,
-    Full_Name varchar(23) NOT NULL,
+    Full_Name varchar(100) NOT NULL,
     DOB varchar(30) NOT NULL,
     datein varchar(12) NOT NULL,
     dateout varchar(12) NOT NULL,
@@ -153,13 +153,13 @@ CREATE TABLE newprison
     Marital varchar(20) NOT NULL,
     Offence varchar(90) NOT NULL,
     Sentence varchar(13) NOT NULL,
-    File_num varchar(12) NOT NULL,
+    File_num varchar(12) NOT NULL ,
     prison varchar(100) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (File_num)
   );
+  
 
 SELECT * FROM registration;
-
 
 
 
@@ -173,8 +173,7 @@ SELECT * FROM registration;
     FOREIGN KEY(id) REFERENCES registration
   );
 
-  SELECT *
-  FROM registration;
+  
 
   /*Table To track prisoners Transfer*/
   CREATE TABLE transfer
