@@ -4,8 +4,7 @@
 $searchTerm = trim($_GET["keyname"]);
 
 //check whether the name parsed is empty
-if($searchTerm == "")
-{
+if ($searchTerm == "") {
 	echo "Enter name  you are searching for.";
 	exit();
 }
@@ -20,18 +19,16 @@ $pwd = "prison123."; //password
 $link = mysqli_connect($host, $user, $pwd, $db);
 
 //MYSQL search statement
-$query ="SELECT * FROM visitor WHERE id LIKE '%$searchTerm%'";
+$query = "SELECT * FROM visitor WHERE id LIKE '%$searchTerm%'";
 
 $results = mysqli_query($link, $query);
 
 /* check whethere there were matching records in the table
 by counting the number of results returned */
-if(mysqli_num_rows($results) >= 1)
-{
+if (mysqli_num_rows($results) >= 1) {
 	$output = "";
-	while($row = mysqli_fetch_array($results))
-	{
-	
+	while ($row = mysqli_fetch_array($results)) {
+
 
 		$output .= "National ID: " . $row['id'] . "<br />";
 		$output .= "Full Name: " . $row['fullname'] . "<br />";
@@ -40,10 +37,9 @@ if(mysqli_num_rows($results) >= 1)
 		$output .= "Time In: " . $row['timein'] . "<br />";
 		$output .= "Time Out: " . $row['timeout'] . "<br />";
 		$output .= "Relationship: " . $row['relationship'] . "<br />";
-		$output .= "Telephone: " . $row['telephone'] . "<br /><br />";
+		$output .= "Telephone: " . $row['telephone'] . "<br />";
 		$output .= "Prisoner: " . $row['prisoner'] . "<br />";
 	}
 	echo $output;
-}
-else
+} else
 	echo "There was no matching record for the name " . $searchTerm;

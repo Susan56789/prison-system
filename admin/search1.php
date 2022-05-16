@@ -35,7 +35,7 @@ if (mysqli_num_rows($results) >= 1) {
 		$output .= "Full Name: " . $row['fullname'] . "<br />";
 		$output .= "Date of Birth: " . $row['dateofbirth'] . "<br />";
 		$output .= "Gender: " . $row['gender'] . "<br />";
-		$output .= "Telephone: " . $row['telephone'] . "<br /><br />";
+		$output .= "Telephone: " . $row['telephone'] . "<br />";
 		$output .= "Education: " . $row['education'] . "<br />";
 		$output .= "Experience: " . $row['experience'] . "<br />";
 	}

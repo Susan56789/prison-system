@@ -30,6 +30,7 @@ if (mysqli_num_rows($results) >= 1) {
 	while ($row = mysqli_fetch_array($results)) {
 
 		$output .= "<table>";
+
 		$output .= "National ID: " . $row['id'] . "<br />";
 		$output .= "Full Name: " . $row['Full_Name'] . "<br />";
 		$output .= "Date of Birth: " . $row['DOB'] . "<br />";
