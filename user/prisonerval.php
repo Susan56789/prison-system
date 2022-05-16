@@ -47,7 +47,7 @@ $allowTypes = array('jpg', 'png', 'jpeg', 'gif', 'pdf');
 
 $tempname = $_FILES["photo"]["tmp_name"];
 
-move_uploaded_file($tempname, $targetFilePath);
+move_uploaded_file($tempname, $targetDir);
 
 
 
