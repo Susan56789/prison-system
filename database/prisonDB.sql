@@ -21,8 +21,7 @@ INSERT INTO admin_tbl
 VALUES
   (2, 'sueNimoh', 'Female', 'susan@yahoo.com', '0745678432', 'Ruai', 'sue1234');
 
-SELECT *
-FROM admin_tbl;
+SELECT * FROM admin_tbl;
 
 /*Comments Table*/
 CREATE TABLE announce
