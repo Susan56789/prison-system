@@ -34,7 +34,7 @@
 								<select name="Nid" placeholder="000999">
 									<option value="">--Select your National Id--</option>
 									<?php
-									$conn = mysqli_connect('localhost', 'root', '', "prison_system");
+									$conn = mysqli_connect('localhost', 'prison', 'prison123.', "prison_system");
 
 									$msql = mysqli_query($conn, "SELECT * FROM registration");
 									while ($m_row = mysqli_fetch_array($msql))

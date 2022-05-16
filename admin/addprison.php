@@ -28,7 +28,7 @@
 					<form action='validatenew.php' method="POST">
 
 						<label for="prisonid">Prison Id:</label>
-						<input name="prisonid" class="prisonid" size=4 maxlength=8 required size=30 type="text" placeholder="NBI-00001" /> *
+						<input name="prisonid" class="prisonid" size=4 size=30 type="text" placeholder="NBI-00001" /> *
 						</br></br>
 
 						<label for="prisonname">Prison Name:

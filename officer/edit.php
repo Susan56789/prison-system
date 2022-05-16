@@ -80,7 +80,7 @@ function valid($Nid, $Filenum, $From, $To, $dateoftransfer)
 <?php
 }
 
-$link = mysqli_connect("localhost", "root", "", "prison_system");
+$link = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
 
 
 if (isset($_POST['submit'])) {

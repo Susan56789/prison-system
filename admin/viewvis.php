@@ -19,8 +19,8 @@
         <?php
 
         $host = "localhost";
-        $username = "root";
-        $password = "";
+        $username = "prison";
+        $password = "prison123.";
         $db_name = "prison_system";
         $tbl_name = "visitor";
 

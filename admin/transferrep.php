@@ -3,8 +3,8 @@
 // Database Connection
 
 $host = "localhost";
-$uname = "root";
-$pass = "";
+$uname = "prison";
+$pass = "prison123.";
 $database = "prison_system";
 
 $connection = mysqli_connect($host, $uname, $pass, $database);

@@ -18,7 +18,7 @@
 
         <?php
         ob_start();
-        $link = mysqli_connect("localhost", "root", "", "prison_system");
+        $link = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
 
         $result = mysqli_query($link, "SELECT * from transfer");
         ?>

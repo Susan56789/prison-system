@@ -19,7 +19,7 @@
 
         <?php
         ob_start();
-        $link = mysqli_connect("localhost", "root", "", 'prison_system');
+        $link = mysqli_connect("localhost", "prison", "prison123.", 'prison_system');
         //mysqli_select_db($link);
         $result = mysqli_query($link, "SELECT * from announce");
         ?>

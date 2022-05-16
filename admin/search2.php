@@ -13,8 +13,8 @@ if($searchTerm == "")
 //database connection info
 $host = "localhost"; //server
 $db = "prison_system"; //database name
-$user = "root"; //dabases user name
-$pwd = ""; //password
+$user = "prison"; //dabases user name
+$pwd = "prison123."; //password
 
 //connecting to server and creating link to database
 $link = mysqli_connect($host, $user, $pwd, $db);
@@ -43,4 +43,3 @@ if(mysqli_num_rows($results) >= 1)
 }
 else
 	echo "There was no matching record for the name " . $searchTerm;
-?>

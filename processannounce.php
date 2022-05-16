@@ -1,8 +1,8 @@
 <?php
 //set up for mysqli Connection
 $dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '';
+$dbuser = 'prison';
+$dbpass = 'prison123.';
 $dbname = 'prison_system';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 //test if the connection is established successfully then it will proceed in next process else it will throw an error message

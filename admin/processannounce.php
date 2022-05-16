@@ -1,8 +1,8 @@
 <?php
 //set up for mysqli Connection
 $dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '';
+$dbuser = 'prison';
+$dbpass = 'prison123.';
 $dbname = 'prison_system';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 if (!$conn) {

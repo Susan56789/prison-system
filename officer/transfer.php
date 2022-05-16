@@ -64,7 +64,7 @@
 										<option>---Select prison---</option>
 										<option>
 											<?php
-											$con = mysqli_connect('localhost', 'root', '', 'prison_system');
+											$con = mysqli_connect('localhost', 'prison', 'prison123.', 'prison_system');
 
 											$msql = mysqli_query($con, "SELECT * FROM newprison");
 											while ($m_row = mysqli_fetch_array($msql))
@@ -79,7 +79,7 @@
 										<option>---Select prison---</option>
 										<option>
 											<?php
-											$con = mysqli_connect('localhost', 'root', '', 'prison_system');
+											$con = mysqli_connect('localhost', 'prison', 'prison123.', 'prison_system');
 
 											$msql = mysqli_query($con, "SELECT * FROM newprison");
 											while ($m_row = mysqli_fetch_array($msql))

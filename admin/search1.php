@@ -4,8 +4,7 @@
 $searchTerm = trim($_GET["keyname"]);
 
 //check whether the name parsed is empty
-if($searchTerm == "")
-{
+if ($searchTerm == "") {
 	echo "Enter name  you are searching for.";
 	exit();
 }
@@ -14,25 +13,23 @@ if($searchTerm == "")
 //database connection info
 $host = "localhost"; //server
 $db = "prison_system"; //database name
-$user = "root"; //dabases user name
-$pwd = ""; //password
+$user = "prison"; //dabases user name
+$pwd = "prison123."; //password
 
 //connecting to server and creating link to database
 $link = mysqli_connect($host, $user, $pwd, $db);
 
 //MYSQL search statement
-$query ="SELECT * FROM officerdetails WHERE id LIKE '%$searchTerm%'";
+$query = "SELECT * FROM officerdetails WHERE id LIKE '%$searchTerm%'";
 
 $results = mysqli_query($link, $query);
 
 /* check whethere there were matching records in the table
 by counting the number of results returned */
-if(mysqli_num_rows($results) >= 1)
-{
+if (mysqli_num_rows($results) >= 1) {
 	$output = "";
-	while($row = mysqli_fetch_array($results))
-	{
-	
+	while ($row = mysqli_fetch_array($results)) {
+
 
 		$output .= "National ID: " . $row['id'] . "<br />";
 		$output .= "Full Name: " . $row['fullname'] . "<br />";
@@ -43,6 +40,5 @@ if(mysqli_num_rows($results) >= 1)
 		$output .= "Experience: " . $row['experience'] . "<br />";
 	}
 	echo $output;
-}
-else
+} else
 	echo "There was no matching record for the name " . $searchTerm;

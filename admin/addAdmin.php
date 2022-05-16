@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link href="style1.css" rel="stylesheet" type="text/css" />
-    <script src="jquery-1.7.1.min.js"></script>
-    <script src="registration_script.js"></script>
+    <link href="login.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" media="screen" href="login.css">
 </head>
 
