@@ -20,7 +20,7 @@
     <tr>
       <td colspan="3" bgcolor="#FF0000" height="1" align="center">
         <font size="4">
-          <a href="location.php">ABOUT US</a>|
+          <a href="location.php">ABOUT</a>|
           <a href="login2.php">LOGIN </a> |
           <a href="announce.php">COMMENT</a>
         </font>

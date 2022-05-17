@@ -14,7 +14,7 @@
     $Password = $_POST['password'];
     $UserType = $_POST['cmbUser'];
     if ($UserType == "Admin") {
-        $con = mySQLi_connect('localhost', 'root', '', 'prison_system');
+        $con = mySQLi_connect('localhost', 'prison', 'prison123.', 'prison_system');
         $result = mySQLi_query($con, "SELECT * FROM Admin_Tbl WHERE Admin_Name='$UserName' and Admin_Password='$Password'");
         $records = mySQLi_num_rows($result);
         $row = mySQLi_fetch_array($result);
