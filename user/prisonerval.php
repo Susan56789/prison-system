@@ -37,7 +37,7 @@ $prison = $_POST['prison'];
 $category = $_POST['category'];
 
 // File upload path
-$targetDir = "../uploads";
+$targetDir = "../uploads/";
 $fileName = $_FILES["photo"]["name"];
 $fileSize = $_FILES["photo"]["size"];
 $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
@@ -47,35 +47,38 @@ $tempname = $_FILES["photo"]["tmp_name"];
 $error = $_FILES["photo"]["error"];
 $newFilename = uniqid("IMG-") . "." . $filetype_lc;
 
-
-$filePath = $targetDir . $newFilename;
 $uploadPath = $targetDir . $newFilename;
-move_uploaded_file($tempname, $uploadPath);
 
-//we are using mysqli_query function. it returns a resource on true else False on error
-$sql = "INSERT into registration set
-                    id = '$Nid',
-                    category='$category',
-                    photo='$newFilename',
-                    Full_Name = '$Fname',  
-                    DOB = '$dateofbirth', 
-                    datein = '$datein',             
-                    dateout = '$dateout',
-                    Address = '$address',
-                    County = '$county',
-                    Gender = '$Gender',
-                    Education = '$education',
-                    Marital = '$status',
-                    Offence = '$offence',
-                    Sentence = '$sentence',
-                    File_num = '$Filenum',
-                    prison = '$prison'";
+$upload = move_uploaded_file($tempname, $uploadPath);
 
+if ($upload) {
+  //Insert data into database
+  $sql = "INSERT into registration set
+id = '$Nid',
+category='$category',
+photo='$newFilename',
+Full_Name = '$Fname',  
+DOB = '$dateofbirth', 
+datein = '$datein',             
+dateout = '$dateout',
+Address = '$address',
+County = '$county',
+Gender = '$Gender',
+Education = '$education',
+Marital = '$status',
+Offence = '$offence',
+Sentence = '$sentence',
+File_num = '$Filenum',
+prison = '$prison'";
 
-//perfoms a query on the database
-if (!mysqli_query($con, $sql)) {
-  die('Error: ' . mysqli_error($con));
+  if (!mysqli_query($con, $sql)) {
+    die('Error: ' . mysqli_error($con));
+  }
+} else {
+  echo $error;
 }
+
+
 ?>
 <script type="text/javascript">
   alert("you have succefully add the record !thank you");

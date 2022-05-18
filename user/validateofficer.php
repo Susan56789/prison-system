@@ -43,5 +43,5 @@ if (!mysqli_query($con, $sql)) {
 ?>
 <script type="text/javascript">
   alert("you have succefully add the record !thank you");
-  window.location = "userpanel.php";
+  window.location = "officerpanel.php";
 </script>

@@ -6,8 +6,6 @@
     <head>
 
         <link href="style1.css" rel="stylesheet" type="text/css" />
-        <script src="jquery-1.7.1.min.js"></script>
-        <script src="registration_script.js"></script>
         <link rel="stylesheet" media="screen" href="login.css">
     </head>
 
@@ -29,12 +27,12 @@
             <td width="50%" align="center" bgcolor="white">
 
                 <div id="content" class="ctrdiv">
-                    <form id="frmReg" method="POST" action="prisonerval.php">
+                    <form id="frmReg" method="POST" action="prisonerval.php" enctype="multipart/form-data">
                         <h2 id="hdr_title">Register Prisoner </h2>
                         <div class="control_input">
                             <label for="photo">Photo</label>
 
-                            <input type="file" name="photo" id="photo" value="" />
+                            <input type="file" name="photo" id="photo" />
                         </div>
                         <div class="control_input">
                             <label for="Nid" class="label">National Id</label>

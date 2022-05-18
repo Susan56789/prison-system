@@ -16,7 +16,7 @@
             <td colspan="2" height="2"><img src="../banner.gif" width="860"></td>
         </tr>
         <tr>
-            <td colspan="3" bgcolor="#FF0000" height="1" align="center">
+            <td colspan="3" bgcolor="#FF0000" height="1" align="left">
                 <font size="4">
                     <a href="adminpanel.php">HOME</a> |
                 </font>
@@ -24,22 +24,23 @@
         </tr>
         <tr>
             <td width="25%" bgcolor="#FFFFFF">&nbsp;&nbsp;
-            <td width="50%" align="center" bgcolor="white">
+            <td width="50%" align="left" bgcolor="white">
 
                 <div id="content" class="ctrdiv">
                     <form id="frmReg" method="POST" action="prisonerval.php" enctype="multipart/form-data">
                         <h2 id="hdr_title">Register Prisoner </h2>
                         <div class="control_input">
-                            <label for="photo">Photo</label>
+                            <label for="photo">Photo </label>
 
                             <input type="file" name="photo" id="photo" />
                         </div>
                         <div class="control_input">
-                            <label for="Nid" class="label">National Id</label>
-                            <input type="text" id="Nid" name="Nid" size=8 maxlength=8 class="reg_fields" placeholder="00001111" />
+                            <label for="Nid" class="label">National Id </label>
+                            <input type="text" id="Nid" name="Nid" class="reg_fields" placeholder="00001111" />
                         </div>
                         <div class="control_input">
-                            <label for="Fname" class="label">Full Name</label><input type="text" id="Fname" name="Fname" class="reg_fields" placeholder="Otienno jin" />
+                            <label for="Fname" class="label">Full Name </label>
+                            <input type="text" id="Fname" name="Fname" class="reg_fields" placeholder="Otienno jin" />
                         </div>
 
                         <div class="control_input">
@@ -47,9 +48,9 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <label for="date" class="label">Birth Date</label>
+                                            <label for="date" class="label">Birth Date </label>
                                         </td>
-                                        <td style="margin: 0; padding: 0;">
+                                        <td>
                                             <select id="1Month" name="1Month" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
                                                 <option selected="selected" value="01">January</option>
                                                 <option value="02">February</option>
@@ -74,7 +75,7 @@
                             </div>
                         </div>
                         <div class="control_input">
-                            <label for="">Category</label>
+                            <label for="">Category </label>
                             <select id="category" name="category" class="reg_fields">
 
                                 <!--Have not yet been convicted--->
@@ -100,7 +101,7 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <label for="datein" class="label">Date In</label>
+                                            <label for="datein" class="label">Date In </label>
                                         </td>
                                         <td style="margin: 0; padding: 0;">
                                             <select id="2Month" name="2Month" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
@@ -132,7 +133,7 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <label for="opendate" class="label">Date Out</label>
+                                            <label for="opendate" class="label">Date Out </label>
                                         </td>
                                         <td style="margin: 0; padding: 0;">
                                             <select id="3Month" name="3Month" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
@@ -160,16 +161,17 @@
                         </div>
 
                         <div class="control_input">
-                            <label for="address" class="label">Address</label><input type="text" id="address" name="address" class="reg_fields" placeholder="Rongai" />
+                            <label for="address" class="label">Address </label>
+                            <input type="text" id="address" name="address" class="reg_fields" placeholder="Rongai" />
                         </div>
 
                         <div style="display: inline-block;">
                             <table>
                                 <tr>
                                     <td>
-                                        <label for="county" class="label">County</label>
+                                        <label for="county" class="label">County </label>
                                     </td>
-                                    <td style="margin: 0; padding: 0;">
+                                    <td>
                                         <input type="text" id="county" name="county" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;" />
 
 
