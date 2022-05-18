@@ -40,24 +40,26 @@ $prison = $_POST['prison'];
 
 
 // File upload path
-$targetDir = "uploads/";
-$fileName = basename($_POST["photo"]);
-$targetFilePath = $targetDir . $fileName;
-$fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-
+$targetDir = "../uploads";
+$fileName = $_FILES["photo"]["name"];
+$fileSize = $_FILES["photo"]["size"];
+$fileType = pathinfo($fileName, PATHINFO_EXTENSION);
+$filetype_lc = strtolower($fileType);
 $allowTypes = array('jpg', 'png', 'jpeg', 'gif', 'pdf');
-
 $tempname = $_FILES["photo"]["tmp_name"];
+$error = $_FILES["photo"]["error"];
+$newFilename = uniqid("IMG-") . "." . $filetype_lc;
 
-move_uploaded_file($tempname, $targetDir);
 
-
+$filePath = $targetDir . $newFilename;
+$uploadPath = $targetDir . $newFilename;
+move_uploaded_file($tempname, $uploadPath);
 
 //we are using mysqli_query function. it returns a resource on true else False on error
 $sql = "INSERT into registration set
                     id = '$Nid',
                     category='$category',
-                    photo='$fileName',
+                    photo='$newFilename',
                     Full_Name = '$Fname',  
                     DOB = '$dateofbirth', 
                     datein = '$datein',             
@@ -75,6 +77,9 @@ $sql = "INSERT into registration set
 if (!mysqli_query($con, $sql)) {
     die('Error: ' . mysqli_error($con));
 }
+
+
+
 
 
 

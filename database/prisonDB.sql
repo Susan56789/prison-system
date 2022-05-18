@@ -154,9 +154,9 @@ CREATE TABLE newprison
     Sentence varchar(13) NOT NULL,
     File_num varchar(12) NOT NULL ,
     prison varchar(100) NOT NULL,
-    PRIMARY KEY (File_num)
+    PRIMARY KEY (id)
   );
-  
+
 
 SELECT * FROM registration;
 

@@ -58,12 +58,11 @@
         while ($row = mysqli_fetch_array($sel)) {
 
           echo "<tr bgcolor='grey'>";
+          echo "<td><img src='../uploads/" . $row['photo'] . "' width='100' height='100'></td>";
+          //$imageURL = 'uploads/' . $row["photo"];
 
 
-          $imageURL = 'uploads/' . $row["photo"];
-
-
-          echo "<td width='20%'>", '<img src=' . $imageURL . "  > ";
+          //echo "<td width='20%'>", '<img src=' . $imageURL . "  > ";
 
           "</td>";
           echo  "<td width='10%'>" . $row['id'] . "</td>";
