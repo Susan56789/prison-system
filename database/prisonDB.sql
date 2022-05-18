@@ -157,7 +157,6 @@ CREATE TABLE newprison
     PRIMARY KEY (id)
   );
 
-
 SELECT * FROM registration;
 
 

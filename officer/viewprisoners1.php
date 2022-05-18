@@ -12,9 +12,17 @@
 
 <body>
   <table align='center' border='0' bgcolor='green' width='1300' cellpadding='8' cellspacing='0' height='200'>
-
     <tr>
-      <td bgcolor='#999999' valign='center'>
+      <td align="center" bgcolor='green'>
+        <a href="officerpanel.php" target="_parent">Officer Admin <b>|</b>
+        </a>
+        <a href="../admin/prisonerep.php" target="_parent">Print <b>|</b></a>
+        <a href="../index.php" target="_parent">Log out</a>
+      </td>
+
+    </tr>
+    <tr>
+      <td bgcolor='#999999' align='center'>
 
         <?php
 
@@ -88,14 +96,7 @@ bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
         <br />
       </td>
     </tr>
-    <tr>
-      <td align="center" bgcolor='green'><a href="officerpanel.php" target="_parent">Officer Admin <b>|</b>
-        </a>
-        <a href="../admin/prisonerep.php" target="_parent">Print <b>|</b></a>
-        <a href="../index.php" target="_parent">Log out</a>
-      </td>
 
-    </tr>
     <tr>
       <td align='center' bgcolor='white' height='1'>
         <?php

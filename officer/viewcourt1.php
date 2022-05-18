@@ -42,7 +42,7 @@
           echo  "<td width='10%'>" . $row['Dateoftrial'] . "</td>";
           echo  "<td width='10%'>" . $row['Sentence'] . "</td>";
           echo  "<td width='10%'>" . $row['Location'] . "</td>";
-          echo '<td width="3%"><b><a href="deletecase.php?id=' . $row['id'] . '">Delete</a></font></b></td>';
+          //  echo '<td width="3%"><b><a href="deletecase.php?id=' . $row['id'] . '">Delete</a></font></b></td>';
 
 
           echo "</tr>";
