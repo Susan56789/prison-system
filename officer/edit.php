@@ -82,7 +82,6 @@ function valid($Nid, $Filenum, $From, $To, $dateoftransfer)
 
 $link = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
 
-
 if (isset($_POST['submit'])) {
 
 	if (is_numeric($_POST['Nid'])) {

@@ -10,20 +10,9 @@ if (mysqli_connect_errno()) {
 $Nid = $_POST['Nid'];
 $Fname = $_POST['Fname'];
 $month = $_POST['1Month'];
-$dDay =  $_POST['txtDay'];
-$dYear = $_POST['txtYear'];
-$dateofbirth = $month . '/' . $dDay . '/' . $dYear;
-
-$month = $_POST['2Month'];
-$dDay =  $_POST['TxtDay'];
-$dYear = $_POST['TxtYear'];
-$datein = $month . '/' . $dDay . '/' . $dYear;
-
-$month = $_POST['3Month'];
-$dDay =  $_POST['TXtDay'];
-$dYear = $_POST['TXtYear'];
-$dateout = $month . '/' . $dDay . '/' . $dYear;
-
+$dateofbirth = $_POST['1date'];
+$datein = $_POST['2date'];
+$dateout = $_POST['3date'];
 $address = $_POST['address'];
 $county = $_POST['county'];
 $Gender = $_POST['Gender'];

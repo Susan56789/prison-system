@@ -10,22 +10,9 @@ if (mysqli_connect_errno()) {
 //escape variable for security here or problem
 $Nid = $_POST['Nid'];
 $Fname = $_POST['Fname'];
-$month1 = $_POST['1Month'];
-$dDay =  $_POST['txtDay'];
-$dYear = $_POST['txtYear'];
-$dateofbirth = $month1 . '/' . $dDay . '/' . $dYear;
-
-$month2 = $_POST['2Month'];
-$dDay =  $_POST['TxtDay'];
-$dYear = $_POST['TxtYear'];
-$datein = $month2 . '/' . $dDay . '/' . $dYear;
-
-$month = $_POST['3Month'];
-$dDay =  $_POST['TXtDay'];
-$dYear = $_POST['TXtYear'];
-$dateout = $month . '/' . $dDay . '/' . $dYear;
-
-
+$dateofbirth = $_POST['1date'];
+$datein = $_POST['2date'];
+$dateout = $_POST['3date'];
 $category = $_POST['category'];
 $address = $_POST['address'];
 $county = $_POST['county'];

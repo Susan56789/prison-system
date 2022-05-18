@@ -51,24 +51,8 @@
                                             <label for="date" class="label">Birth Date</label>
                                         </td>
                                         <td style="margin: 0; padding: 0;">
-                                            <select id="1Month" name="1Month" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
-                                                <option selected="selected" value="01">January</option>
-                                                <option value="02">February</option>
-                                                <option value="03">March</option>
-                                                <option value="04">April</option>
-                                                <option value="05">May</option>
-                                                <option value="06">June</option>
-                                                <option value="07">July</option>
-                                                <option value="08">August</option>
-                                                <option value="09">September</option>
-                                                <option value="10">October</option>
-                                                <option value="11">November</option>
-                                                <option value="12">December</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <input type="text" id="txtDay" name="txtDay" style="width: 40px;" value="01" class="reg_fields" />
-                                            <input type="text" id="txtYear" name="txtYear" style="width: 60px;" value="2000" class="reg_fields" />
+                                            <input type="date" id="1date" name="1date" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
+
                                         </td>
                                     </tr>
                                 </table>
@@ -104,24 +88,8 @@
                                             <label for="datein" class="label">Date In</label>
                                         </td>
                                         <td style="margin: 0; padding: 0;">
-                                            <select id="2Month" name="2Month" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
-                                                <option selected="selected" value="01">January</option>
-                                                <option value="02">February</option>
-                                                <option value="03">March</option>
-                                                <option value="04">April</option>
-                                                <option value="05">May</option>
-                                                <option value="06">June</option>
-                                                <option value="07">July</option>
-                                                <option value="08">August</option>
-                                                <option value="09">September</option>
-                                                <option value="10">October</option>
-                                                <option value="11">November</option>
-                                                <option value="12">December</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <input type="text" id="TxtDay" name="TxtDay" style="width: 40px;" value="01" class="reg_fields" />
-                                            <input type="text" id="TxtYear" name="TxtYear" style="width: 60px;" value="2000" class="reg_fields" />
+                                            <input type="date" id="2date" name="2date" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
+
                                         </td>
                                     </tr>
                                 </table>
@@ -136,24 +104,8 @@
                                             <label for="opendate" class="label">Date Out</label>
                                         </td>
                                         <td style="margin: 0; padding: 0;">
-                                            <select id="3Month" name="3Month" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
-                                                <option selected="selected" value="01">January</option>
-                                                <option value="02">February</option>
-                                                <option value="03">March</option>
-                                                <option value="04">April</option>
-                                                <option value="05">May</option>
-                                                <option value="06">June</option>
-                                                <option value="07">July</option>
-                                                <option value="08">August</option>
-                                                <option value="09">September</option>
-                                                <option value="10">October</option>
-                                                <option value="11">November</option>
-                                                <option value="12">December</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <input type="text" id="TXtDay" name="TXtDay" style="width: 40px;" value="DD" class="reg_fields" />
-                                            <input type="text" id="TXtYear" name="TXtYear" style="width: 60px;" value="YYYY" class="reg_fields" />
+                                            <input type="date" id="3date" name="3date" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
+
                                         </td>
                                     </tr>
                                 </table>

@@ -44,7 +44,8 @@
           echo  "<td width='7%'>" . $row['From_prison'] . "</td>";
           echo  "<td width='10%'>" . $row['To_prison'] . "</td>";
           echo  "<td width='10%'>" . $row['Dateoftransfer'] . "</td>";
-          echo '<td width="3%"><b><a href="deletetransfer1.php?id=' . $row['National_id'] . '">Delete</a></font></b></td>';
+          //echo '<td width="3%"><b><a href="deletetransfer1.php?id=' . $row['National_id'] . '">Delete</a></font></b></td>';
+          //echo '<td width="3%"><b><a href="edit.php?id=' . $row['National_id'] . '">Edit</a></font></b></td>';
 
           echo "</tr>";
         }
