@@ -48,13 +48,15 @@ CREATE TABLE court
   FOREIGN KEY(id) REFERENCES registration
 );
 
+SELECT * FROM court;
+
 
 
 /*Table For Prisons*/
 CREATE TABLE newprison
 (
   pno int(25) NOT NULL
-  AUTO_INCREMENT,
+AUTO_INCREMENT,
   pname varchar
   (100) NOT NULL,
   location varchar
@@ -159,6 +161,19 @@ CREATE TABLE newprison
 
 SELECT * FROM registration;
 
+
+
+CREATE TABLE witness(
+NationalID varchar(12) NOT NULL,
+FullNames varchar(50) NOT NULL,
+Email varchar(100) NOT NULL,
+Telephone varchar(15) NOT NULL,
+File_num varchar(12) NOT NULL,
+PrisonerId int(12),
+FOREIGN KEY (File_num) REFERENCES registration 
+);
+
+SELECT * FROM witness;
 
 
   CREATE TABLE inmates

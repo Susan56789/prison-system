@@ -7,7 +7,6 @@ if (mysqli_connect_errno()) {
 
 // escape variables for security
 
-
 $Nationalid = mysqli_real_escape_string($con, $_POST['Nationalid']);
 $Filenum = mysqli_real_escape_string($con, $_POST['Filenum']);
 //deal with date and concatenate variables month, day, year

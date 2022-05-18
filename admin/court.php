@@ -30,10 +30,11 @@
 						<td width="66%" bgcolor="#FFFFFF"><input type="text" name="Nationalid" size=4 maxlength=7 placeholder="99999" /></td>
 		</tr>
 		<tr>
+
 			<td bgcolor="#FFFFFF"><b>File Number:</b>
 			</td>
 			<td bgcolor="#FFFFFF">
-				<select name="Filenum"  placeholder="NBI-9999">
+				<select name="Filenum" placeholder="NBI-9999">
 					<option>-----Select -----</option>
 					<option>
 						<?php
@@ -51,30 +52,10 @@
 		<tr>
 			<td>
 				<label for="on"><b>Date Of Trial:</b></label>
-			<td><select name="month">
-					<option selected="selected" value="01">January</option>
-					<option value="02">February</option>
-					<option value="03">March</option>
-					<option value="04">April</option>
-					<option value="05">May</option>
-					<option value="06">June</option>
-					<option value="07">July</option>
-					<option value="08">August</option>
-					<option value="09">September</option>
-					<option value="10">October</option>
-					<option value="11">November</option>
-					<option value="12">December</option>
-				</select></td>
 			<td>
-				<input type="text" name="day" size=4 maxlength=2 placeholder="DD" />
-			</td>
+				<input type="date" name="date" id="date" />
 
-			<td><select name="year">
-					<option selected="selected" value="01">2019</option>
-					<option value="02">2020</option>
-					<option>2021</option>
-					<option>2022</option>
-					<option>2023</option>
+
 			</td>
 
 			</select>
@@ -90,13 +71,9 @@
 
 		<tr>
 			<td bgcolor="#FFFFFF"><b>Court Location:</b></td>
-			<td> <select name="location">
-					<option>Milimani Court</option>
-					<option>Kibera Court</option>
-					<option>Maseno Court</option>
-					<option>Kwale Court</option>
-					<option>Kisumu Court</option>
-					<option>Shanzu Court</option>
+			<td>
+				<input type="text" name="location" />
+
 			</td>
 		</tr>
 		<tr>

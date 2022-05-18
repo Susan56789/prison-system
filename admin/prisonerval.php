@@ -25,6 +25,15 @@ $sentence = $_POST['sentence'];
 $Filenum = $_POST['Filenum'];
 $prison = $_POST['prison'];
 
+$dateoftrial = $_POST['date'];
+$location = $_POST['location'];
+$judge = $_POST['judge'];
+
+
+$FullNames = $_POST['Fnames'];
+$Id = $_POST['id'];
+$Email = $_POST['email'];
+$Tel = $_POST['tel'];
 
 // File upload path
 $targetDir = "../uploads/";
@@ -37,13 +46,12 @@ $tempname = $_FILES["photo"]["tmp_name"];
 $error = $_FILES["photo"]["error"];
 $newFilename = uniqid("IMG-") . "." . $filetype_lc;
 
-
 $uploadPath = $targetDir . $newFilename;
 
 $upload = move_uploaded_file($tempname, $uploadPath);
 
 if ($upload) {
-    //Insert data into database
+    //Insert into prisoner table
     $sql = "INSERT into registration set
 id = '$Nid',
 category='$category',
@@ -62,7 +70,21 @@ Sentence = '$sentence',
 File_num = '$Filenum',
 prison = '$prison'";
 
+    //insert into court table
+    $quer = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId) 
+    VALUES ('$Id', '$FullNames', '$Email', '$Tel', '$Filenum','$Nid');";
+
+    //insert into witness table
+    $link = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
+VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');";
+
     if (!mysqli_query($con, $sql)) {
+        die('Error: ' . mysqli_error($con));
+    }
+    if (!mysqli_query($con, $link)) {
+        die('Error: ' . mysqli_error($con));
+    }
+    if (!mysqli_query($con, $quer)) {
         die('Error: ' . mysqli_error($con));
     }
 } else {

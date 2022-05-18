@@ -84,8 +84,8 @@
 								<br>
 								<li><a href='viewnewprison.php'><b><button>View Prisons</button></b></a></li>
 								<br>
-								<li><a href='viewcourt.php'><b><button>Court Information</button></b></a></li>
-								<br>
+								<!--<li><a href='viewcourt.php'><b><button>Court Information</button></b></a></li>
+								<br>-->
 								<li><a href='addofficer.php'><b><button>Add Officer</button></b></a></li>
 								<br>
 								<li><a href='viewoff.php'><b><button>Officer details</button></b></a></li>

@@ -8,6 +8,13 @@
 <body>
   <table align='center' border='1' bgcolor='green' width='800' cellpadding='8' cellspacing='0' height='200'>
     <tr>
+      <td align="center"><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
+        <a href="witness.php">Witnesses <b>|</b></a>
+        <a href="../index.php" target="_parent">Log out</a>
+      </td>
+
+    </tr>
+    <tr>
       <td bgcolor='#999999' valign='center'>
 
         <?php
@@ -42,7 +49,8 @@
           echo  "<td width='10%'>" . $row['Dateoftrial'] . "</td>";
           echo  "<td width='10%'>" . $row['Sentence'] . "</td>";
           echo  "<td width='10%'>" . $row['Location'] . "</td>";
-          echo '<td width="3%"><b><a href="deletecase.php?id=' . $row['id'] . '">Delete</a></font></b></td>';
+          // echo '<td><a href="witness.php?id=' . $row['id'] . '">Witness</a></td>';
+          // echo '<td width="3%"><b><a href="deletecase.php?id=' . $row['id'] . '">Delete</a></font></b></td>';
 
 
           echo "</tr>";
@@ -55,13 +63,7 @@
       </td>
 
     </tr>
-    <tr>
-      <td align="center"><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
 
-        <a href="../index.php" target="_parent">Log out</a>
-      </td>
-
-    </tr>
     <tr>
       <td align='center' bgcolor='white' height='1'><?php
                                                     include("footer.php");
