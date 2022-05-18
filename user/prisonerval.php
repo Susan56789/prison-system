@@ -25,6 +25,16 @@ $Filenum = $_POST['Filenum'];
 $prison = $_POST['prison'];
 $category = $_POST['category'];
 
+$dateoftrial = $_POST['date'];
+$location = $_POST['location'];
+$judge = $_POST['judge'];
+
+
+$FullNames = $_POST['Fnames'];
+$Id = $_POST['id'];
+$Email = $_POST['email'];
+$Tel = $_POST['tel'];
+
 // File upload path
 $targetDir = "../uploads/";
 $fileName = $_FILES["photo"]["name"];
@@ -60,7 +70,21 @@ Sentence = '$sentence',
 File_num = '$Filenum',
 prison = '$prison'";
 
+  //insert into court table
+  $quer = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId) 
+  VALUES ('$Id', '$FullNames', '$Email', '$Tel', '$Filenum','$Nid');";
+
+  //insert into witness table
+  $link = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
+VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');";
+
   if (!mysqli_query($con, $sql)) {
+    die('Error: ' . mysqli_error($con));
+  }
+  if (!mysqli_query($con, $link)) {
+    die('Error: ' . mysqli_error($con));
+  }
+  if (!mysqli_query($con, $quer)) {
     die('Error: ' . mysqli_error($con));
   }
 } else {

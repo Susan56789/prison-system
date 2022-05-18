@@ -251,26 +251,64 @@
                     </select>
 
                 </td>
+                <tr>
+                    <td>
+                        <label for="on"><b>Date Of Trial:</b></label>
+                    <td>
+                        <input type="date" name="date" id="date" />
+
+
+                    </td>
+
+                    </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td bgcolor="#FFFFFF"><b>Court Location:</b></td>
+                    <td>
+                        <input type="text" name="location" id="location" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#FFFFFF"><b>Judge Name:</b></td>
+                    <td bgcolor="#FFFFFF"><input type="text" name="judge" id="judge" placeholder="Jury President" /></td>
+                </tr>
             </table>
-        </div class="control_input">
-
-
-
+        </div>
+        <br />
         <div class="control_input">
-            <input type="submit" name="signup" id="Add" value="Add " title="" border="0">
+            <h4>Witness Section</h4>
+            <label>Full Names</label>
+            <input type="text" name="Fnames" id="Fnames" /><br />
+            <label>ID Number</label>
+            <input type="text" name="id" /><br />
+            <label>Email Address</label>
+            <input type="email" name="email" id="email" /><br />
+            <label>Phone Number</label>
+            <input type="tel" name="tel" id="tel" /><br />
         </div>
-
-        <div id="validation_msg">
-        </div>
-        </form>
-        </td>
-        </tr>
-        <tr>
-            <?php
-            include("Footer.php");
-            ?>
-        </tr>
         </table>
+    </div class="control_input">
+
+
+
+    <div class="control_input">
+        <input type="submit" name="signup" id="Add" value="Add " title="" border="0">
+    </div>
+
+    <div id="validation_msg">
+    </div>
+    </form>
+    </td>
+    </tr>
+    <tr>
+        <?php
+        include("Footer.php");
+        ?>
+    </tr>
+    </table>
 </body>
 
 </html>
