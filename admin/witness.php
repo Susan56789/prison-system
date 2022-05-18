@@ -13,7 +13,7 @@
     <table align='center' border='1' bgcolor='green' width='800' cellpadding='8' cellspacing='0' height='200'>
         <tr>
 
-            <td align="center"><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
+            <td align="center"><a href="newWitness.php">Add Witness <b>|</b></a><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
 
                 <a href="viewcase.php" target="_parent">Court details</a>
             </td>
@@ -31,7 +31,7 @@
                 <?php
 
 
-                $select = mysqli_query($link, "SELECT * from witness where NationalID");
+                $select = mysqli_query($link, "SELECT * from witness ORDER BY File_num DESC");
 
                 echo "<table width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='silver'>
     <caption><b>Witness Details</b></caption>
