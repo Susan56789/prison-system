@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="style1.css" rel="stylesheet" type="text/css" />
-    <script src="jquery-1.7.1.min.js"></script>
-    <script src="registration_script.js"></script>
     <link rel="stylesheet" media="screen" href="login.css">
 </head>
 
@@ -28,7 +26,7 @@
         </tr>
         <tr>
             <td width="25%" bgcolor="#FFFFFF">&nbsp;&nbsp;
-            <td width="50%" align="center" bgcolor="white">
+            <td width="50%" align="left" bgcolor="white">
 
                 <div id="content" class="ctrdiv">
                     <form id="frmReg" method="POST" action="validateofficer.php">
@@ -39,6 +37,18 @@
                         <div class="control_input">
                             <label for="fullname" class="label">Full Name</label>
                             <input type="text" id="fullname" name="fullname" class="reg_fields" placeholder="John otieno" />
+                        </div>
+                        <div class="control_input">
+                            <label for="username" class="label">UserName</label>
+                            <input type="text" id="username" name="username" class="reg_fields" placeholder="John otieno" />
+                        </div>
+                        <div class="control_input">
+                            <label for="email" class="label">Email</label>
+                            <input type="text" id="email" name="email" class="reg_fields" placeholder="John@yahoo.com" />
+                        </div>
+                        <div class="control_input">
+                            <label for="city" class="label">City</label>
+                            <input type="text" id="city" name="city" class="reg_fields" placeholder="Nairobi" />
                         </div>
                         <div class="control_input">
                             <label for="address" class="label">Address</label>
@@ -54,7 +64,7 @@
                                             <label for="dateofbirth" class="label">Date of birth</label>
                                         </td>
                                         <td style="margin: 0; padding: 0;">
-                                            <input type="date" />
+                                            <input type="date" id="dob" name="dob" />
                                         </td>
                                     </tr>
                                 </table>
@@ -74,7 +84,7 @@
                                         </select>
                                     </td>
                                 </table>
-                            </div class="control_input">
+                            </div>
 
                             <div class="control_input">
                                 <label for="uemail" class="label">Telephone No.</label>
@@ -100,7 +110,7 @@
                                             </select>
                                         </td>
                                     </table>
-                                </div class="control_input">
+                                </div>
 
                                 <div class="control_input">
                                     <div style="display: inline-block;">
@@ -109,22 +119,35 @@
                                                 <label for="campus" class="label">Years of experience</label>
                                             </td>
                                             <td style="margin: 0; padding: 0;">
-                                                <select id="exp" name="exp" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;">
-                                                    <option>1-6 months</option>
-                                                    <option>1-2years</option>
-                                                    <option>3-4years</option>
-                                                    <option>5-7years</option>
-                                                    <option>7-above</option>
-                                                </select>
+                                                <input type="text" id="exp" name="exp" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;">
+
                                             </td>
                                         </table>
-                                    </div class="control_input">
+                                    </div>
+                                    <div class="control_input">
+                                        <label for="password">Password</label>
+                                        <input type="password" id="password" name="password" class="reg_fields" placeholder="John otieno" />
+                                    </div>
 
+                                    <div class="control_input">
+                                        <label for="fullname" class="label">Prison</label>
+                                        <select id="prison" name="prison" class="reg_fields">
+                                            <option value="">--Select prison--</option>
+                                            <option>
+                                                <?php
+                                                $con = mysqli_connect('localhost', 'prison', 'prison123.', 'prison_system');
+
+                                                $msql = mysqli_query($con, "SELECT * FROM newprison");
+                                                while ($m_row = mysqli_fetch_array($msql))
+                                                    echo ("<option value = '" . $m_row['pname'] . "'>" . $m_row['pname'] . "</option>");
+                                                ?>
+                                            </option>
+                                    </div>
 
 
                                     <div class="control_input">
                                         <input type="submit" name="signup" id="signup" value="Submit" title="" border="0">
-                                    </div class="control_input">
+                                    </div>
 
                                     <div id="validation_msg">
                                     </div>

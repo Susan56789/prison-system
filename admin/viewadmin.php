@@ -26,6 +26,7 @@
                 echo "<table align='center' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='green'>
 <caption><h3>ADMIN INFORMATION</h3></caption>
 <tr bgcolor='green'>
+<th width='3%'>Full Name</th>
 <th width='3%'>National id</th>
 <th width='10%'>Username</th>
 <th width='10%'>Gender</th>
@@ -36,9 +37,9 @@
 
                 while ($row = mysqli_fetch_array($sel)) {
                     echo "<tr bgcolor='grey'>";
-
-                    echo  "<td width='3%'>" . $row['Admin_Id'] . "</td>";
                     echo  "<td width='7%'>" . $row['Admin_Name'] . "</td>";
+                    echo  "<td width='3%'>" . $row['Admin_Id'] . "</td>";
+                    echo  "<td width='7%'>" . $row['Usename'] . "</td>";
                     echo  "<td width='7%'>" . $row['Gender'] . "</td>";
                     echo  "<td width='10%'>" . $row['Email'] . "</td>";
                     echo  "<td width='10%'>" . $row['Telephone'] . "</td>";

@@ -15,7 +15,7 @@
     $UserType = $_POST['cmbUser'];
     if ($UserType == "Admin") {
         $con = mySQLi_connect('localhost', 'prison', 'prison123.', 'prison_system');
-        $result = mySQLi_query($con, "SELECT * FROM Admin_Tbl WHERE Admin_Name='$UserName' and Admin_Password='$Password'");
+        $result = mySQLi_query($con, "SELECT * FROM Admin_Tbl WHERE Usename='$UserName' and Admin_Password='$Password'");
         $records = mySQLi_num_rows($result);
         $row = mySQLi_fetch_array($result);
         if ($records == 0) {
@@ -26,7 +26,7 @@
         }
         mySQLi_close($con);
     } else if ($UserType == "Police") {
-        $con = mySQLi_connect('localhost', 'root', '', 'prison_system');
+        $con = mySQLi_connect('localhost', 'prison', 'prison123.', 'prison_system');
         $result = mySQLi_query($con,  "SELECT * from police_tbl
 where UserName='$UserName' and Password='$Password'");
         $records = mySQLi_num_rows($result);
@@ -41,7 +41,7 @@ where UserName='$UserName' and Password='$Password'");
         }
         mySQLi_close($con);
     } else {
-        $con = mySQLi_connect('localhost', 'root', '', 'prison_system');
+        $con = mySQLi_connect('localhost', 'prison', 'prison123.', 'prison_system');
         $result = mySQLi_query($con, "SELECT * from user_tbl where UserName='$UserName' and Password='$Password'");
         $records = mySQLi_num_rows($result);
         $row = mySQLi_fetch_array($result);

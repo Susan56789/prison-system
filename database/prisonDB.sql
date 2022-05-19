@@ -6,6 +6,7 @@ CREATE TABLE admin_tbl
 (
   Admin_Id varchar(12) NOT NULL ,
   Admin_Name varchar(50) NOT NULL,
+  Usename varchar(30) NOT NULL,
   Gender varchar(20),
   Email varchar(100),
   Telephone varchar(15),
@@ -14,12 +15,11 @@ CREATE TABLE admin_tbl
   PRIMARY KEY (Admin_Id)
 );
 
-
 /*Admin Table*/
 INSERT INTO admin_tbl
-  (Admin_Id, Admin_Name,Gender,Email,Telephone,Address, Admin_Password)
+  (Admin_Id, Admin_Name,Usename,Gender,Email,Telephone,Address, Admin_Password)
 VALUES
-  (2, 'sueNimoh', 'Female', 'susan@yahoo.com', '0745678432', 'Ruai', 'sue1234');
+  (23245,'Susan Wairimu', 'sueNimoh', 'Female', 'susan@yahoo.com', '0745678432', 'Ruai', 'sue1234');
 
 SELECT * FROM admin_tbl;
 
@@ -88,21 +88,15 @@ AUTO_INCREMENT,
     PRIMARY KEY (id)
   );
 
+SELECT * FROM officerdetails;
 
-
-  INSERT INTO officerdetails
-    (id, fullname, address, dateofbirth, gender, telephone, education, experience)
-  VALUES
-    (33333333, 'Mbuvi', 'Embu', '1989-04-12', 'Female', 99666666, 'PDG', '1-6 months'),
-    (44444444, 'Emmanuel', 'Langata', '2015-02-12', 'Male', 2147483647, 'Certificate', '1-2years'),
-    (45555555, 'yamiv', 'rongai', '1977-02-12', '', 2147483647, 'Certificate', '5-7yrs');
 
 
   /*Table for police or officers*/
   CREATE TABLE police_tbl
   (
     id int(12) NOT  NULL,
-    Prison_Name varchar(30) NOT NULL,
+    Prison_Name varchar(100) NOT NULL,
     Address varchar(100) NOT NULL,
     City varchar(100) NOT NULL,
     Email varchar(50) NOT NULL,
@@ -113,6 +107,8 @@ AUTO_INCREMENT,
     FOREIGN KEY (id) REFERENCES officerdetails
   );
 
+
+SELECT * FROM police_tbl;
 
   INSERT INTO police_tbl
     (Id, Prison_Name, Address, City, Email, Mobile, UserName, Password)

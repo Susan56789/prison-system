@@ -8,16 +8,16 @@ if (mysqli_connect_errno()) {
 $id = $_POST['id'];
 $fullname = $_POST['fullname'];
 $address = $_POST['address'];
-$month = $_POST['lMonth'];
-$dDay =  $_POST['txtDay'];
-$dYear = $_POST['txtYear'];
 $gender = $_POST['gender'];
 $telephone = $_POST['telephone'];
 $education = $_POST['education'];
 $exp = $_POST['exp'];
-$dateofbirth = $month . '/' . $dDay . '/' . $dYear;
-$dateofbirth = date('Y-m-d', strtotime($dateofbirth));
-
+$dateofbirth = $_POST['dob'];
+$password = $_POST['password'];
+$email = $_POST['email'];
+$username = $_POST['username'];
+$city = $_POST['city'];
+$prison = $_POST['prison'];
 
 //we are using mysql_query function. it returns a resource on true else False on error
 $sql = "insert into officerdetails set
@@ -31,17 +31,39 @@ $sql = "insert into officerdetails set
                     experience = '$exp'
                     ";
 
-// $sql1 = "INSERT INTO registration (id, Full_Name, DOB, Address, County,Gender, Education, Marital, Offence, Date_in,sentence, File_num)
-// VALUES ('$Nid', '$Fname', '$dob', '$address', '$county', '$Gender', '$education', '$status', '$offence', '$di', '$sentence', '$Filenum');";
+$link = " insert into police_tbl set 
+id = '$id',
+Prison_Name = '$prison',
+Address = '$address',
+City = '$city',
+Email = '$email',
+Mobile = '$telephone',
+UserName = '$username',
+Password = '$password'
+";
+
+if (
+    empty($id) || empty($fullname) || empty($address) || empty($dateofbirth) || empty($telephone)
+    || empty($username) || empty($password) || empty($email) || empty($city)
+) {
+    echo "All fields are required";
+    return false;
+}
 
 
-
+if (strlen($password) < 6) {
+    echo "Password should have at least 6 characters";
+    return false;
+}
 
 if (!mysqli_query($con, $sql)) {
+    die('Error: ' . mysqli_error($con));
+}
+if (!mysqli_query($con, $link)) {
     die('Error: ' . mysqli_error($con));
 }
 ?>
 <script type="text/javascript">
     alert("you have succefully add the record !thank you");
-    window.location = "userpanel.php";
+    window.location = "officerpanel.php";
 </script>
