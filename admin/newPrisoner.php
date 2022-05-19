@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="../scripts/validation.js" type="text/javascript"></script>
     <link rel="stylesheet" media="screen" href="login.css">
 </head>
 
@@ -205,7 +205,7 @@
 
     <div class="control_input">
         <label for="Pname" class="label">Offence</label>
-        <textarea cols="17" rows="4" name="offence" placeholder="fill this box"></textarea>
+        <textarea cols="17" rows="4" name="offence" id="offence" placeholder="fill this box"></textarea>
     </div>
 
     <div style="display: inline-block;">
@@ -294,7 +294,7 @@
         </div>
 
         <div class="control_input">
-            <input type="submit" name="signup" id="Add" value="Save " title="" border="0">
+            <input type="submit" name="signup" id="Add" value="Save" title="" border="0" />
         </div>
 
         <div id="validation_msg">
@@ -302,12 +302,14 @@
         </form>
         </td>
         </tr>
+
         <tr>
             <?php
             include("Footer.php");
             ?>
         </tr>
         </table>
+
 </body>
 
 </html>
