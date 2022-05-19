@@ -51,7 +51,6 @@ CREATE TABLE court
 SELECT * FROM court;
 
 
-
 /*Table For Prisons*/
 CREATE TABLE newprison
 (
@@ -200,6 +199,8 @@ SELECT * FROM witness;
   );
 
 
+SELECT * FROM transfer;
+
   /*Table for the User*/
   CREATE TABLE user_tbl
   (
@@ -249,10 +250,8 @@ SELECT * FROM witness;
       timeout varchar(23) NOT NULL,
       relationship varchar(25) NOT NULL,
       telephone int(13) NOT NULL,
-      prisoner varchar(25) NOT NULL,
-      AdmissionID varchar(30),
-      FOREIGN KEY (AdmissionID) REFERENCES inmates
+      prisoner varchar(25) NOT NULL
     );
 
-
+SELECT * FROM visitor;
 
