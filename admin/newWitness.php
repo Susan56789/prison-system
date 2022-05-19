@@ -13,7 +13,7 @@
     <div>
         <table align='center' border='1' bgcolor='green' width='800' cellpadding='8' cellspacing='0' height='200'>
             <tr>
-                <td colspan="2" height="2"><img src="../banner.gif" width="860"></td>
+                <td colspan="2" height="2"><img src="../banner.gif" width="700"></td>
             </tr>
             <tr>
 
@@ -23,9 +23,13 @@
                 </td>
 
             </tr>
-            <caption>New Witness</caption>
-            <tr>
+
+            <tr align="center" bgcolor="white">
+
+
+
                 <td>
+                    <h3>New Witness</h3>
                     <form action="valinatewitness.php" method="post">
                         <label>Full Names</label>
                         <input type="text" name="Fnames" id="Fnames" /><br /><br />
