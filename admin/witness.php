@@ -57,7 +57,7 @@
             </td>
         </tr>
         <tr>
-            <td align='center' bgcolor='white' height='1'>
+            <td>
                 <?php
                 include("footer.php");
                 ?>

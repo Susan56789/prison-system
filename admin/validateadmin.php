@@ -26,15 +26,14 @@ Admin_Password = '$password'
 ";
 
 if (
-    empty($id) || empty($name) || empty($gender) || empty($email) || empty($tell)
-    || empty($address) || empty($password)
+    empty($id) || empty($name) || empty($email) || empty($tel) || empty($address) || empty($password)
 ) {
     echo "Please fill all fields";
     return false;
 }
 
-if ($password < 8) {
-    echo "Password should have atleast 8 characters";
+if (strlen($password) < 6) {
+    echo "Password should have at least 6 characters";
     return false;
 }
 

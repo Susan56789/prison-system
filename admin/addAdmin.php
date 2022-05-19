@@ -41,6 +41,7 @@
                             <input type="text" name="names" id="names" />
                         </div>
                         <div class="control_input">
+                            <label for="gender">Gender</label>
                             <select id="gender" name="gender">
                                 <option>Male</option>
                                 <option>Female</option>
@@ -71,6 +72,7 @@
                     </form>
             </td>
         </tr>
+
         <tr>
             <?php
             include("Footer.php");

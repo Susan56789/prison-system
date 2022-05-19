@@ -13,6 +13,9 @@
     <div>
         <table align='center' border='1' bgcolor='green' width='800' cellpadding='8' cellspacing='0' height='200'>
             <tr>
+                <td colspan="2" height="2"><img src="../banner.gif" width="860"></td>
+            </tr>
+            <tr>
 
                 <td align="center"><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
 
