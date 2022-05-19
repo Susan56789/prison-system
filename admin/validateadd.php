@@ -20,9 +20,6 @@ $dateofconstruction = date('Y-m-d', strtotime($dateofconstruction));
 
 $admin = mysqli_real_escape_string($con, $_POST['admin']);
 
-// $sql = "INSERT INTO `prisonpro`.`prison` (`prisonid`,`prisoname`, `location`, `capacity`, `dateofcons`,  `Gender`, `Education`, `Marital`, `Offence`, `Date_in`, `File_num`) 
-// VALUES ('{$Nid}', '{$Fname}', '{$dob}', '{$address}', '{$county}', '{$Gender}', '{$education}', '{$status}', '{$offence}','{$di}', '{$Filenum}');";
-
 
 $sql = "INSERT INTO prison (prisonid, prisoname, location, capacity, population,  dateofcons, administrator)
 VALUES ('$prisonid', '$prisonname', '$location','$capacity', '$population', '$dateofconstruction','$admin')";

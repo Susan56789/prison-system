@@ -25,6 +25,18 @@ Address = '$address',
 Admin_Password = '$password'
 ";
 
+if (
+    empty($id) || empty($name) || empty($gender) || empty($email) || empty($tell)
+    || empty($address) || empty($password)
+) {
+    echo "Please fill all fields";
+    return false;
+}
+
+if ($password < 8) {
+    echo "Password should have atleast 8 characters";
+    return false;
+}
 
 if (!mysqli_query($con, $sql)) {
     die('Error: ' . mysqli_error($con));

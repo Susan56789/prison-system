@@ -15,20 +15,6 @@ body {
   font-family: Georgia, Times, "Times New Roman", serif;
 }
 
-#error {
-  display: none;
-  font-size: 0.8em;
-}
-
-#error.visible {
-  display: block;
-  font-size: 0.8em;
-  color: red;
-}
-
-input.invalid {
-  border-color: red;
-}
 
 .form_hint,
 .required_notification {

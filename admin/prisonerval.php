@@ -48,7 +48,17 @@ $newFilename = uniqid("IMG-") . "." . $filetype_lc;
 
 $uploadPath = $targetDir . $newFilename;
 
-$upload = move_uploaded_file($tempname, $uploadPath);
+if (
+    empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum)
+    || empty($Email) || empty($sentence) || empty($address) || empty($county) || empty($Tel)
+) {
+    echo "Please fill all fields";
+    return false;
+} else {
+    $upload = move_uploaded_file($tempname, $uploadPath);
+}
+
+
 
 if ($upload) {
     //Insert into prisoner table
@@ -78,10 +88,7 @@ prison = '$prison'";
     $link = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
 VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');";
 
-    if (empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum) || empty($Email)) {
-        echo "Please fill all fields";
-        return false;
-    }
+
 
     if (!mysqli_query($con, $sql)) {
         die('Error: ' . mysqli_error($con));
