@@ -24,7 +24,10 @@ $sql = "INSERT INTO transfer (National_id, File_num, From_prison, To_prison, Dat
 VALUES ('$Nid', '$Filenum', '$From', '$To', '$dateoftransfer');";
 
 
-
+if (empty($dateoftransfer)) {
+	echo "All fields are required";
+	exit;
+}
 
 if (!mysqli_query($con, $sql)) {
 	die('Error: ' . mysqli_error($con));

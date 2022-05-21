@@ -18,10 +18,10 @@
     if ($UserType == "Admin") {
         $con = mySQLi_connect('localhost', 'prison', 'prison123.', 'prison_system');
         $result = mySQLi_query($con, "SELECT * FROM Admin_Tbl WHERE Usename='$UserName' and Admin_Password='$Password'");
-        //$row = mysqli_fetch_array($result);
+        $row = mysqli_fetch_array($result);
         $_SESSION['username'] = $row['Admin_Name'];
         $records = mySQLi_num_rows($result);
-        $row = mySQLi_fetch_array($result);
+        //  $row = mySQLi_fetch_array($result);
         if ($records == 0) {
             echo $records;
             echo '<script type="text/javascript">alert("Wrong UserName or Password");window.location=\'index.php\';</script>';
