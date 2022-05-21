@@ -15,6 +15,8 @@ CREATE TABLE admin_tbl
   PRIMARY KEY (Admin_Id)
 );
 
+SELECT * FROM  admin_tbl;
+
 /*Admin Table*/
 INSERT INTO admin_tbl
   (Admin_Id, Admin_Name,Usename,Gender,Email,Telephone,Address, Admin_Password)
