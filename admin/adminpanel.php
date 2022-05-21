@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -26,6 +29,7 @@
 						<a href="court.php">Court</a>
 					</font>
 				</h1>
+				<h4 style="color:white; display:inline-block;"><?php echo "Hello " . $_SESSION['username'] . "!"  ?></h4>
 			</td>
 			</td>
 
@@ -33,7 +37,11 @@
 
 		</tr>
 
+
+
 		<tr>
+
+
 
 			<td width='4%' bgcolor='#FFFFFF' valign='top'>
 				<h3 align='center' title='You should be online'>&nbsp;</h3>
