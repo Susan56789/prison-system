@@ -100,6 +100,7 @@ if (isset($_POST['submit'])) {
 
 			$error = 'ERROR: Please fill in all required fields!';
 
+
 			// use this 2nd from database
 			valid($National_id, $File_Num, $From_prison, $To_prison, $Dateoftransfer, $error);
 		} else {
