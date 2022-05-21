@@ -33,12 +33,16 @@
                     <form id="frmReg" method="POST" action="validateadmin.php">
                         <h2 id="hdr_title">Admin Registration Form </h2>
                         <div class="control_input">
+                            <label for="id" class="label">Full Name</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="control_input">
                             <label for="id" class="label">National ID</label>
                             <input type="text" name="id" id="id" />
                         </div>
                         <div class="control_input">
                             <label for='names'>UserName</label>
-                            <input type="text" name="names" id="names" />
+                            <input type="text" name="usname" id="usname" />
                         </div>
                         <div class="control_input">
                             <label for="gender">Gender</label>
