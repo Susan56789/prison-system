@@ -87,6 +87,16 @@ prison = '$prison'";
   $link = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
 VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');";
 
+  //check if age is greater than 18 years
+  $age = 18;
+
+  if (is_string($dateofbirth)) {
+    $dateofbirth = strtotime($dateofbirth);
+  }
+  if (time() - $dateofbirth < $age * 31536000) {
+    echo "Invalid date";
+    return false;
+  }
 
 
 
