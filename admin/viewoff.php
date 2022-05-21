@@ -72,7 +72,7 @@ border='0' bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
       </td>
     </tr>
     <tr>
-      <td align="center" bgcolor='green'><a href="adminpanel.php" target="_parent">Officer Admin <b>|</b></a>
+      <td align="center" bgcolor='green'><a href="adminpanel.php" target="_parent">Admin panel <b>|</b></a>
         <a href="../admin/officereport.php" target="_parent">Report <b>|</b></a>
         <a href="../index.php" target="_parent">Log out</a>
       </td>

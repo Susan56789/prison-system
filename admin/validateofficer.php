@@ -42,6 +42,20 @@ UserName = '$username',
 Password = '$password'
 ";
 
+//check if age is greater than 18 years
+$age = 18;
+
+if (is_string($dateofbirth)) {
+    $dateofbirth = strtotime($dateofbirth);
+}
+if (time() - $dateofbirth < $age * 31536000) {
+    echo "Invalid date";
+    return false;
+}
+
+
+//check if is empty
+
 if (
     empty($id) || empty($fullname) || empty($address) || empty($dateofbirth) || empty($telephone)
     || empty($username) || empty($password) || empty($email) || empty($city)
@@ -65,5 +79,5 @@ if (!mysqli_query($con, $link)) {
 ?>
 <script type="text/javascript">
     alert("you have succefully add the record !thank you");
-    window.location = "officerpanel.php";
+    window.location = "viewoff.php";
 </script>
