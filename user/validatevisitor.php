@@ -21,6 +21,13 @@ $prisoner = $_POST['prisoner'];
 $date = $month . '/' . $dDay . '/' . $dYear;
 $date = date('Y-m-d', strtotime($date));
 
+if (
+  empty($id) || empty($fullname) || empty($address) || empty($date) || empty($timein)
+  || empty($timeout) || empty($telephone) || empty($relationship) || empty($prisoner)
+) {
+  echo "Please fill all fields";
+  return false;
+}
 
 //we are using mysql_query function. it returns a resource on true else False on error
 $sql = "insert into visitor set

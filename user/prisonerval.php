@@ -9,7 +9,6 @@ if (mysqli_connect_errno()) {
 //escape variable for security here or problem
 $Nid = $_POST['Nid'];
 $Fname = $_POST['Fname'];
-$month = $_POST['1Month'];
 $dateofbirth = $_POST['1date'];
 $datein = $_POST['2date'];
 $dateout = $_POST['3date'];
@@ -52,6 +51,7 @@ if (
   || empty($Email) || empty($sentence) || empty($address) || empty($county) || empty($Tel)
 ) {
   echo "Please fill all fields";
+  echo '<br/><td><a href="prisoner.php"> <<<< </a></td>';
   return false;
 } else {
   $upload = move_uploaded_file($tempname, $uploadPath);

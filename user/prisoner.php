@@ -11,7 +11,7 @@
 
 <body>
 
-    <table align="center" border="0" bgcolor="white" width="400" cellpadding="9" cellspacing="0" height="525">
+    <table align="center" border="0" bgcolor="white" width="400" cellpadding="9" cellspacing="0" height="600">
         <tr>
             <td colspan="2" height="2"><img src="../banner.gif" width="860"></td>
         </tr>
@@ -289,14 +289,15 @@
             <label>Phone Number</label>
             <input type="tel" name="tel" id="tel" /><br />
         </div>
+        <div class="control_input" align="center">
+            <input type="submit" name="signup" id="Add" value="Add " title="" border="0">
+        </div>
         </table>
     </div class="control_input">
 
 
 
-    <div class="control_input">
-        <input type="submit" name="signup" id="Add" value="Add " title="" border="0">
-    </div>
+
 
     <div id="validation_msg">
     </div>

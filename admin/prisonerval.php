@@ -53,6 +53,7 @@ if (
     || empty($Email) || empty($sentence) || empty($address) || empty($county) || empty($Tel)
 ) {
     echo "Please fill all fields";
+    echo '<br/><td><a href="newPrisoner.php"> <<<< </a></td>';
     return false;
 } else {
     $upload = move_uploaded_file($tempname, $uploadPath);
