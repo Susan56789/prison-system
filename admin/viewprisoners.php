@@ -47,7 +47,7 @@
 <th width='10%'>National id</th>
 <th width='10%'>Category</th>
 <th width='15%'>Full Name</th>
-<th width='10%'>Date of Birth</th>
+<th width='15%'>Date of Birth</th>
 <th width='15%'>Sentence</th>
 <th width='10%'>Date In</th>
 <th width='10%'>Date Out</th>
@@ -76,7 +76,7 @@
           echo  "<td width='10%'>" . $row['id'] . "</td>";
           echo  "<td width='10%'>" . $row['category'] . "</td>";
           echo  "<td width='15%'>" . $row['Full_Name'] . "</td>";
-          echo  "<td width='10%'>" . $row['DOB'] . "</td>";
+          echo  "<td width='15%'>" . $row['DOB'] . "</td>";
           echo  "<td width='10%'>" . $row['Sentence'] . "</td>";
           echo  "<td width='10%'>" . $row['datein'] . "</td>";
           echo  "<td width='10%'>" . $row['dateout'] . "</td>";
