@@ -26,7 +26,6 @@ Admin_Password = '$password',
 Usename = '$username'
 ";
 
-
 //prevent sending empty form
 if (
     empty($id) || empty($name) || empty($email) || empty($tel) || empty($address) || empty($password)
