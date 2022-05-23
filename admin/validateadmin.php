@@ -26,6 +26,26 @@ Admin_Password = '$password',
 Usename = '$username'
 ";
 
+
+
+$con = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
+$sel = mysqli_query($con, "SELECT * from admin_tbl");
+
+$row = mysqli_fetch_array($sel);
+
+//check if username is already in database
+if ($row['Usename'] == $username) {
+    echo '<script type="text/javascript">alert("Username already taken.");window.location=\'addAdmin.php\';</script>';
+    return false;
+}
+
+//check if email is already in database
+
+if ($row['Email'] == $email) {
+    echo '<script type="text/javascript">alert("Email already in use.");window.location=\'addAdmin.php\';</script>';
+    return false;
+}
+
 //prevent sending empty form
 if (
     empty($id) || empty($name) || empty($email) || empty($tel) || empty($address) || empty($password)
