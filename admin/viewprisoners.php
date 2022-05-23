@@ -37,15 +37,15 @@
 
 
 
-        $sel = mysqli_query($con, "SELECT * from $tbl_name");
+        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY datein DESC ");
         echo "<table align='center' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='green'>
 <caption>
 <h3>PRISONER INFORMATION</h3>
 </caption>
 <tr bgcolor='green'>
-<th width='20%'>Photo</th>
-<th width='10%'>National id</th>
-<th width='10%'>Category</th>
+<th width='10%'>Photo</th>
+<th width='7%'>National id</th>
+<th width='7%'>Category</th>
 <th width='15%'>Full Name</th>
 <th width='15%'>Date of Birth</th>
 <th width='15%'>Sentence</th>
@@ -57,7 +57,6 @@
 <th width='10%'>Education</th>
 <th width='10%'>Status</th>
 <th width='15%'>Offence</th>
-
 <th width='10%'>File Number</th>
 <th width='10%'>Prison</th>
 </tr>";
@@ -66,15 +65,15 @@
         while ($row = mysqli_fetch_array($sel)) {
 
           echo "<tr bgcolor='grey'>";
-          echo "<td><img src='../uploads/" . $row['photo'] . "' width='100' height='100'></td>";
+          echo "<td><img src='../uploads/" . $row['photo'] . "' width='80' height='80'></td>";
           //$imageURL = 'uploads/' . $row["photo"];
 
 
           //echo "<td width='20%'>", '<img src=' . $imageURL . "  > ";
 
           "</td>";
-          echo  "<td width='10%'>" . $row['id'] . "</td>";
-          echo  "<td width='10%'>" . $row['category'] . "</td>";
+          echo  "<td width='7%'>" . $row['id'] . "</td>";
+          echo  "<td width='7%'>" . $row['category'] . "</td>";
           echo  "<td width='15%'>" . $row['Full_Name'] . "</td>";
           echo  "<td width='15%'>" . $row['DOB'] . "</td>";
           echo  "<td width='10%'>" . $row['Sentence'] . "</td>";

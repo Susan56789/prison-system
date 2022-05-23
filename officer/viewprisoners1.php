@@ -16,7 +16,7 @@
       <td align="center" bgcolor='green'>
         <a href="officerpanel.php" target="_parent">Officer Admin <b>|</b>
         </a>
-        <a href="../admin/prisonerep.php" target="_parent">Print <b>|</b></a>
+        <a href="../admin/prisonerep.php" target="_parent">Report <b>|</b></a>
         <a href="../index.php" target="_parent">Log out</a>
       </td>
 
@@ -34,12 +34,12 @@
 
         $con = mysqli_connect($host, $username, $password, $db_name);
 
-        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY id DESC LIMIT 0,7");
+        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY datein DESC");
         echo "<table align='center' width='100%' bgcolor='GREEN' border='0' 
 bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
 <caption><h3>PRISONER INFORMATION</h3></caption>
 <tr bgcolor='#CCCCCC'>
-<th width='20%'>Photo</th>
+<th width='15%'>Photo</th>
 <th width='10%'>National id</th>
 <th width='10%'>Category</th>
 <th width='15%'>Full Name</th>
@@ -64,7 +64,7 @@ bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
 
           // $imageURL = 'uploads/' . $row["photo"];
 
-          echo "<td><img src='../uploads/" . $row['photo'] . "' width='100' height='100'></td>";
+          echo "<td><img src='../uploads/" . $row['photo'] . "' width='80' height='80'></td>";
           // echo "<td width='20%'>", '<img src=' . $imageURL . "  > ";
 
           "</td>";
