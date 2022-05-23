@@ -51,13 +51,11 @@ session_start();
 
       <td width='71%' valign='top' bgcolor="#FFFFFF">
 
-        <h3 align='center'> PRISON MNGNT SYSTEM FOR THE OFFICER </h3>
+        <h3 align='center'> OFFICER PANEL </h3>
         <P align='justify'>
           <font face='Arial, Helvetica, sans-serif'>
-            This user has the abilty to view information,edit and delete.
-            this is for user The system enable an Administrator to provide
-            services to users nd here the administrator can add and upload information, update, delete, view the record added.
-            The administrator can also change his account for more security.
+            This user has the abilty to view,add or delete some data.
+            They can also request prisoner transfer.
 
       </td>
       <td width='25%' bgcolor='GREEN' valign='top'>
