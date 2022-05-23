@@ -38,10 +38,14 @@
 
 
         $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY datein DESC ");
+        $records = mySQLi_num_rows($sel);
+
+
         echo "<table align='center' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='green'>
 <caption>
-<h3>PRISONER INFORMATION</h3>
+<h3>  PRISONERS DETAIL ($records prisoners)</h3>
 </caption>
+
 <tr bgcolor='green'>
 <th width='10%'>Photo</th>
 <th width='7%'>National id</th>
