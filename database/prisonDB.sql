@@ -17,7 +17,6 @@ CREATE TABLE admin_tbl
 
 SELECT * FROM  admin_tbl;
 
-
 /*Admin Table*/
 INSERT INTO admin_tbl
   (Admin_Id, Admin_Name,Usename,Gender,Email,Telephone,Address, Admin_Password)
@@ -254,3 +253,13 @@ SELECT * FROM transfer;
 
 SELECT * FROM visitor;
 
+
+
+CREATE TABLE userlog (
+user_id varchar(255),
+actions varchar(255),
+times varchar(255),
+user_type varchar(255)
+);
+
+SELECT * FROM userlog;

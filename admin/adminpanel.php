@@ -25,8 +25,8 @@ session_start();
 						<a href="search-form.php">Search </a>
 						<!-- <a href="location.php">Location</a>| -->
 						<a href="prisonertransfer.php">Prisoner Transfer</a>|
-						<!--<a href="registration.php">Register</a>--->
 						<a href="court.php">Court</a>
+						<a href="Logged.php">Logs</a>
 					</font>
 				</h1>
 				<h4 style="color:white; display:inline-block;"><?php echo "Hello " . $_SESSION['username'] . "!"  ?></h4>
