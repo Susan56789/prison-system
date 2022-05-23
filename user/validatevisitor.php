@@ -42,11 +42,6 @@ $sql = "insert into visitor set
                     prisoner = '$prisoner'
                     ";
 
-// $sql1 = "INSERT INTO registration (id, Full_Name, DOB, Address, County,Gender, Education, Marital, Offence, Date_in,sentence, File_num)
-// VALUES ('$Nid', '$Fname', '$dob', '$address', '$county', '$Gender', '$education', '$status', '$offence', '$di', '$sentence', '$Filenum');";
-
-
-
 
 if (!mysqli_query($con, $sql)) {
   die('Error: ' . mysqli_error($con));
