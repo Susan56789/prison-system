@@ -52,7 +52,7 @@ if (
     empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum)
     || empty($Email) || empty($sentence) || empty($address) || empty($county) || empty($Tel)
 ) {
-    echo '<script type="text/javascript">alert("Please fill all fields.");window.location=\'newPrisoner.php\';</script>';
+    echo 'Please fill all fields.';
     return false;
 } else {
     $upload = move_uploaded_file($tempname, $uploadPath);

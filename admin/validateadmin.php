@@ -35,14 +35,14 @@ $row = mysqli_fetch_array($sel);
 
 //check if username is already in database
 if ($row['Usename'] == $username) {
-    echo '<script type="text/javascript">alert("Username already taken.");window.location=\'addAdmin.php\';</script>';
+    echo 'Username already taken !';
     return false;
 }
 
 //check if email is already in database
 
 if ($row['Email'] == $email) {
-    echo '<script type="text/javascript">alert("Email already in use.");window.location=\'addAdmin.php\';</script>';
+    echo 'Email already in use !';
     return false;
 }
 
