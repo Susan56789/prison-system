@@ -46,6 +46,8 @@ $error = $_FILES["photo"]["error"];
 $newFilename = uniqid("IMG-") . "." . $filetype_lc;
 
 $uploadPath = $targetDir . $newFilename;
+
+//check if empty
 if (
   empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum)
   || empty($Email) || empty($sentence) || empty($address) || empty($county) || empty($Tel)
@@ -78,6 +80,9 @@ Offence = '$offence',
 Sentence = '$sentence',
 File_num = '$Filenum',
 prison = '$prison'";
+
+
+
 
   //insert into court table
   $quer = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId) 
