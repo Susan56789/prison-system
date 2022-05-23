@@ -13,14 +13,16 @@
     <table align='center' border='1' bgcolor='green' width='800' cellpadding='8' cellspacing='0' height='200'>
         <tr>
 
-            <td align="center"><a href="newWitness.php">Add Witness <b>|</b></a><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
+            <td align="center">
+
+                <a href="newWitness.php">Add Witness <b>|</b></a><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
 
                 <a href="viewcase.php" target="_parent">Court details</a>
             </td>
 
         </tr>
         <tr>
-            <td colspan="3" bgcolor='grey' valign='center'>
+            <td bgcolor='grey' valign='center'>
 
                 <?php
                 ob_start();
@@ -36,11 +38,11 @@
                 echo "<table width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='silver'>
     <caption><b>Witness Details</b></caption>
     <tr bgcolor='green'>
-    <th width='3%'>National id</th>
-    <th width='5%'>File Number</th>
+    <th width='10%'>National id</th>
+    <th width='10%'>File Number</th>
     <th width='10%'>Full Names</th>
     <th width='10%'>Email Address</th>
-    <th width='7%'>Telephone</th>
+    <th width='10%'>Telephone</th>
     </tr>";
                 while ($row = mysqli_fetch_array($select)) {
                     echo "<tr bgcolor='grey'>";
@@ -54,13 +56,14 @@
 
 
                 ?>
+                <br />
             </td>
         </tr>
+
         <tr>
-            <td>
-                <?php
-                include("footer.php");
-                ?>
+            <td align='center' bgcolor='white' height='1'><?php
+                                                            include("footer.php");
+                                                            ?>
             </td>
         </tr>
     </table>
