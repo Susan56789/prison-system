@@ -91,9 +91,9 @@
           echo  "<td width='10%'>" . $row['Offence'] . "</td>";
           echo  "<td width='10%'>" . $row['File_num'] . "</td>";
           echo  "<td width='10%'>" . $row['prison'] . "</td>";
-          echo '<td><a href="editprisoner.php?id=' . $row['id'] . '">Edit</a>
-          <br/><b><a href="deleteprisoners.php?id=' . $row['id'] . '">Delete</a></font></b>
-          </td>';
+          // echo '<td><a href="editprisoner.php?id=' . $row['id'] . '">Edit</a>
+          // <br/><b><a href="deleteprisoners.php?id=' . $row['id'] . '">Delete</a></font></b>
+          // </td>';
 
           // echo '<td width="5%"><b><a href="deleteprisoners.php?id=' . $row['id'] . '">Delete</a></font></b></td>';
 

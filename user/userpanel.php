@@ -47,13 +47,10 @@
 
                     <li><a href='prisoner.php'><b>Register Prisoner</b></a></li>
                     <br>
-                    <!--<li><a href='registration.php'><b>Register Form</b></a></li>
-		<br>--->
+
                     <li><a href='visitors.php'><b>Register Visitor</b></a></li>
                     <br>
-                    <!--<li><a href='addofficer.php'><b>Officer registration </b></a></li>
-    <br>-->
-                    <!-- <li><a href='transfer.php'><b>Transfer Prisoners</b></a></li> -->
+
                     <br>
                     <li><a href='../index.php'><b>LOG OUT</b></a></li>
                   </ul>
