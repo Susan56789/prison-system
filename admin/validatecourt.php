@@ -8,15 +8,23 @@ if (mysqli_connect_errno()) {
 // escape variables for security
 
 $Nationalid = mysqli_real_escape_string($con, $_POST['Nationalid']);
-$Filenum = mysqli_real_escape_string($con, $_POST['Filenum']);
-//deal with date and concatenate variables month, day, year
-$month = mysqli_real_escape_string($con, $_POST['month']);
-$day = mysqli_real_escape_string($con, $_POST['day']);
-$year = mysqli_real_escape_string($con, $_POST['year']);
-$dateoftrial = $year . '/' . $month . '/' . $day;
-$sentence = mysqli_real_escape_string($con, $_POST['sentence']);
+//$Filenum = mysqli_real_escape_string($con, $_POST['Filenum']);
+$dateoftrial = mysqli_real_escape_string($con, $_POST['date']);
+//$sentence = mysqli_real_escape_string($con, $_POST['sentence']);
 $location = mysqli_real_escape_string($con, $_POST['location']);
 $judge = mysqli_real_escape_string($con, $_POST['judge']);
+
+
+//check if is in database
+
+$sel = mysqli_query($con, "SELECT * from registration WHERE id = $Nationalid");
+$row = mysqli_fetch_array($sel);
+if ($row['id'] != $Nationalid) {
+	echo "Prisoner does not exist, input correct ID";
+	return false;
+}
+$Filenum = $row['File_num'];
+$sentence = $row['Sentence'];
 
 
 $sql = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 

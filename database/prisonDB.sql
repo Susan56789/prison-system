@@ -50,6 +50,8 @@ CREATE TABLE court
   FOREIGN KEY(id) REFERENCES registration
 );
 
+ALTER TABLE court DROP PRIMARY KEY;
+
 SELECT * FROM court;
 
 
