@@ -12,7 +12,13 @@
 
 <body>
   <table align='center' border='0' bgcolor='green' width='800' cellpadding='8' cellspacing='0' height='200'>
+    <tr>
+      <td align="center"><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
+        <a href="viewprisoners.php" target="_parent">View Prisoners<b>|</b></a>
+        <a href="index.php" target="_parent">Log out</a>
+      </td>
 
+    </tr>
     <tr>
       <td colspan="3" bgcolor='#999999' valign='center'>
 
@@ -49,6 +55,7 @@
         print "<table width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='green'>
 <caption><b>DELETE PRISONER RECORD</b></caption>
 <tr bgcolor='green'>
+<th>Photo</th>
 <th>National id</th>
 <th width='10%'>Full Name</th>
 <th width='15%'>Date of Birth</th>
@@ -70,6 +77,7 @@
         while ($row = mysqli_fetch_array($result)) {
           print "<form method=POST>";
           print "<tr bgcolor='white'>
+          <td><img src='../uploads/" . $row['photo'] . "' width='80' height='80'></td>
 <td>$i<input type=\"hidden\" name=\"id\" value=\"$row[id]\"></td>
 <td>$row[Full_Name]</td>
 <td>$row[DOB]</td>
@@ -97,13 +105,7 @@
 
       </td>
     </tr>
-    <tr>
-      <td align="center"><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
-        <a href="viewprisoners.php" target="_parent">View Prisoners<b>|</b></a>
-        <a href="index.php" target="_parent">Log out</a>
-      </td>
 
-    </tr>
     <tr>
       <td colspan='3' align='center' bgcolor='silver' height='1'>
 

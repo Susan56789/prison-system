@@ -13,7 +13,7 @@ if (!$conn) {
 //we specify here the Database name we are using
 
 $To = $_POST['To'];
-$id = $_POST['id'];
+$id = rand(1, 1000000);
 $Subject = $_POST['Subject'];
 $Message = $_POST['Message'];
 $From = $_POST['From'];

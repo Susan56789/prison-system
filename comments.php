@@ -13,6 +13,14 @@
 <body>
     <table align='center' border='0' bgcolor='green' width='1000' cellpadding='8' cellspacing='0' height='400'>
         <tr>
+            <td>
+                <a href="announce.php" target="_parent">Add Comment <b>|</b></a>
+                <a href="index.php" target="_parent">Home</a>
+            </td>
+
+
+        </tr>
+        <tr>
             <td bgcolor='#999999' valign='center'>
 
                 <?php
@@ -26,7 +34,7 @@
                 $con = mysqli_connect($host, $username, $password, $db_name);
 
                 $sel = mysqli_query($con, "SELECT * from $tbl_name");
-                echo "<table align='center' bgcolor='GREEN' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='silver'>
+                echo "<table align='center' bgcolor='green' width='100%' border='0' cellpadding='3' cellspacing='2'>
 <caption><h3>COMMENTS</h3></caption>
 <tr bgcolor='#CCCCCC'>
 <th  width='15%'>From</th>
@@ -53,16 +61,9 @@
                 <br />
             </td>
         </tr>
-        <tr>
-            <td>
-                <a href="announce.php" target="_parent">Add Comment <b>|</b></a>
-                <a href="index.php" target="_parent">Home</a>
-            </td>
 
-
-        </tr>
         <tr>
-            <td align='center' bgcolor='GREY' height='1'><?php
+            <td align='center' bgcolor='white' height='1'><?php
                                                             include("footer.php");
                                                             ?>
             </td>

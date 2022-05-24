@@ -37,12 +37,7 @@
                                    <input type="text" name="To" />
                               </td>
                          </tr>
-                         <tr>
-                              <td height="51" bgcolor="#FFFFFF"><b>Id:</b></td>
-                              <td bgcolor="#FFFFFF">
-                                   <input type="text" name="id">
-                              </td>
-                         </tr>
+
                          <tr>
                               <td height="51" bgcolor="#FFFFFF"><b>Subject:</b></td>
                               <td bgcolor="#FFFFFF"><input type="text" name="Subject"></td>

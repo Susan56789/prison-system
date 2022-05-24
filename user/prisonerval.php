@@ -40,12 +40,15 @@ $fileName = $_FILES["photo"]["name"];
 $fileSize = $_FILES["photo"]["size"];
 $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
 $filetype_lc = strtolower($fileType);
-$allowTypes = array('jpg', 'png', 'jpeg', 'gif', 'pdf');
+$allowTypes = array('jpg', 'png', 'jpeg', 'gif', 'jfif');
 $tempname = $_FILES["photo"]["tmp_name"];
 $error = $_FILES["photo"]["error"];
 $newFilename = uniqid("IMG-") . "." . $filetype_lc;
 
 $uploadPath = $targetDir . $newFilename;
+
+
+
 
 //check if empty
 if (
@@ -55,15 +58,16 @@ if (
   echo 'Please fill all fields.';
 
   return false;
-} else {
-  $upload = move_uploaded_file($tempname, $uploadPath);
 }
+if (in_array($fileType, $allowTypes)) {
+  $upload = move_uploaded_file($tempname, $uploadPath);
 
 
 
-if ($upload) {
-  //Insert data into database
-  $sql = "INSERT into registration set
+
+  if ($upload) {
+    //Insert data into database
+    $sql = "INSERT into registration set
 id = '$Nid',
 category='$category',
 photo='$newFilename',
@@ -84,25 +88,25 @@ prison = '$prison'";
 
 
 
-  //insert into court table
-  $quer = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId) 
+    //insert into court table
+    $quer = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId) 
   VALUES ('$Id', '$FullNames', '$Email', '$Tel', '$Filenum','$Nid');";
 
-  //insert into witness table
-  $link = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
+    //insert into witness table
+    $link = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
 VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');";
 
-  //check if age is greater than 18 years
-  $age = 18;
+    //check if age is greater than 18 years
+    $age = 18;
 
-  if (is_string($dateofbirth)) {
-    $dateofbirth = strtotime($dateofbirth);
+    if (is_string($dateofbirth)) {
+      $dateofbirth = strtotime($dateofbirth);
+    }
+    if (time() - $dateofbirth < $age * 31536000) {
+      echo "Invalid date";
+      return false;
+    }
   }
-  if (time() - $dateofbirth < $age * 31536000) {
-    echo "Invalid date";
-    return false;
-  }
-
 
 
   if (!mysqli_query($con, $sql)) {
@@ -117,6 +121,7 @@ VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');
 } else {
   echo $error;
 }
+
 
 
 ?>

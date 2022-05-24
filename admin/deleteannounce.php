@@ -62,7 +62,7 @@
           print "<tr bgcolor='grey'>
 
 <td>$i<input type=\"hidden\" name=\"Id\" value=\"$row[Id]\"></td>
-<td>$row[to]</td>
+<td>$row[to_]</td>
 
 <td>$row[subject]</td>
 <td>$row[message]</td>

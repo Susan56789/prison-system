@@ -43,7 +43,7 @@
 
         echo "<table align='center' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='green'>
 <caption>
-<h3>  PRISONERS DETAIL ($records prisoners)</h3>
+<h3>  PRISONERS DETAIL ($records records)</h3>
 </caption>
 
 <tr bgcolor='green'>
@@ -52,7 +52,7 @@
 <th width='7%'>Category</th>
 <th width='15%'>Full Name</th>
 <th width='15%'>Date of Birth</th>
-<th width='15%'>Sentence</th>
+<th width='7%'>Sentence</th>
 <th width='10%'>Date In</th>
 <th width='10%'>Date Out</th>
 <th width='15%'>Address</th>
@@ -80,7 +80,7 @@
           echo  "<td width='7%'>" . $row['category'] . "</td>";
           echo  "<td width='15%'>" . $row['Full_Name'] . "</td>";
           echo  "<td width='15%'>" . $row['DOB'] . "</td>";
-          echo  "<td width='10%'>" . $row['Sentence'] . "</td>";
+          echo  "<td width='7%'>" . $row['Sentence'] . "</td>";
           echo  "<td width='10%'>" . $row['datein'] . "</td>";
           echo  "<td width='10%'>" . $row['dateout'] . "</td>";
           echo  "<td width='10%'>" . $row['Address'] . "</td>";
@@ -91,9 +91,11 @@
           echo  "<td width='10%'>" . $row['Offence'] . "</td>";
           echo  "<td width='10%'>" . $row['File_num'] . "</td>";
           echo  "<td width='10%'>" . $row['prison'] . "</td>";
-          echo '<td><a href="editprisoner.php?id=' . $row['id'] . '">Edit</a></td>';
+          echo '<td><a href="editprisoner.php?id=' . $row['id'] . '">Edit</a>
+          <br/><b><a href="deleteprisoners.php?id=' . $row['id'] . '">Delete</a></font></b>
+          </td>';
 
-          //echo '<td width="5%"><b><a href="deleteprisoners.php?id=' . $row['id'] . '">Delete</a></font></b></td>';
+          // echo '<td width="5%"><b><a href="deleteprisoners.php?id=' . $row['id'] . '">Delete</a></font></b></td>';
 
 
           echo "</tr>";
