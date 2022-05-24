@@ -188,14 +188,13 @@ SELECT * FROM witness;
   /*Table To track prisoners Transfer*/
   CREATE TABLE transfer
   (
-    National_id int(16) NOT NULL,
+    National_id int(16) NOT NULL PRIMARY KEY,
     File_num varchar(16) NOT NULL,
     From_prison varchar(100) NOT NULL,
     To_prison varchar(100) NOT NULL,
     Dateoftransfer date NOT NULL
 
   );
-
 
 SELECT * FROM transfer;
 

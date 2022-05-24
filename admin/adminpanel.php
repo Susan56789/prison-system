@@ -24,7 +24,7 @@ session_start();
 
 						<a href="search-form.php">Search </a>
 						<!-- <a href="location.php">Location</a>| -->
-						<a href="prisonertransfer.php">Prisoner Transfer</a>|
+						<a href="transfer.php">Prisoner Transfer</a>|
 						<a href="court.php">Court</a>
 						<a href="Logged.php">Logs</a>
 					</font>

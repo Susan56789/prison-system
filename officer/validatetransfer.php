@@ -5,20 +5,38 @@ if (mysqli_connect_errno()) {
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
+
+
 // escape variables for security
 
-
 $Nid = mysqli_real_escape_string($con, $_POST['Nid']);
-$Filenum = mysqli_real_escape_string($con, $_POST['Filenum']);
+//$Filenum = mysqli_real_escape_string($con, $_POST['Filenum']);
 $From = mysqli_real_escape_string($con, $_POST['From']);
 $To = mysqli_real_escape_string($con, $_POST['To']);
-//deal with date and concatenate variables month, day, year
-$month = mysqli_real_escape_string($con, $_POST['month']);
-$day = mysqli_real_escape_string($con, $_POST['day']);
-$year = mysqli_real_escape_string($con, $_POST['year']);
-$dateoftransfer = $year . '/' . $month . '/' . $day;
+$dateoftransfer = mysqli_real_escape_string($con, $_POST['date']);
 
+//check if is in database
 
+$sel = mysqli_query($con, "SELECT * from registration WHERE id = $Nid");
+$row = mysqli_fetch_array($sel);
+if ($row['id'] != $Nid) {
+	echo "Prisoner does not exist, input correct ID";
+	return false;
+}
+$Filenum = $row['File_num'];
+
+$datein = $row['datein'];
+
+//date of transfer should not be less than date in 
+if (strtotime($dateoftransfer) < strtotime($datein)) {
+	echo 'Please correct date of transfer';
+	return false;
+}
+
+if ($To == $From) {
+	echo "Choose a different prison";
+	return false;
+}
 
 $sql = "INSERT INTO transfer (National_id, File_num, From_prison, To_prison, Dateoftransfer) 
 VALUES ('$Nid', '$Filenum', '$From', '$To', '$dateoftransfer');";
@@ -32,5 +50,5 @@ if (!mysqli_query($con, $sql)) {
 ?>
 <script type="text/javascript">
 	alert("you have succefully add the record !thank you");
-	window.location = "transfer.php";
+	window.location = "viewtransfer1.php";
 </script>
