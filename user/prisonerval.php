@@ -47,7 +47,15 @@ $newFilename = uniqid("IMG-") . "." . $filetype_lc;
 
 $uploadPath = $targetDir . $newFilename;
 
+if (strtotime($dateout) < strtotime($datein)) {
+  echo "Enter correct Date Out";
+  return false;
+}
 
+if (strtotime($dateoftrial) < strtotime($datein)) {
+  echo "Enter correct Date Of Trial";
+  return false;
+}
 
 
 //check if empty

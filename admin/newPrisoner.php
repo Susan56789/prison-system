@@ -88,7 +88,7 @@
                                         <td>
                                             <label for="datein" class="label">Date In </label>
                                         </td>
-                                        <td style="margin: 0; padding: 0;">
+                                        <td>
                                             <input type="date" id="2date" name="2date" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
 
                                         </td>
@@ -104,7 +104,7 @@
                                         <td>
                                             <label for="opendate" class="label">Date Out </label>
                                         </td>
-                                        <td style="margin: 0; padding: 0;">
+                                        <td>
                                             <input type="date" id="3date" name="3date" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
 
                                         </td>
@@ -142,7 +142,7 @@
                 <td>
                     <label for="opendate" class="label">Gender</label>
                 </td>
-                <td style="margin: 0; padding: 0;">
+                <td>
                     <select id="Gender" name="Gender" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
                         <option selected="selected">Male</option>
                         <option>Female</option>
@@ -158,7 +158,7 @@
                 <td>
                     <label for="opendate" class="label">Education Level</label>
                 </td>
-                <td style="margin: 0; padding: 0;">
+                <td>
                     <select id="education" name="education" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
                         <option selected="selected">KCPE</option>
                         <option>Never</option>
@@ -182,7 +182,7 @@
                 <td>
                     <label for="status" class="label">Maritial Status</label>
                 </td>
-                <td style="margin: 0; padding: 0;">
+                <td>
                     <select id="status" name="status" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
                         <option selected="selected">Engaged</option>
                         <option>Divorced</option>
@@ -204,7 +204,7 @@
 
     <div class="control_input">
         <label for="Pname" class="label">Offence</label>
-        <textarea cols="17" rows="4" name="offence" id="offence" placeholder="fill this box"></textarea>
+        <textarea name="offence" id="offence" placeholder="offence"></textarea>
     </div>
 
     <div style="display: inline-block;">
@@ -213,7 +213,7 @@
                 <td>
                     <label for="opendate" class="label">Sentence</label>
                 </td>
-                <td style="margin: 0; padding: 0;">
+                <td>
                     <input type="text" id="sentence" name="sentence" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;" />
 
                 </td>
@@ -238,7 +238,7 @@
                 <td>
                     <label for="Campus" class="label">Prison</label>
                 </td>
-                <td style="margin: 0; padding: 0;">
+                <td>
                     <select id="prison" name="prison" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
                         <option value="">--Select prison--</option>
                         <option>
