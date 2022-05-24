@@ -172,6 +172,9 @@ PrisonerId int(12),
 FOREIGN KEY (File_num) REFERENCES registration 
 );
 
+ALTER TABLE witness DROP FOREIGN KEY File_num;
+ALTER TABLE witness ADD FOREIGN KEY (PrisonerId) REFERENCES registration(id);
+
 SELECT * FROM witness;
 
 
@@ -197,6 +200,8 @@ SELECT * FROM witness;
     Dateoftransfer date NOT NULL
 
   );
+  
+  ALTER TABLE transfer ADD FOREIGN KEY (National_id) REFERENCES registration(id);
 
 SELECT * FROM transfer;
 

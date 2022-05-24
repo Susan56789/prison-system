@@ -53,10 +53,7 @@ if (strtotime($dateout) < strtotime($datein)) {
     return false;
 }
 
-if (strtotime($dateoftrial) < strtotime($datein)) {
-    echo "Enter correct Date Of Trial";
-    return false;
-}
+
 
 if (
     empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum)

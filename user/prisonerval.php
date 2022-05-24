@@ -52,11 +52,6 @@ if (strtotime($dateout) < strtotime($datein)) {
   return false;
 }
 
-if (strtotime($dateoftrial) < strtotime($datein)) {
-  echo "Enter correct Date Of Trial";
-  return false;
-}
-
 
 //check if empty
 if (
