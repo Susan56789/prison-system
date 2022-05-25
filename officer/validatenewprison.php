@@ -29,6 +29,17 @@ $sql = "insert into newprison set
 
 
 
+//record user actions
+if (isset($_POST['signup'])) {
+  $id = $_SESSION['id'];
+  $status = 'Added new prison';
+  $time = date('Y/m/d H:i:s');
+  $UserType = 'Police';
+  $sql = "INSERT INTO userlog (user_id , actions, times, user_type) VALUES ('$id', '$status', '$time','$UserType')";
+  if (!mysqli_query($con, $sql)) {
+    die('Error: ' . mysqli_error($con));
+  }
+}
 
 
 if (!mysqli_query($con, $sql)) {

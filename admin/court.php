@@ -59,7 +59,7 @@
 			<td bgcolor="#FFFFFF"><input type="text" name="judge" placeholder="Jury President" /></td>
 		</tr>
 
-		<td height="26" bgcolor="#FFFFFF" align="center"><input type="submit" value="SAVE" /></td>
+		<td height="26" bgcolor="#FFFFFF" align="center"><input type="submit" name="submit" value="SAVE" /></td>
 		</tr>
 	</table>
 	</form>

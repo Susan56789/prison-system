@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -106,16 +107,16 @@ session_start();
 								<br>
 								<li><a href='report.php'><b><button>Report</button></b></a></li>
 								<br>
-								<li><a href='../index.php''><b><button>LOG OUT</button></b></a></li>
+								<li><a href='../index.php''><b><button name="logout">LOG OUT</button></b></a></li>
 </ul>
 </td>
 </tr>
 </table>
 
-
 			
 			</td>
           </tr>
+		  
           <tr>
             <?php
 			include("Footer.php");

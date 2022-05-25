@@ -58,23 +58,14 @@ SELECT * FROM court;
 /*Table For Prisons*/
 CREATE TABLE newprison
 (
-  pno int(25) NOT NULL
-AUTO_INCREMENT,
-  pname varchar
-  (100) NOT NULL,
-  location varchar
-  (30) NOT NULL,
-  opendate varchar
-  (30) NOT NULL,
-  contact int
-  (30) NOT NULL,
-  capacity int
-  (30) NOT NULL,
-  PRIMARY KEY
-  (pno)
+  pno int(25) NOT NULL AUTO_INCREMENT,
+pname varchar(100) NOT NULL,
+location varchar(30) NOT NULL,
+opendate varchar(30) NOT NULL,
+contact int(30) NOT NULL,
+capacity int(30) NOT NULL,
+PRIMARY KEY(pno)
 );
-
-
   
 
   /*Table to capture officer details*/
@@ -119,23 +110,6 @@ SELECT * FROM police_tbl;
   VALUES
     (897, 'Langata', 'Langata', 'Nairobi', 'policepol@police.com', 888766, 'police', 'police');
 
-
-  /*Table for Officer Transfer Details*/
-
-  CREATE TABLE officer
-  (
-    National_id int(30) NOT NULL,
-    Telephone int(25) NOT NULL,
-    From_prison varchar(100) NOT NULL,
-    To_prison varchar(100) NOT NULL,
-    Dateoftransfer date NOT NULL,
-    PRIMARY KEY (National_id)
-  )
-  ;
-  
-
-
-
   /*Table for New Prisoners Registration*/
   CREATE TABLE registration
   (
@@ -177,19 +151,6 @@ ALTER TABLE witness ADD FOREIGN KEY (PrisonerId) REFERENCES registration(id);
 
 SELECT * FROM witness;
 
-
-  CREATE TABLE inmates
-  (
-    AdmissionID varchar(30) PRIMARY KEY NOT NULL,
-    CellBlock varchar(30) NOT NULL,
-    Category varchar(30) NOT NULL,
-    Medical varchar(200) NOT NULL,
-    id int(12),
-    FOREIGN KEY(id) REFERENCES registration
-  );
-
-  
-
   /*Table To track prisoners Transfer*/
   CREATE TABLE transfer
   (
@@ -208,31 +169,19 @@ SELECT * FROM transfer;
   /*Table for the User*/
   CREATE TABLE user_tbl
   (
-    User_Id int(16) NOT NULL
-    AUTO_INCREMENT,
-  Name varchar
-    (50) NOT NULL,
-  Address varchar
-    (100) NOT NULL,
-  City varchar
-    (20) NOT NULL,
-  Mobile int
-    (11) NOT NULL,
-  Email varchar
-    (50) NOT NULL,
-  Gender varchar
-    (10) NOT NULL,
-  BirthDate date NOT NULL,
-  UserName varchar
-    (50) NOT NULL,
-  Password varchar
-    (30) NOT NULL,
-  Station_Name varchar
-    (30) NOT NULL,
-  VerificationProof varchar
-    (200) NOT NULL,
-  PRIMARY KEY
-    (User_Id)
+    User_Id int(16) NOT NULL AUTO_INCREMENT,
+Name varchar(50) NOT NULL,
+Address varchar(100) NOT NULL,
+City varchar (20) NOT NULL,
+Mobile int(11) NOT NULL,
+Email varchar(50) NOT NULL,
+Gender varchar(10) NOT NULL,
+BirthDate date NOT NULL,
+UserName varchar(50) NOT NULL,
+Password varchar(30) NOT NULL,
+Station_Name varchar(30) NOT NULL,
+VerificationProof varchar(200) NOT NULL,
+PRIMARY KEY(User_Id)
 );
 
 

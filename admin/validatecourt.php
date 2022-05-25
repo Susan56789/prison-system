@@ -1,4 +1,6 @@
 <?php
+session_start();
+date_default_timezone_set("Africa/Nairobi");
 $con = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
 // Check connection
 if (mysqli_connect_errno()) {
@@ -30,6 +32,18 @@ $sentence = $row['Sentence'];
 $sql = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
 VALUES ('$Nationalid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');";
 
+
+//record user actions
+if (isset($_POST['submit'])) {
+	$id = $_SESSION['id'];
+	$status = 'Added court details';
+	$time = date('Y/m/d H:i:s');
+	$UserType = 'Admin';
+	$sql = "INSERT INTO userlog (user_id , actions, times, user_type) VALUES ('$id', '$status', '$time','$UserType')";
+	if (!mysqli_query($con, $sql)) {
+		die('Error: ' . mysqli_error($con));
+	}
+}
 
 
 

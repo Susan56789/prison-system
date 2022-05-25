@@ -317,7 +317,6 @@ if (isset($_POST['submit'])) {
         $prison = mysqli_real_escape_string($link, htmlspecialchars($_POST['prison']));
 
 
-
         //use this from database 
         if ($Nid == '' || $Filenum == '' || $Category == '' || $offence == '' || $Sentence == '' || $photo == '') {
 
@@ -346,9 +345,9 @@ if (isset($_POST['submit'])) {
         } else {
 
             // use code update db
-            mysqli_query($link, "UPDATE registration SET id = '$Nid',
-            category='$category',
-            photo='$newFilename',
+            mysqli_query($link, "UPDATE registration WHERE id='$Nid' SET,
+            category='$Category',
+            photo='$photo',
             Full_Name = '$Fname',  
             DOB = '$dateofbirth', 
             datein = '$datein',             
@@ -359,9 +358,9 @@ if (isset($_POST['submit'])) {
             Education = '$education',
             Marital = '$status',
             Offence = '$offence',
-            Sentence = '$sentence',
+            Sentence = 'Sentence',
             File_num = '$Filenum',
-            prison = '$prison'  WHERE id='$id'")
+            prison = '$prison'  ")
                 or die(mysqli_connect_error());
 
             header("Location: viewprisoners.php");
@@ -382,6 +381,7 @@ if (isset($_POST['submit'])) {
         $result = mysqli_query($link, "SELECT * FROM registration WHERE id=$Nid")
             or die(mysqli_connect_error());
         $row = mysqli_fetch_array($result);
+
 
         if ($row) {
             $Nid = $row['id'];

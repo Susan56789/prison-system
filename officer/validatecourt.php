@@ -1,4 +1,6 @@
 <?php
+session_start();
+date_default_timezone_set("Africa/Nairobi");
 $con = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
 // Check connection
 if (mysqli_connect_errno()) {
@@ -7,22 +9,40 @@ if (mysqli_connect_errno()) {
 
 // escape variables for security
 
-
 $Nationalid = mysqli_real_escape_string($con, $_POST['Nationalid']);
-$Filenum = mysqli_real_escape_string($con, $_POST['Filenum']);
-//deal with date and concatenate variables month, day, year
-$month = mysqli_real_escape_string($con, $_POST['month']);
-$day = mysqli_real_escape_string($con, $_POST['day']);
-$year = mysqli_real_escape_string($con, $_POST['year']);
-$dateoftrial = $year . '/' . $month . '/' . $day;
-$sentence = mysqli_real_escape_string($con, $_POST['sentence']);
+//$Filenum = mysqli_real_escape_string($con, $_POST['Filenum']);
+$dateoftrial = mysqli_real_escape_string($con, $_POST['date']);
+//$sentence = mysqli_real_escape_string($con, $_POST['sentence']);
 $location = mysqli_real_escape_string($con, $_POST['location']);
 $judge = mysqli_real_escape_string($con, $_POST['judge']);
+
+
+//check if is in database
+
+$sel = mysqli_query($con, "SELECT * from registration WHERE id = $Nationalid");
+$row = mysqli_fetch_array($sel);
+if ($row['id'] != $Nationalid) {
+	echo "Prisoner does not exist, input correct ID";
+	return false;
+}
+$Filenum = $row['File_num'];
+$sentence = $row['Sentence'];
 
 
 $sql = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
 VALUES ('$Nationalid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');";
 
+//record user actions
+if (isset($_POST['submit'])) {
+	$id = $_SESSION['id'];
+	$status = 'Added court details';
+	$time = date('Y/m/d H:i:s');
+	$UserType = 'Police';
+	$sql = "INSERT INTO userlog (user_id , actions, times, user_type) VALUES ('$id', '$status', '$time','$UserType')";
+	if (!mysqli_query($con, $sql)) {
+		die('Error: ' . mysqli_error($con));
+	}
+}
 
 
 

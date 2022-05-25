@@ -42,6 +42,7 @@
         <th width='10%'>User Type</th>
         </tr>";
 
+
                 while ($row = mysqli_fetch_array($sel)) {
                     echo "<tr bgcolor='grey'>";
 

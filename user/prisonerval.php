@@ -99,6 +99,15 @@ prison = '$prison'";
     $link = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
 VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');";
 
+
+    $sel = mysqli_query($con, "SELECT * from registration ");
+    $row = mysqli_fetch_array($sel);
+
+    if ($Filenum  == $row['File_num']) {
+      echo "Check file number";
+      return false;
+    }
+
     //check if age is greater than 18 years
     $age = 18;
 

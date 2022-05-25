@@ -83,7 +83,10 @@
 <td bgcolor="#FFFFFF"><input type="text" name="dot" /></td>
 </tr>
  -->
-							<td height="26" bgcolor="#FFFFFF" align="center"><input type="submit" value="Add" /></td>
+
+							<td height="26" bgcolor="#FFFFFF" align="center">
+								<input type="submit" name="submit" value="Add" />
+							</td>
 			</tr>
 	</table>
 	</form>

@@ -16,6 +16,7 @@
     $Password = $_POST['password'];
     $UserType = $_POST['cmbUser'];
 
+
     if ($UserType == "Admin") {
         $con = mySQLi_connect('localhost', 'prison', 'prison123.', 'prison_system');
         $result = mySQLi_query($con, "SELECT * FROM Admin_Tbl WHERE Usename='$UserName' and Admin_Password='$Password'");
@@ -44,7 +45,8 @@
 where UserName='$UserName' and Password='$Password'");
         $records = mySQLi_num_rows($result);
         $row = mySQLi_fetch_array($result);
-        $id = $row['id'];
+        $_SESSION['id'] = $row['id'];
+        $id = $_SESSION['id'];
         $link = mysqli_query($con, "SELECT * FROM officerdetails where id='$id'");
         $sel =  mySQLi_fetch_array($link);
         $_SESSION['username'] = $sel['fullname'];

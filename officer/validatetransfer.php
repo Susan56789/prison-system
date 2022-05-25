@@ -1,4 +1,7 @@
 <?php
+session_start();
+date_default_timezone_set("Africa/Nairobi");
+
 $con = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
 // Check connection
 if (mysqli_connect_errno()) {
@@ -41,7 +44,17 @@ if ($To == $From) {
 $sql = "INSERT INTO transfer (National_id, File_num, From_prison, To_prison, Dateoftransfer) 
 VALUES ('$Nid', '$Filenum', '$From', '$To', '$dateoftransfer');";
 
-
+//record user actions
+if (isset($_POST['submit'])) {
+	$id = $_SESSION['id'];
+	$status = 'Requested prisoner transfer';
+	$time = date('Y/m/d H:i:s');
+	$UserType = 'Police';
+	$sql = "INSERT INTO userlog (user_id , actions, times, user_type) VALUES ('$id', '$status', '$time','$UserType')";
+	if (!mysqli_query($con, $sql)) {
+		die('Error: ' . mysqli_error($con));
+	}
+}
 
 
 if (!mysqli_query($con, $sql)) {

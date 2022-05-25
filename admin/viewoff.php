@@ -27,19 +27,21 @@
         $con = mysqli_connect($host, $username, $password, $db_name);
 
 
-        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY id DESC");
+        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY fullname ASC");
+        $records = mySQLi_num_rows($sel);
         echo "<table align='center' width='100%' bgcolor='GREEN' 
 border='0' bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
-<caption><h3>OFFICER DETAILS</h3></caption>
+<caption>
+<h3>OFFICER DETAILS</h3>
+<i>$records records</i>
+</caption>
 <tr bgcolor='#CCCCCC'>
 <th width='3%'>National id</th>
 <th width='10%'>Full Name</th>
 <th width='15%'>Address</th>
 <th width='10%'>Date of birth</th>
 <th width='10%'>Gender</th>
-
 <th width='10%'>Telephone</th>
-
 <th width='10%'>Education</th>
 <th width='10%'>Experiance</th>
 
@@ -54,7 +56,6 @@ border='0' bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
           echo  "<td width='10%'>" . $row['address'] . "</td>";
           echo  "<td width='10%'>" . $row['dateofbirth'] . "</td>";
           echo  "<td width='10%'>" . $row['gender'] . "</td>";
-
           echo  "<td width='3%'>" . $row['telephone'] . "</td>";
           echo  "<td width='10%'>" . $row['education'] . "</td>";
           echo  "<td width='10%'>" . $row['experience'] . "</td>";
