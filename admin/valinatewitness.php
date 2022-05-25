@@ -16,6 +16,11 @@ $Filenum = $_POST['Filenum'];
 $Nid = $_POST['Nid'];
 
 
+if (empty($FullNames) || empty($Id) || empty($Email) || empty($Tel) || empty($Nid) || empty($Filenum)) {
+    echo "Fill All Fields";
+    return false;
+}
+
 //insert into court table
 $link = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId) 
 VALUES ('$Id', '$FullNames', '$Email', '$Tel', '$Filenum','$Nid');";

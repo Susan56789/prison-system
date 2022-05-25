@@ -40,27 +40,11 @@
                         <label>Phone Number</label>
                         <input type="tel" name="tel" id="tel" /><br /><br />
                         <label>File Number</label>
-                        <select name="Filenum">
-                            <option>---Select Case---</option>
-                            <?php
-                            $con = mysqli_connect('localhost', 'prison', 'prison123.', 'prison_system');
-
-                            $msql = mysqli_query($con, "SELECT * FROM registration");
-                            while ($m_row = mysqli_fetch_array($msql))
-                                echo ("<option value = '" . $m_row['File_num'] . "'>" . $m_row['File_num'] . "</option>");
-                            ?>
-                        </select><br /><br />
-                        <label>Prisoner</label>
-                        <select name="Nid">
-                            <option>---Select Prisoner---</option>
-                            <?php
-                            $con = mysqli_connect('localhost', 'prison', 'prison123.', 'prison_system');
-
-                            $msql = mysqli_query($con, "SELECT * FROM registration");
-                            while ($m_row = mysqli_fetch_array($msql))
-                                echo ("<option value = '" . $m_row['id'] . "'>" . $m_row['id'] . "</option>");
-                            ?>
-                        </select><br /><br />
+                        <input type="text" name="Filenum" />
+                        <br /><br />
+                        <label>Prisoner ID</label>
+                        <input type="text" name="Nid">
+                        <br /><br />
 
                         <input type="submit" name="signup" id="Add" value="Save " title="" border="0">
                     </form>
