@@ -87,7 +87,7 @@ session_start();
 								<br>
 								<li><a href='viewtransfer.php'><b><button>Transfer Information</button></b></a></li>
 								<br>
-								<li><a href='viewvis.php'><b><button>Visitors Information</button></b></a></li>
+								<li><a href='viewvisitors.php'><b><button>Visitors Information</button></b></a></li>
 								<br>
 								<li><a href='newprison.php'><b><button>Add Prison</button></b></a></li>
 								<br>

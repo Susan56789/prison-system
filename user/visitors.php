@@ -8,8 +8,6 @@
 
 
     <link href="style1.css" rel="stylesheet" type="text/css" />
-    <script src="jquery-1.7.1.min.js"></script>
-    <script src="registration_script.js"></script>
     <link rel="stylesheet" media="screen" href="login.css">
 </head>
 
@@ -23,13 +21,13 @@
         <tr>
             <td colspan="3" bgcolor="#FF0000" height="1" align="center">
                 <font size="4">
-                    <a href="userpanel.php">HOME</a> |
+                    <a href="userpanel.php">HOME</a>
                 </font>
             </td>
         </tr>
         <tr>
             <td width="25%" bgcolor="#FFFFFF">&nbsp;&nbsp;
-            <td width="50%" align="center" bgcolor="white">
+            <td width="50%" align="left" bgcolor="white">
 
                 <div id="content" class="ctrdiv">
                     <form id="frmReg" method="POST" action="validatevisitor.php">
@@ -85,8 +83,8 @@
                                     </td>
                                     <td style="margin: 0; padding: 0;">
                                         <select id="timein" name="timein" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
-                                            <option>12:00am</option>
-                                            <option>12:30am</option>
+                                            <option>12:00pm</option>
+                                            <option>12:30pm</option>
                                             <option>1:00pm</option>
                                             <option>1:30pm</option>
                                             <option>2:00pm</option>
@@ -110,11 +108,10 @@
                                         </td>
                                         <td style="margin: 0; padding: 0;">
                                             <select id="timeout" name="timeout" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
-                                                <option>12:00am</option>
-                                                <option>12:30am</option>
+                                                <option>12:00pm</option>
+                                                <option>12:30pm</option>
                                                 <option>1:00pm</option>
                                                 <option>1:30pm</option>
-
                                                 <option>2:00pm</option>
                                                 <option>2:30pm</option>
                                                 <option>3:00pm</option>
@@ -129,7 +126,7 @@
                                 </div class="control_input">
 
                                 <div class="control_input">
-                                    <label for="uemail" class="label">Telephone No.</label><input type="text" id="telephone" name="telephone" size=11 maxlength=11 class="reg_fields" placeholder="074565558" class="reg_fields" />
+                                    <label for="uemail" class="label">Telephone No.</label><input type="tel" id="telephone" name="telephone" size=11 maxlength=11 class="reg_fields" placeholder="074565558" class="reg_fields" />
                                 </div class="control_input">
 
 
@@ -161,16 +158,8 @@
                                                     <label for="campus" class="label">Prisoner Name</label>
                                                 </td>
                                                 <td style="margin: 0; padding: 0;">
-                                                    <select id="prisoner" name="prisoner" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
-                                                        <option value="">--Select prisoner name--</option>
-                                                        <?php
-                                                        $con = mysqli_connect('localhost', 'root', '', 'prison_system');
+                                                    <input type="text" id="prisoner" name="prisoner" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;" />
 
-                                                        $msql = mysqli_query($con, "SELECT * FROM registration");
-                                                        while ($m_row = mysqli_fetch_array($msql))
-                                                            echo ("<option value = '" . $m_row['Full_Name'] . "'>" . $m_row['Full_Name'] . "</option>");
-                                                        ?>
-                                                    </select>
                                                 </td>
                                             </table>
                                         </div class="control_input">

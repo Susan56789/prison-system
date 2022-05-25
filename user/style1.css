@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-size: small;
@@ -6,43 +6,54 @@ body{
     text-align: center;
     background: #white;
 }
-#main{
+
+#main {
     width: 100%;
 }
-#header{
+
+#header {
     width: 800px;
     height: 60px;
     padding: 0 20px 0 20px;
 }
-#content{
+
+#content {
     position: relative;
     padding: 20px;
     background: #fafafa;
 }
-.ctrdiv{
+
+.ctrdiv {
     width: 800px;
     margin-right: auto;
     margin-left: auto;
     /*border: 1px solid red;*/
-    text-align: left ;
+    text-align: left;
 }
-#hdr_title{
+
+#hdr_title {
     color: #af0ad3;
 }
-.label{
-    width: 120px;   
+
+.label {
+    width: 120px;
     display: inline-block;
 }
-.reg_fields{
+
+.reg_fields {
     height: 30px;
 }
-input[type=text],input[type=password]{
+
+input[type=text],
+input[type=password] {
     width: 220px;
 }
-.control_input{
+
+.control_input {
     margin: 5px 0 5px 0;
 }
-#signup{
+
+#signup {
     margin: 30px 0 0 0;
     height: 50px;
     font-size: 20px;
@@ -50,7 +61,8 @@ input[type=text],input[type=password]{
     background: #af0ad3;
     border-radius: 8px;
 }
-#validation_msg{
+
+#validation_msg {
     margin: 10px 0 0 0;
     color: red;
 }

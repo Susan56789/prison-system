@@ -29,6 +29,7 @@ if (
   return false;
 }
 
+
 //we are using mysql_query function. it returns a resource on true else False on error
 $sql = "insert into visitor set
                     id = '$id',

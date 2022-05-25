@@ -70,8 +70,8 @@ cellpadding='3' cellspacing='2' bgcolor='silver'>
     </tr>
     <tr>
 
-      <td align="center" bgcolor='green'><a href="officerpanel.php" target="_parent">Officer Admin <b>|</b></a>
-        <a href="visitorep.php" target="_parent">Report <b>|</b></a>
+      <td align="center" bgcolor='green'><a href="adminpanel.php" target="_parent">Admin panel<b>|</b></a>
+        <a href="../officer/visitorep.php" target="_parent">Report <b>|</b></a>
         <a href="../index.php" target="_parent">Log out</a>
       </td>
 
