@@ -100,7 +100,7 @@ prison = '$prison'";
 VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');";
 
 
-    $sel = mysqli_query($con, "SELECT * from registration ");
+    $sel = mysqli_query($con, "SELECT * from registration");
     $row = mysqli_fetch_array($sel);
 
     if ($Filenum  == $row['File_num']) {
