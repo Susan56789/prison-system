@@ -38,7 +38,7 @@
 <tr bgcolor='green'>
 <th width='3%'>National id</th>
 <th width='10%'>Fie Number</th>
-<th width='10%'>Judge</th>
+<th width='10%'>Lawyer</th>
 <th width='10%'>Date of trial</th>
 <th width='15%'>Sentence</th>
 <th width='10%'>Location</th>

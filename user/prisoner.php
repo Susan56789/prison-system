@@ -63,7 +63,7 @@
                             <select id="category" name="category" class="reg_fields">
 
                                 <!--Have not yet been convicted--->
-                                <!-- <option selected="selected" value="">Remands</option>-->
+                                <option selected="selected">Remands</option>
 
                                 <!---First offenders and well behaved.-->
                                 <option>Star class</option>
@@ -272,8 +272,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td bgcolor="#FFFFFF"><b>Judge Name:</b></td>
-                    <td bgcolor="#FFFFFF"><input type="text" name="judge" id="judge" placeholder="Jury President" /></td>
+                    <td bgcolor="#FFFFFF"><b>Lawyer's Name:</b></td>
+                    <td bgcolor="#FFFFFF"><input type="text" name="judge" id="judge" placeholder="Lawyer" /></td>
                 </tr>
             </table>
         </div>

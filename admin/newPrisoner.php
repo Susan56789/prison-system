@@ -275,8 +275,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td bgcolor="#FFFFFF"><b>Judge Name:</b></td>
-                    <td bgcolor="#FFFFFF"><input type="text" name="judge" id="judge" placeholder="Jury President" /></td>
+                    <td bgcolor="#FFFFFF"><b>Lawyer's Name:</b></td>
+                    <td bgcolor="#FFFFFF"><input type="text" name="judge" id="judge" placeholder="lawyer" /></td>
                 </tr>
             </table>
         </div>
