@@ -54,6 +54,7 @@
 
 			</td>
 		</tr>
+		
 		<tr>
 			<td bgcolor="#FFFFFF"><b>Judge Name:</b></td>
 			<td bgcolor="#FFFFFF"><input type="text" name="judge" placeholder="Jury President" /></td>
