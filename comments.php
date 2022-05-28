@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>View Comments </title>
-    <link rel="stylesheet" media="screen" href="login.css">
+    <link rel="stylesheet" media="screen" href="card.css">
 </head>
 
 <body>
-    <table align='center' border='0' bgcolor='green' width='1000' cellpadding='8' cellspacing='0' height='400'>
+    <table align='center' bgcolor='green' width='100%' cellpadding='8' cellspacing='0' height='400'>
         <tr>
             <td>
                 <a href="announce.php" target="_parent">Add Comment <b>|</b></a>
@@ -21,40 +21,41 @@
 
         </tr>
         <tr>
-            <td bgcolor='#999999' valign='center'>
+            <td class="cards" bgcolor='white' align='left'>
 
                 <?php
 
                 $host = "localhost";
-                $username = "root";
-                $password = "";
+                $username = "prison";
+                $password = "prison123.";
                 $db_name = "prison_system";
                 $tbl_name = "announce";
 
                 $con = mysqli_connect($host, $username, $password, $db_name);
 
                 $sel = mysqli_query($con, "SELECT * from $tbl_name");
-                echo "<table align='center' bgcolor='green' width='100%' border='0' cellpadding='3' cellspacing='2'>
+                /**echo "<table align='center' bgcolor='green' width='100%' border='0' cellpadding='3' cellspacing='2'>
 <caption><h3>COMMENTS</h3></caption>
-<tr bgcolor='#CCCCCC'>
+<tr bgcolor='grey'>
 <th  width='15%'>From</th>
 <th width='10%'>To</th>
 <th width='10%'>Message Id</th>
 <th width='15%'>Subject</th>
 <th width='25%'>Message</th>
 </tr>";
-
+                 **/
                 while ($row = mysqli_fetch_array($sel)) {
-                    echo "<tr bgcolor='white'>";
-                    echo  "<td width='10%'>" . $row['Username'] . "</td>";
-                    echo  "<td width='3%'>" . $row['to_'] . "</td>";
-                    echo  "<td width='10%'>" . $row['Id'] . "</td>";
-                    echo  "<td width='10%'>" . $row['subject'] . "</td>";
-                    echo  "<td width='10%'>" . $row['message'] . "</td>";
-
-                    echo "</tr>";
+                    echo "<div class='card'";
+                    echo  "<i >", "ID: " . $row['Id'] . "</i>";
+                    echo "<div class='container'";
+                    echo  "<h4 >", "From: " . $row['Username'] . "</h4>";
+                    echo  "<h5 >", "To: " . $row['to_'] . "</h5>";
+                    echo  "<h3 >", "Title: " . $row['subject'] . "</h3>";
+                    echo  "<p >" . $row['message'] . "</p>";
+                    echo "</div>";
+                    echo "</div>";
                 }
-                echo "</table>";
+
 
                 ?>
 

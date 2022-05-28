@@ -7,22 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>View comments </title>
-  <link rel="stylesheet" media="screen" href="login.css">
+  <link rel="stylesheet" media="screen" href="../card.css">
 </head>
 
 <body>
-  <table align='center' border='0' bgcolor='green' width='700' cellpadding='8' cellspacing='0' height='200'>
+  <table align='center' bgcolor='green' width='100%' cellpadding='8' cellspacing='0' height='100%'>
     <tr>
-      <td align="center"><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
-
-        <a href="../index.php" target="_parent">Log out</a>
+      <td>
+        <a href="../index.php" target="_parent">Log out <b>|</b></a>
+        <a href="adminpanel.php" target="_parent">Admin Panel</a>
       </td>
-
 
 
     </tr>
     <tr>
-      <td bgcolor='#999999' valign='center'>
+      <td class="cards" bgcolor='white' align='left'>
 
         <?php
 
@@ -35,27 +34,29 @@
         $con = mysqli_connect($host, $username, $password, $db_name);
 
         $sel = mysqli_query($con, "SELECT * from $tbl_name");
-        echo "<table align='center' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='green'>
-<caption><h3>ANNOUNCE  DETAILS</h3></caption>
-<tr bgcolor='green'>
-<th width='3%'>To</th>
-<th width='10%'>Id</th>
+        /**echo "<table align='center' bgcolor='green' width='100%' border='0' cellpadding='3' cellspacing='2'>
+<caption><h3>COMMENTS</h3></caption>
+<tr bgcolor='grey'>
+<th  width='15%'>From</th>
+<th width='10%'>To</th>
+<th width='10%'>Message Id</th>
 <th width='15%'>Subject</th>
-<th width='10%'>Message</th>
+<th width='25%'>Message</th>
 </tr>";
-
+         **/
         while ($row = mysqli_fetch_array($sel)) {
-          echo "<tr bgcolor='grey'>";
-          echo  "<td width='3%'>" . $row['to_'] . "</td>";
-          echo  "<td width='10%'>" . $row['Id'] . "</td>";
-          echo  "<td width='10%'>" . $row['subject'] . "</td>";
-          echo  "<td width='10%'>" . $row['message'] . "</td>";
-          echo '<td width="3%"><b><a href="deleteannounce.php?id=' . $row['Id'] . '">Delete</a></font></b></td>';
-
-
-          echo "</tr>";
+          echo "<div class='card'";
+          echo  "<i >", "ID: " . $row['Id'] . "</i>";
+          echo "<div class='container'";
+          echo  "<h4 >", "From: " . $row['Username'] . "</h4>";
+          echo  "<h5 >", "To: " . $row['to_'] . "</h5>";
+          echo  "<h3 >", "Title: " . $row['subject'] . "</h3>";
+          echo  "<p >" . $row['message'] . "</p>";
+          echo '<p><b><a class="delete" href="deleteannounce.php">Delete</a></b></p>';
+          echo "</div>";
+          echo "</div>";
         }
-        echo "</table>";
+
 
         ?>
 
@@ -64,10 +65,9 @@
     </tr>
 
     <tr>
-      <td align='center' bgcolor='white' height='1'>
-        <?php
-        include("footer.php");
-        ?>
+      <td align='center' bgcolor='white' height='1'><?php
+                                                    include("footer.php");
+                                                    ?>
       </td>
     </tr>
   </table>
