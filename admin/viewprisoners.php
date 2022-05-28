@@ -24,7 +24,7 @@
       <div></div>
     </tr>
     <tr>
-      <td bgcolor='#999999' valign='center'>
+      <td bgcolor='#999999' align='center'>
 
         <?php
 
@@ -49,7 +49,7 @@
 <h3>  PRISONERS DETAIL ($records records)</h3>
 </caption>
 
-<tr bgcolor='green'>
+<tr bgcolor='white'>
 <th width='10%'>Photo</th>
 <th width='7%'>National id</th>
 <th width='7%'>Category</th>

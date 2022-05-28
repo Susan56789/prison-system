@@ -21,13 +21,13 @@ session_start();
 			<td colspan="7" bgcolor="#yellow" height="1" align="center">
 				<h1>
 					<font size="5">
-						<!--<a href="adminpanel.php">Home</a> --->|
 
-						<a href="search-form.php">Search </a>
+						<a href="Logged.php">Logs</a> |
+						<a href="search-form.php">Search </a> |
 						<a href="location.php">Location</a>|
 						<a href="transfer.php">Prisoner Transfer</a>|
 						<a href="court.php">Court</a>
-						<a href="Logged.php">Logs</a>
+
 					</font>
 				</h1>
 				<h4 style="color:white; display:inline-block;"><?php echo "Hello " . $_SESSION['username'] . "!"  ?></h4>

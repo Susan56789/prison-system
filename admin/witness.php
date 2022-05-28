@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <table align='center' border='1' bgcolor='green' width='800' cellpadding='8' cellspacing='0' height='200'>
+    <table align='center' border='1' bgcolor='green' width='80%' cellpadding='8' cellspacing='0' height='200'>
         <tr>
 
             <td align="center">
@@ -22,7 +22,7 @@
 
         </tr>
         <tr>
-            <td bgcolor='grey' valign='center'>
+            <td bgcolor='green' align='center'>
 
                 <?php
                 ob_start();
@@ -35,9 +35,9 @@
 
                 $select = mysqli_query($link, "SELECT * from witness ORDER BY File_num DESC");
 
-                echo "<table width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='silver'>
+                echo "<table width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='black'>
     <caption><b>Witness Details</b></caption>
-    <tr bgcolor='green'>
+    <tr bgcolor='white'>
     <th width='10%'>National id</th>
     <th width='10%'>File Number</th>
     <th width='10%'>Full Names</th>
@@ -60,11 +60,12 @@
             </td>
         </tr>
 
+
         <tr>
-            <td align='center' bgcolor='white' height='1'><?php
-                                                            include("footer.php");
-                                                            ?>
-            </td>
+            <td colspan=' 5' bgcolor='#fff' height='2'> <?php
+                                                        include("footer.php");
+                                                        ?></td>
+
         </tr>
     </table>
 </body>

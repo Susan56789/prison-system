@@ -17,9 +17,11 @@ $location = mysqli_real_escape_string($con, $_POST['location']);
 $judge = mysqli_real_escape_string($con, $_POST['judge']);
 
 
-//check if is in database
 
-$sel = mysqli_query($con, "SELECT * from registration WHERE id = $Nationalid");
+
+//check if is in database
+$query = "SELECT * from registration WHERE id = $Nationalid";
+$sel = mysqli_query($con, $query);
 $row = mysqli_fetch_array($sel);
 if ($row['id'] != $Nationalid) {
 	echo "Prisoner does not exist, input correct ID";
@@ -28,10 +30,17 @@ if ($row['id'] != $Nationalid) {
 $Filenum = $row['File_num'];
 $sentence = $row['Sentence'];
 
+if (empty($Filenum) | empty($judge) | empty($Nationalid) | empty($dateoftrial)) {
+	echo "All Fields are required !";
+	return false;
+}
 
 $sql = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
 VALUES ('$Nationalid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');";
 
+if (!mysqli_query($con, $sql)) {
+	die('Error: ' . mysqli_error($con));
+}
 
 //record user actions
 if (isset($_POST['submit'])) {
@@ -45,11 +54,6 @@ if (isset($_POST['submit'])) {
 	}
 }
 
-
-
-if (!mysqli_query($con, $sql)) {
-	die('Error: ' . mysqli_error($con));
-}
 ?>
 <script type="text/javascript">
 	alert("you have succefully add the record !thank you");

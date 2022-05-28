@@ -54,10 +54,10 @@
 
 			</td>
 		</tr>
-		
+
 		<tr>
-			<td bgcolor="#FFFFFF"><b>Judge Name:</b></td>
-			<td bgcolor="#FFFFFF"><input type="text" name="judge" placeholder="Jury President" /></td>
+			<td bgcolor="#FFFFFF"><b>Lawyer's Name:</b></td>
+			<td bgcolor="#FFFFFF"><input type="text" name="judge" placeholder="Lawyer ..." /></td>
 		</tr>
 
 		<td height="26" bgcolor="#FFFFFF" align="center"><input type="submit" name="submit" value="SAVE" /></td>
