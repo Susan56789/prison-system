@@ -24,7 +24,7 @@ session_start();
 						<!--<a href="adminpanel.php">Home</a> --->|
 
 						<a href="search-form.php">Search </a>
-						<!-- <a href="location.php">Location</a>| -->
+						<a href="location.php">Location</a>|
 						<a href="transfer.php">Prisoner Transfer</a>|
 						<a href="court.php">Court</a>
 						<a href="Logged.php">Logs</a>
@@ -72,15 +72,12 @@ session_start();
 				<table border='1' align='center'>
 					<tr>
 						<td width="300" bgcolor="green">
-							<h4> Admin Management : </h4>
+							<h4> Admin Panel : </h4>
 
 
 							<ul>
 								<li><a href='newPrisoner.php'><b><button>New Prisoner</button></b></a></li>
 								<br>
-								<!---<li><a href='viewofficer.php'><b><button>Prisoner Transfer</button></b></a></li>
-								<br>--->
-
 								<li><a href='viewprisoners.php'><b><button>Prisoners Details</button></b></a></li>
 								<br>
 								<li><a href='viewcase.php'><b><button>Case Details</button></b></a></li>
@@ -93,8 +90,6 @@ session_start();
 								<br>
 								<li><a href='viewnewprison.php'><b><button>View Prisons</button></b></a></li>
 								<br>
-								<!--<li><a href='viewcourt.php'><b><button>Court Information</button></b></a></li>
-								<br>-->
 								<li><a href='addofficer.php'><b><button>Add Officer</button></b></a></li>
 								<br>
 								<li><a href='viewoff.php'><b><button>Officer details</button></b></a></li>

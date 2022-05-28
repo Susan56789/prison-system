@@ -13,10 +13,10 @@
 <body>
   <table align="center" border="1" bgcolor="#937541" width="600" cellpadding="8" cellspacing="0" height="415">
     <tr>
-      <td colspan="0" height="246"><img src="banner.gif" width="1045" height="230""></td>
-          </tr>
-          <tr>
-            <td colspan=" 8" bgcolor="green" height="3" align="center">
+      <td colspan="0" height="246"><img src="banner.gif" width="860" height="300"></td>
+    </tr>
+    <tr>
+      <td colspan=" 8" bgcolor="green" height="3" align="center">
 
 
 
