@@ -37,13 +37,14 @@
         $sel = mysqli_query($con, "SELECT * from $tbl_name");
         while ($row = mysqli_fetch_array($sel)) {
           echo "<div class='card'";
-          echo  "<i >", "ID: " . $row['Id'] . "</i>";
+          // echo  "<i >", "ID: " . $row['Id'] . "</i>";
+          echo "<i>" . $row['posted_on'] . "</i><br/>";
           echo "<div class='container'";
           echo  "<h4 >", "From: " . $row['Username'] . "</h4>";
           echo  "<h5 >", "To: " . $row['to_'] . "</h5>";
           echo  "<h3 >", "Title: " . $row['subject'] . "</h3>";
           echo  "<p >" . $row['message'] . "</p>";
-          echo '<p><b><a class="delete" href="deleteannounce1.php">Delete</a></b></p>';
+          //echo '<p><b><a class="delete" href="deleteannounce1.php">Delete</a></b></p>';
           echo "</div>";
           echo "</div>";
         }
@@ -55,7 +56,7 @@
     </tr>
 
     <tr>
-      <td align='center' bgcolor='GREY' height='1'><?php
+      <td align='center' bgcolor='gold' height='1'><?php
                                                     include("footer.php");
                                                     ?>
       </td>

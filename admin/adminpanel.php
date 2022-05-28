@@ -34,19 +34,13 @@ session_start();
 			</td>
 			</td>
 
-			<td height='1' colspan='3' align='right' bgcolor="green">&nbsp;</td>
+
 
 		</tr>
 
 
 
 		<tr>
-
-
-
-			<td width='4%' bgcolor='#FFFFFF' valign='top'>
-				<h3 align='center' title='You should be online'>&nbsp;</h3>
-			</td>
 
 			<td width='81%' valign='top' bgcolor="#FFFFFF">
 
@@ -56,7 +50,7 @@ session_start();
 				<h3 align='center'>&nbsp;</h3>
 				<br />
 				<h3 align='center'>THIS FOR ADMINSITRATOR </h3>
-				<P align='justify'>
+				<p align='justify'>
 					<font face='Arial, Helvetica, sans-serif'>
 						The system enables an Administrator to provide services to
 						users. The administrator can add and upload information,
@@ -66,7 +60,7 @@ session_start();
 
 				<br>
 			</td>
-			<td width='25%' bgcolor='green' valign='top'>
+			<td width='30%' bgcolor='green' valign='top'>
 
 
 				<table border='1' align='center'>
@@ -113,10 +107,13 @@ session_start();
           </tr>
 		  
           <tr>
-            <?php
-			include("Footer.php");
-			?>
-          </tr>
-	</table>
+			  <td bgcolor=' gold' colspan="4">
+										<?php
+										include("Footer.php");
+										?>
+						</td>
+					</tr>
+				</table>
 </body>
+
 </html>

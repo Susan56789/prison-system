@@ -11,16 +11,17 @@ if (!$conn) {
 }
 
 //we specify here the Database name we are using
-
+date_default_timezone_set("Africa/Nairobi");
 $To = $_POST['To'];
 $id = rand(1, 1000000);
 $Subject = $_POST['Subject'];
 $Message = $_POST['Message'];
 $From = $_POST['From'];
+$time = date('Y/m/d H:i:s');
 
 //It wiil insert a row to our leave details`
-$sql = "INSERT INTO `prison_system`.`announce` (`to_`,`Id`,`subject`,`message`,`Username`) 
-	     VALUES ('{$To}','{$id}', '{$Subject}', '{$Message}','{$From}');";
+$sql = "INSERT INTO `prison_system`.`announce` (`to_`,`Id`,`subject`,`message`,`Username`,`posted_on`) 
+	     VALUES ('{$To}','{$id}', '{$Subject}', '{$Message}','{$From}','{$time}');";
 
 //we are using mysqli_query function. it returns a resource on true else False on error
 $retval = mysqli_query($conn, $sql);

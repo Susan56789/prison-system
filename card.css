@@ -8,6 +8,7 @@ body {
     color: #000;
     font-size: 20px;
     background: grey;
+    display: block;
 
 }
 
@@ -22,8 +23,12 @@ a:hover {
 }
 
 .cards {
-    display: flex;
-    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: .5rem;
+
 }
 
 .card {
@@ -32,9 +37,7 @@ a:hover {
     border: 1px solid #003366;
     border-radius: 5px;
     width: 300px;
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
+
 }
 
 .card:hover {

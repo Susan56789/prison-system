@@ -30,12 +30,12 @@ CREATE TABLE announce
 (
   Id varchar(16) NOT NULL PRIMARY KEY,
   Username varchar(50),
-  to_ varchar(17) NOT NULL,
-  subject varchar(14) NOT NULL,
-  message varchar(100) NOT NULL
+  to_ varchar(50) NOT NULL,
+  subject varchar(100) NOT NULL,
+  message varchar(1000) NOT NULL
 );
-
-
+ALTER TABLE announce ADD COLUMN posted_on varchar(255) NOT NULL;
+SELECT * FROM announce;
 
 /*Table for Court Details*/
 CREATE TABLE court

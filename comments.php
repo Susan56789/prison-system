@@ -21,7 +21,7 @@
 
         </tr>
         <tr>
-            <td class="cards" bgcolor='white' align='left'>
+            <td class="cards" width='100%' bgcolor='white' align='left'>
 
                 <?php
 
@@ -33,7 +33,7 @@
 
                 $con = mysqli_connect($host, $username, $password, $db_name);
 
-                $sel = mysqli_query($con, "SELECT * from $tbl_name");
+                $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY posted_on DESC");
                 /**echo "<table align='center' bgcolor='green' width='100%' border='0' cellpadding='3' cellspacing='2'>
 <caption><h3>COMMENTS</h3></caption>
 <tr bgcolor='grey'>
@@ -46,7 +46,8 @@
                  **/
                 while ($row = mysqli_fetch_array($sel)) {
                     echo "<div class='card'";
-                    echo  "<i >", "ID: " . $row['Id'] . "</i>";
+                    // echo  "<i >", "ID: " . $row['Id'] . "</i> <br/>";
+                    echo "<i>" . $row['posted_on'] . "</i> <br/>";
                     echo "<div class='container'";
                     echo  "<h4 >", "From: " . $row['Username'] . "</h4>";
                     echo  "<h5 >", "To: " . $row['to_'] . "</h5>";

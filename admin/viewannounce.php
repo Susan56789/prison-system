@@ -46,7 +46,8 @@
          **/
         while ($row = mysqli_fetch_array($sel)) {
           echo "<div class='card'";
-          echo  "<i >", "ID: " . $row['Id'] . "</i>";
+          echo "<i>" . $row['posted_on'] . "</i> <br/>";
+          //echo  "<i >", "ID: " . $row['Id'] . "</i>";
           echo "<div class='container'";
           echo  "<h4 >", "From: " . $row['Username'] . "</h4>";
           echo  "<h5 >", "To: " . $row['to_'] . "</h5>";

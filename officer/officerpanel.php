@@ -89,11 +89,11 @@ session_start();
 
       </td>
     </tr>
-    <?php
-    include("footer.php");
-    ?>
     <tr>
-
+      <td align='center' colspan="3" bgcolor='gold' height='1'><?php
+                                                                include "Footer.php";
+                                                                ?>
+      </td>
     </tr>
   </table>
 </body>
