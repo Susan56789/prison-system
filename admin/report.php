@@ -12,12 +12,12 @@
 </head>
 
 <body>
-  <table align="center" border="1" bgcolor="#937541" width="600" cellpadding="8" cellspacing="0" height="415">
+  <table align="center" border="1" bgcolor="#937541" width="800" cellpadding="8" cellspacing="0" height="515">
     <tr>
-      <td colspan="1" height="246"><img src="banner.gif" width="700" height="230""></td>
-          </tr>
-          <tr>
-            <td colspan=" 8" bgcolor="green" height="3" align="center">
+      <td colspan="1" height="246"><img src="banner.gif" width="860" height="300"></td>
+    </tr>
+    <tr>
+      <td colspan=" 8" bgcolor="green" height="3" align="center">
 
 
 
