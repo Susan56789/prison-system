@@ -35,6 +35,7 @@
 
         $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY fullname ASC");
         $records = mySQLi_num_rows($sel);
+
         echo "<table align='center' width='100%' bgcolor='GREEN' 
 border='0' bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
 <caption>

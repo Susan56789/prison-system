@@ -29,7 +29,7 @@
                 $con = mysqli_connect($host, $username, $password, $db_name);
                 mysqli_select_db($con, "$db_name") or die("cannot connect");
 
-                $sel = mysqli_query($con, "SELECT * from $tbl_name");
+                $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY Admin_Name ASC");
                 echo "<table align='center' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='black'>
 <caption><h3>ADMIN INFORMATION</h3></caption>
 <tr bgcolor='white'>

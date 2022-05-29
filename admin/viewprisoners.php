@@ -73,11 +73,6 @@
 
           echo "<tr bgcolor='grey'>";
           echo "<td><img src='../uploads/" . $row['photo'] . "' width='80' height='80'></td>";
-          //$imageURL = 'uploads/' . $row["photo"];
-
-
-          //echo "<td width='20%'>", '<img src=' . $imageURL . "  > ";
-
           "</td>";
           echo  "<td width='7%'>" . $row['id'] . "</td>";
           echo  "<td width='7%'>" . $row['category'] . "</td>";

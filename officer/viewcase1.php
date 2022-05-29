@@ -25,7 +25,7 @@
 
         $con = mysqli_connect($host, $username, $password, $db_name);
 
-        $sel = mysqli_query($con, "SELECT * from $tbl_name");
+        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY Dateoftrial DESC");
         echo "<table align='center'  bgcolor='GREEN' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='silver'>
 <caption><h3>COURT INFORMATION</h3></caption>
 <tr bgcolor='#CCCCCC'>

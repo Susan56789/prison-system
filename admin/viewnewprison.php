@@ -21,7 +21,7 @@
 
     </tr>
     <tr>
-      <td bgcolor='#999999' valign='center'>
+      <td bgcolor='#999999' align='center'>
 
         <?php
 
@@ -32,9 +32,8 @@
         $tbl_name = "newprison";
 
         $con = mysqli_connect($host, $username, $password, $db_name) or die("cannot connect");
-        //mysqli_select_db("$db_name")or die("cannot connect");
 
-        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY pno DESC LIMIT 0,7");
+        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY pno ASC");
         echo "<table align='center' width='100%'
  bgcolor='GREEN' border='0' bgcolor='green'
   cellpadding='3' cellspacing='2' bgcolor='silver'>

@@ -32,7 +32,7 @@
 
         $con = mysqli_connect($host, $username, $password, $db_name);
 
-        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY id DESC LIMIT 0,7");
+        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY dateofvisit DESC");
         echo "<table align='center' width='100%' bgcolor='GREEN' border='0' bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
 <caption><h3>VISITORS INFORMATION</h3></caption>
 <tr bgcolor='#CCCCCC'>

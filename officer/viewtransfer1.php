@@ -31,7 +31,7 @@
 
         $con = mysqli_connect($host, $username, $password, $db_name);
 
-        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY National_id DESC LIMIT 0,7");
+        $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY Dateoftransfer DESC");
         echo "<table align='center'bgcolor='GREEN' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='silver'>
 <caption><h3>PRISONER TRANSFER  INFORMATION</h3></caption>
 <tr bgcolor='#CCCCCC'>
@@ -51,7 +51,7 @@
           echo  "<td width='10%'>" . $row['To_prison'] . "</td>";
           echo  "<td width='10%'>" . $row['Dateoftransfer'] . "</td>";
           //echo '<td width="3%"><b><a href="deletetransfer1.php?id=' . $row['National_id'] . '">Delete</a></font></b></td>';
-          //echo '<td width="3%"><b><a href="edit.php?id=' . $row['National_id'] . '">Edit</a></font></b></td>';
+          echo '<td width="3%"><b><a href="edit.php?id=' . $row['National_id'] . '">Edit</a></font></b></td>';
 
           echo "</tr>";
         }

@@ -62,10 +62,8 @@ bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
         while ($row = mysqli_fetch_array($sel)) {
           echo "<tr bgcolor='grey'>";
 
-          // $imageURL = 'uploads/' . $row["photo"];
 
           echo "<td><img src='../uploads/" . $row['photo'] . "' width='80' height='80'></td>";
-          // echo "<td width='20%'>", '<img src=' . $imageURL . "  > ";
 
           "</td>";
           echo  "<td width='10%'>" . $row['id'] . "</td>";
