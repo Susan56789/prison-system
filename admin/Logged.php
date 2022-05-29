@@ -12,8 +12,9 @@
 <body>
     <table align='center' border='1' bgcolor='green' width='800' cellpadding='8' cellspacing='0' height='200'>
         <tr>
-            <td align="center"><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
-
+            <td align="center">
+                <a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
+                <a href="logsrep.php" target="_parent">Print <b>|</b></a>
                 <a href="../index.php" target="_parent">Log out</a>
             </td>
 

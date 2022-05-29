@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set("Africa/Nairobi");
 $con = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
 
 
@@ -49,13 +49,25 @@ $newFilename = uniqid("IMG-") . "." . $filetype_lc;
 
 $uploadPath = $targetDir . $newFilename;
 
+
+
+$today = date('Y/m/d H:i:s');
+//Check if file Number is already in database
+$sel = mysqli_query($con, "SELECT * from registration");
+$row = mysqli_fetch_array($sel);
+
+if ($row['File_num'] == $Filenum) {
+    echo "Check file number";
+    return false;
+}
 if (strtotime($dateout) < strtotime($datein)) {
     echo "Enter correct Date Out";
     return false;
 }
-
-
-
+if (strtotime($datein) > strtotime($today)) {
+    echo "Enter correct date in !";
+    return false;
+}
 if (
     empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum)
     || empty($Email) || empty($sentence) || empty($address) || empty($county) || empty($Tel)
@@ -98,13 +110,6 @@ prison = '$prison'";
 VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');";
 
 
-    //Check if file Number is already in database
-    $sel = mysqli_query($con, "SELECT * from registration");
-    $row = mysqli_fetch_array($sel);
-    if ($Filenum  == $row['File_num']) {
-        echo "Check file number";
-        return false;
-    }
 
     //check if age is greater than 18 years
     $age = 18;
@@ -113,7 +118,7 @@ VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');
         $dateofbirth = strtotime($dateofbirth);
     }
     if (time() - $dateofbirth < $age * 31536000) {
-        echo "Invalid date";
+        echo "Invalid date of birth !";
         return false;
     }
 

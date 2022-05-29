@@ -61,6 +61,9 @@
                       <td>
                         <li><a href="newprisonrep.php"><button>Prisons Report</button></a></li>
                       </td>
+                      <td>
+                        <li><a href="logsrep.php"><button>Logs Report</button></a></li>
+                      </td>
                     </ul>
                   </div>
                 </div>

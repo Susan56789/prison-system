@@ -21,10 +21,10 @@
 				</font>
 			</td>
 		</tr>
-		<td height="5" bgcolor="#FFFFFF">
+		<td>
 			<tr>
 				<td>
-					<h2 class="bg-primary" align="center">TRANSFER FORM FOR PRISONNER</h2>
+					<h2 class="bg-primary" align="center">TRANSFER FORM FOR PRISONER</h2>
 					<form action="validatetransfer.php" method="post">
 						<table bgcolor="white" height="431" border="0" align="center" width="50%">
 
@@ -39,8 +39,11 @@
 
 
 							<tr>
-								<td bgcolor="#FFFFFF"><b>From Prison:</b></td>
-								<td> <select name="From">
+								<td>
+									<b>From Prison:</b>
+								</td>
+								<td>
+									<select name="From">
 										<option>---Select prison---</option>
 										<option>
 											<?php
@@ -54,8 +57,11 @@
 								</td>
 							</tr>
 							<tr>
-								<td bgcolor="#FFFFFF"><b>To Prison:</b></td>
-								<td> <select name="To">
+								<td>
+									<b>To Prison:</b>
+								</td>
+								<td>
+									<select name="To">
 										<option>---Select prison---</option>
 										<option>
 											<?php
@@ -70,7 +76,8 @@
 							</tr>
 
 							<tr>
-								<td><label for="on"><b>Date of Transfer:</b></label>
+								<td>
+									<label for="on"><b>Date of Transfer:</b></label>
 								</td>
 								<td>
 									<input type="date" name="date" id="date" />
@@ -78,20 +85,16 @@
 								</td>
 							</tr>
 
-							<!-- <tr>
-<td bgcolor="#FFFFFF"><b>Date of Transfer:</b></td>
-<td bgcolor="#FFFFFF"><input type="text" name="dot" /></td>
-</tr>
- -->
 
-							<td height="26" bgcolor="#FFFFFF" align="center">
+
+							<td align="center">
 								<input type="submit" name="submit" value="Add" />
 							</td>
 			</tr>
 	</table>
 	</form>
 	</td>
-	<td bgcolor="#FFFFFF">
+	<td>
 		</tr>
 		<tr>
 			<?php
