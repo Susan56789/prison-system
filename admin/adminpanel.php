@@ -7,7 +7,7 @@ session_start();
 
 <head>
 	<title>Prison Management System</title>
-	<link rel="stylesheet" href="./login.css">
+	<link rel="stylesheet" href="login.css">
 </head>
 
 <body>

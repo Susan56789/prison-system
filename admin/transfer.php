@@ -25,7 +25,7 @@
 		<td height="5" bgcolor="#FFFFFF">
 			<tr>
 				<td>
-					<h2 class="bg-primary" align="center">TRANSFER FORM FOR PRISONNER</h2>
+					<h2 class="bg-primary" align="center">TRANSFER FORM FOR PRISONER</h2>
 					<form action="validatetransfer.php" method="post">
 						<table bgcolor="white" height="431" border="0" align="center" width="50%">
 							<td width="34%" bgcolor="#FFFFFF"><b>National Id:</b></td>

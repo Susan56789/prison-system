@@ -110,7 +110,7 @@
 
 
     <tr>
-      <td align='center' bgcolor='white' height='1'>
+      <td align='center' bgcolor='gold' height='1'>
         <?php
         include("footer.php");
         ?>

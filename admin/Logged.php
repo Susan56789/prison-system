@@ -35,7 +35,7 @@
                 $sel = mysqli_query($con, "SELECT * from $tbl_name ORDER BY times DESC");
                 echo "<table align='center' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='green'>
         <caption><h3>USERS LOG IN HISTORY</h3></caption>
-        <tr bgcolor='green'>
+        <tr bgcolor='white'>
         <th width='10%'>User id</th>
         <th width='10%'>Action</th>
         <th width='10%'>Time</th>
@@ -60,7 +60,7 @@
             </td>
         </tr>
         <tr>
-            <td align='center' bgcolor='white' height='1'><?php
+            <td align='center' bgcolor='gold' height='1'><?php
                                                             include("footer.php");
                                                             ?>
             </td>

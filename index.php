@@ -33,9 +33,11 @@
           <h2 class="bg-primary">Online Prison Management System </h2>
 
     <tr>
-      <?php
-      include("footer.php");
-      ?>
+      <td colspan=' 3' align='center' bgcolor='gold' height='1'>
+        <?php
+        include("footer.php");
+        ?>
+      </td>
     </tr>
 
   </table>

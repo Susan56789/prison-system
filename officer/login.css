@@ -5,9 +5,9 @@
 
 /* === Form Typography === */
 body {
-  font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode",
-    sans-serif;
-  background: rgb(145, 218, 240);
+  font-size: 14px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: rgb(6, 54, 14);
 }
 
 .contact_form h2,

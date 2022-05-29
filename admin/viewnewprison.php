@@ -12,7 +12,14 @@
 
 <body>
   <table align='center' border='0' bgcolor='green' width='1300' cellpadding='8' cellspacing='0' height='200'>
+    <tr>
 
+      <td align="center" bgcolor='green'><a href="adminpanel.php" target="_parent">Admin <b>|</b></a>
+        <a href="newprisonrep.php" target="_parent">Report <b>|</b></a>
+        <a href="../index.php" target="_parent">Log out</a>
+      </td>
+
+    </tr>
     <tr>
       <td bgcolor='#999999' valign='center'>
 
@@ -63,16 +70,9 @@
         <br />
       </td>
     </tr>
-    <tr>
 
-      <td align="center" bgcolor='green'><a href="adminpanel.php" target="_parent">Admin <b>|</b></a>
-        <a href="newprisonrep.php" target="_parent">Report <b>|</b></a>
-        <a href="../index.php" target="_parent">Log out</a>
-      </td>
-
-    </tr>
     <tr>
-      <td align='center' bgcolor='white' height='1'>
+      <td align='center' bgcolor='gold' height='1'>
         <?php
         include("footer.php");
         ?>

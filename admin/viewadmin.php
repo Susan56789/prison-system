@@ -9,7 +9,14 @@
 <body>
     <table align='center' border='1' bgcolor='green' width='800' cellpadding='8' cellspacing='0' height='200'>
         <tr>
-            <td bgcolor='#999999' valign='center'>
+            <td align="center"><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
+
+                <a href="../index.php" target="_parent">Log out</a>
+            </td>
+
+        </tr>
+        <tr>
+            <td bgcolor='green' align='center'>
 
                 <?php
 
@@ -23,9 +30,9 @@
                 mysqli_select_db($con, "$db_name") or die("cannot connect");
 
                 $sel = mysqli_query($con, "SELECT * from $tbl_name");
-                echo "<table align='center' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='green'>
+                echo "<table align='center' width='100%' border='0' cellpadding='3' cellspacing='2' bgcolor='black'>
 <caption><h3>ADMIN INFORMATION</h3></caption>
-<tr bgcolor='green'>
+<tr bgcolor='white'>
 <th width='3%'>Full Name</th>
 <th width='3%'>National id</th>
 <th width='10%'>Username</th>
@@ -57,15 +64,9 @@
             </td>
 
         </tr>
-        <tr>
-            <td align="center"><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
 
-                <a href="../index.php" target="_parent">Log out</a>
-            </td>
-
-        </tr>
         <tr>
-            <td align='center' bgcolor='white' height='1'><?php
+            <td align='center' bgcolor='gold' height='1'><?php
                                                             include("footer.php");
                                                             ?>
             </td>

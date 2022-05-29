@@ -1,6 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
 
   <link rel="stylesheet" media="screen" href="login.css">
 </head>
@@ -28,10 +33,15 @@
             The prisons system was introduced in Kenya by the British East Africa protectorate with the enactment of East Africa Prisons Regulations in April, 1902. At independence, the reforms in the penal system were strengthened with the enactment of chapters 90 and 92 to establish the Kenya Prisons, and Act (Cap 90) has since been reviewed, the last being 1977.
             The Borstal Act has also been reviewed, the last being in 1967. Maximum Security Prisons in Kenya Currentl
           </p>
+        </div>
+      </td>
+    </tr>
     <tr>
-      <?php
-      include("footer.php");
-      ?>
+      <td colspan=' 3' align='center' bgcolor='gold' height='1'>
+        <?php
+        include("footer.php");
+        ?>
+      </td>
     </tr>
 
   </table>

@@ -69,7 +69,7 @@
     </tr>
 
     <tr>
-      <td align='center' bgcolor='white' height='1'><?php
+      <td align='center' bgcolor='gold' height='1'><?php
                                                     include("footer.php");
                                                     ?>
       </td>

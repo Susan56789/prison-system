@@ -33,7 +33,6 @@
 			</td>
 			</td>
 
-			<td height='1' colspan='3' align='right' bgcolor="#006600">&nbsp;</td>
 
 		</tr>
 
@@ -89,7 +88,7 @@
 			</td>
           </tr>
           <tr>
-            <td colspan=' 3' align='center' bgcolor='#FF0000' height='1'>
+            <td colspan=' 3' align='center' bgcolor='gold' height='1'>
 
 										<?php
 										include("Footer.php");
