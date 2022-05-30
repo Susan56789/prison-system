@@ -64,7 +64,7 @@
                             <select id="category" name="category" class="reg_fields">
 
                                 <!--Have not yet been convicted--->
-                                <!-- <option>Remands</option> -->
+                                <option>Remands</option>
 
                                 <!---First offenders and well behaved.-->
                                 <option>Star class</option>
