@@ -278,6 +278,8 @@
             </table>
         </div>
         <br />
+
+        <!-----
         <div class="control_input">
             <h4>Witness Section</h4>
             <label>Full Names</label>
@@ -289,6 +291,8 @@
             <label>Phone Number</label>
             <input type="tel" name="tel" id="tel" /><br />
         </div>
+        ----->
+
         <div class="control_input" align="center">
             <input type="submit" name="signup" id="Add" value="Add " title="" border="0">
         </div>

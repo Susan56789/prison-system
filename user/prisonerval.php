@@ -29,10 +29,10 @@ $location = $_POST['location'];
 $judge = $_POST['judge'];
 
 
-$FullNames = $_POST['Fnames'];
-$Id = $_POST['id'];
-$Email = $_POST['email'];
-$Tel = $_POST['tel'];
+//$FullNames = $_POST['Fnames'];
+//$Id = $_POST['id'];
+//$Email = $_POST['email'];
+//$Tel = $_POST['tel'];
 
 // File upload path
 $targetDir = "../uploads/";
@@ -92,8 +92,8 @@ prison = '$prison'";
 
 
     //insert into court table
-    $quer = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId) 
-  VALUES ('$Id', '$FullNames', '$Email', '$Tel', '$Filenum','$Nid');";
+    // $quer = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId) 
+    //VALUES ('$Id', '$FullNames', '$Email', '$Tel', '$Filenum','$Nid');";
 
     //insert into witness table
     $link = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
