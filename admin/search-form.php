@@ -16,7 +16,7 @@
       <td colspan="0" height="246"><img src="banner.gif" width="860" height="300"></td>
     </tr>
     <tr>
-      <td colspan=" 8" bgcolor="green" height="3" align="center">
+      <td colspan=" 8" border='1' bgcolor='brown' align="center">
 
 
 

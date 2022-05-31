@@ -27,7 +27,7 @@
     </tr>
 
     <tr>
-      <td colspan="8" bgcolor="FF0000" height="3" align="center">
+      <td colspan="8" bgcolor="brown" height="3" align="center">
         <font size="5">
           <a href="../index.php">Log Out</a>|
           <a href="officerpanel.php">Back to Panel</a>

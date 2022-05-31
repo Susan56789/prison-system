@@ -17,15 +17,15 @@
 			<td colspan='3' height='2'><img src='banner.gif' width="860" height="300"></td>
 		</tr>
 		<tr>
-			<td colspan="7" bgcolor="#yellow" height="1" align="center">
+			<td colspan="7" bgcolor="brown" height="1" align="center">
 				<h1>
 					<font size="5">
 						<a href="adminpanel.php">Home</a> |
 
-						<a href="search-form.php">Search </a>
+						<a href="search-form.php">Search </a>|
 
 						<a href="announce.php">Complain</a>|
-						<a href="transfer.php">Prisoner Trans </a> ||
+						<a href="transfer.php">Prisoner Trans </a> |
 
 						<a href="court.php">Court</a>
 					</font>

@@ -13,7 +13,7 @@
 <body>
   <table align='center' border='0' bgcolor='green' width='100%' cellpadding='8' cellspacing='0' height='100%'>
     <tr>
-      <td align="center" bgcolor='green'>
+      <td align="center" border='1' bgcolor='brown'>
         <a href="officerpanel.php" target="_parent">Panel Officer <b>|</b></a>
         <!--<a href="deleteannounce1.php" target="_parent">Delete <b>|</b></a>---->
         <a href="../index.php" target="_parent">Log out</a>

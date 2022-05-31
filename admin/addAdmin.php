@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="login.css" rel="stylesheet" type="text/css" />
-    
+
 </head>
 
 <body>
@@ -18,7 +17,7 @@
             <td colspan="2" height="2"><img src="../banner.gif" width="860"></td>
         </tr>
         <tr>
-            <td colspan="3" bgcolor="#FF0000" height="1" align="center">
+            <td colspan="3" bgcolor="brown" height="1" align="center">
                 <font size="4">
                     <a href="adminpanel.php">HOME</a> |
                 </font>

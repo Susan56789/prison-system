@@ -16,17 +16,10 @@
       <td colspan="3" height="2"><img src="banner.gif" width="860" height="300"></td>
     </tr>
     <tr>
-      <td bgcolor="#FF0000" height="1" align="center">
+      <td bgcolor="brown" colspan="5" height="1" align="center">
         <font size="4">
 
-          <a href="index.php">HOME</a>
-
-        </font>
-      </td>
-      <td bgcolor="#FF0000" height="1" align="center">
-        <font size="4">
-
-
+          <a href="index.php">HOME</a> |
           <a href="location.php">ABOUT</a>
         </font>
       </td>

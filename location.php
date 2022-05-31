@@ -16,7 +16,7 @@
       <td colspan="3" height="2"><img src="banner.gif" width="860" height="300"></td>
     </tr>
     <tr>
-      <td colspan="3" bgcolor="#FF0000" height="1" align="center">
+      <td colspan="3" bgcolor="brown" height="1" align="center">
         <font size="4">
           <a href="index.php">HOME</a> |
           <a href="login2.php">LOGIN </a> |

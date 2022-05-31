@@ -13,7 +13,7 @@
 <body>
 	<table width="60%" height="91" border="1" align="center" bgcolor="#FFFFFF">
 		<tr>
-			<td height="33" align="center" bgcolor="green">
+			<td align="center" border='1' bgcolor='brown'>
 				<font size="5">
 					<a href="adminpanel.php">HOME</a>
 

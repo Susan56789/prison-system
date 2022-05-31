@@ -18,7 +18,7 @@ session_start();
 			</td>
 		</tr>
 		<tr>
-			<td colspan="7" bgcolor="#yellow" height="1" align="center">
+			<td colspan="7" bgcolor="brown" height="1" align="center">
 				<h1>
 					<font size="5">
 

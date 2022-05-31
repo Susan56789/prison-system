@@ -17,10 +17,12 @@
 
     <table align="center" border="0" bgcolor="white" width="400" cellpadding="9" cellspacing="0" height="525">
         <tr>
-            <td colspan="2" height="2"><img src="../banner.gif" width="860"></td>
+            <td colspan="2" height="2">
+                <img src="../banner.gif" width="860">
+            </td>
         </tr>
         <tr>
-            <td colspan="3" bgcolor="#FF0000" height="1" align="center">
+            <td colspan="3" border='1' bgcolor='brown' height="1" align="center">
                 <font size="4">
                     <a href="adminpanel.php">HOME</a> |
                 </font>

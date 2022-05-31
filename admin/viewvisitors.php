@@ -14,7 +14,8 @@
   <table align='center' border='0' bgcolor='green' width='1300' cellpadding='8' cellspacing='0' height='200'>
     <tr>
 
-      <td align="center" bgcolor='green'><a href="adminpanel.php" target="_parent">Admin panel<b>|</b></a>
+      <td align="center" border='1' bgcolor='brown'>
+        <a href="adminpanel.php" target="_parent">Admin panel<b>|</b></a>
         <a href="../officer/visitorep.php" target="_parent">Report <b>|</b></a>
         <a href="../index.php" target="_parent">Log out</a>
       </td>

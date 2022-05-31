@@ -12,7 +12,7 @@
 
 <body>
 	<table border="1" bgcolor="#FFFFFF" align="center" width="54%">
-		<tr bgcolor="#FF0000">
+		<tr bgcolor="brown">
 
 			<font size="5">
 				<a href="userpanel.php">HOME</a>

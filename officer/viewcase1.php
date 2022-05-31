@@ -13,7 +13,7 @@
 <body>
   <table align='center' border='0' bgcolor='green' width='800' cellpadding='8' cellspacing='0' height='200'>
     <tr>
-      <td bgcolor='#999999' valign='center'>
+      <td bgcolor='#999999' align='center'>
 
         <?php
 
@@ -58,7 +58,8 @@
       </td>
     </tr>
     <tr>
-      <td align="center"><a href="officerpanel.php" target="_parent">Panel Officer <b>|</b></a>
+      <td align="center" border='1' bgcolor='brown'>
+        <a href="officerpanel.php" target="_parent">Panel Officer <b>|</b></a>
         <a href="deletecase.php" target="_parent">Delete prisoners <b>|</b></a>
         <a href="../index.php" target="_parent">Log out</a>
       </td>

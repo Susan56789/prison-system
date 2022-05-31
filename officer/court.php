@@ -13,7 +13,7 @@
 <body>
 	<table border="1" bgcolor="#FFFFFF" align="center" width="54%">
 		<tr bgcolor="#FF0000">
-			<td align="center">
+			<td align="center" border='1' bgcolor='brown'>
 				<font size="5">
 					<a href="officerpanel.php">HOME</a>
 					<a href="transfer.php">TRANSFER</a>

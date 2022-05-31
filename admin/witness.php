@@ -13,7 +13,7 @@
     <table align='center' border='1' bgcolor='green' width='80%' cellpadding='8' cellspacing='0' height='200'>
         <tr>
 
-            <td align="center">
+            <td align="center" border='1' bgcolor='brown'>
 
                 <a href="newWitness.php">Add Witness <b>|</b></a><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
 

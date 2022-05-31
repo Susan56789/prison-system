@@ -18,7 +18,7 @@
       </td>
     </tr>
     <tr>
-      <td colspan="3" bgcolor="#FF0000" height="1" align="center">
+      <td colspan="3" bgcolor="brown" height="1" align="center">
         <font size="4">
           <a href="location.php">ABOUT</a>|
           <a href="login2.php">LOGIN </a> |

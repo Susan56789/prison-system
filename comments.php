@@ -13,7 +13,7 @@
 <body>
     <table align='center' bgcolor='green' width='100%' cellpadding='8' cellspacing='0' height='400'>
         <tr>
-            <td>
+            <td border='1' bgcolor='brown'>
                 <a href="announce.php" target="_parent">Add Comment <b>|</b></a>
                 <a href="index.php" target="_parent">Home</a>
             </td>

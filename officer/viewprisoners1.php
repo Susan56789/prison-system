@@ -13,7 +13,7 @@
 <body>
   <table align='center' border='0' bgcolor='green' width='1300' cellpadding='8' cellspacing='0' height='200'>
     <tr>
-      <td align="center" bgcolor='green'>
+      <td align="center" border='1' bgcolor='brown'>
         <a href="officerpanel.php" target="_parent">Officer Admin <b>|</b>
         </a>
         <a href="../admin/prisonerep.php" target="_parent">Report <b>|</b></a>

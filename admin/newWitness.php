@@ -17,7 +17,8 @@
             </tr>
             <tr>
 
-                <td align="center"><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
+                <td align="center" border='1' bgcolor='brown'>
+                    <a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
 
                     <a href="viewcase.php" target="_parent">Court details</a>
                 </td>
