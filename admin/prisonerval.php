@@ -69,8 +69,7 @@ if (strtotime($datein) > strtotime($today)) {
     return false;
 }
 if (
-    empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum)
-    || empty($Email) || empty($sentence) || empty($address) || empty($county) || empty($Tel)
+    empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum) || empty($sentence) || empty($address) || empty($county)
 ) {
     echo 'Please fill all fields.';
     return false;
@@ -130,9 +129,9 @@ VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');
     if (!mysqli_query($con, $link)) {
         die('Error: ' . mysqli_error($con));
     }
-    if (!mysqli_query($con, $quer)) {
-        die('Error: ' . mysqli_error($con));
-    }
+    //if (!mysqli_query($con, $quer)) {
+    // die('Error: ' . mysqli_error($con));
+    //}
 } else {
     echo $error;
 }

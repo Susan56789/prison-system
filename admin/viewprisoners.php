@@ -13,7 +13,6 @@
 <body>
   <table align='center' border='0' bgcolor='green' width='1000' cellpadding='8' cellspacing='0' height='200'>
     <tr>
-
       <td align="center"><a href="adminpanel.php" target="_parent">Panel Admin <b>|</b></a>
 
         <a href="../index.php" target="_parent">Log out</a>
@@ -21,7 +20,20 @@
 
     </tr>
     <tr>
-      <div></div>
+      <td>
+        <div class="dropdown">
+          <button class="dropbtn">Filter By:</button>
+          <div class='dropdown-content'>
+            <span>Category: </span>
+            <a href="ordinary.php">Ordinary</a>
+            <a href="remand.php">Remand</a>
+            <a href="lifers.php">Lifers</a>
+            <a href="civil.php">Civil debtors</a>
+            <a href="special.php">Special</a>
+          </div>
+        </div>
+
+      </td>
     </tr>
     <tr>
       <td bgcolor='#999999' align='center'>
