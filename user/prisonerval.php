@@ -56,7 +56,7 @@ if (strtotime($dateout) < strtotime($datein)) {
 //check if empty
 if (
   empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum)
-  || empty($Email) || empty($sentence) || empty($address) || empty($county) || empty($Tel)
+  || empty($sentence) || empty($address) || empty($county)
 ) {
   echo 'Please fill all fields.';
 
@@ -115,7 +115,7 @@ VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');
       $dateofbirth = strtotime($dateofbirth);
     }
     if (time() - $dateofbirth < $age * 31536000) {
-      echo "Invalid date";
+      echo "Invalid date of birth ";
       return false;
     }
   }
