@@ -15,7 +15,8 @@ CREATE TABLE admin_tbl
   PRIMARY KEY (Admin_Id)
 );
 
-SELECT * FROM  admin_tbl;
+ALTER TABLE admin_tbl MODIFY COLUMN Admin_Password varchar(255) NOT NULL ;
+
 
 /*Admin Table*/
 INSERT INTO admin_tbl
@@ -101,7 +102,7 @@ SELECT * FROM officerdetails;
     PRIMARY KEY (Username),
     FOREIGN KEY (id) REFERENCES officerdetails
   );
-
+  ALTER TABLE police_tbl MODIFY COLUMN Password varchar(255) NOT NULL ;
 
 SELECT * FROM police_tbl;
 
@@ -184,13 +185,12 @@ VerificationProof varchar(200) NOT NULL,
 PRIMARY KEY(User_Id)
 );
 
-
     INSERT INTO user_tbl
       (User_Id, Name, Address, City, Mobile, Email, Gender, BirthDate, UserName, Password, Station_Name, VerificationProof)
     VALUES
       (1, 'Susan Wairimu', 'Ruai', 'Nairobi', 0770291162, 'susanwairimu177@yahoo.com', 'Female', '1999-04-03', 'sueNimu', 'Nimu1234', 'Langata', 'User');
 
-
+ALTER TABLE user_tbl MODIFY COLUMN Password varchar(255) NOT NULL ;
 
     /*Visitors Table*/
     CREATE TABLE visitor
