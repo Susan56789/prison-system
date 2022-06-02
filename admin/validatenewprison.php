@@ -5,7 +5,7 @@ if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-//escape variable for security here or problem
+////assign  variable to form data 
 $pno = $_POST['pno'];
 $pname = $_POST['pname'];
 $location = $_POST['location'];

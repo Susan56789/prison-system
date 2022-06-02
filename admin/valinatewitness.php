@@ -7,7 +7,7 @@ if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-
+//assign  variable to form data 
 $FullNames = $_POST['Fnames'];
 $Id = $_POST['id'];
 $Email = $_POST['email'];

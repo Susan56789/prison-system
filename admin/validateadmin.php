@@ -1,10 +1,11 @@
 <?php
 $con = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
+
 // Check connection
 if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-//escape variable for security here or problem
+//assign  variable to form data 
 $id = $_POST['id'];
 $name = $_POST['name'];
 $gender = $_POST['gender'];
@@ -14,7 +15,7 @@ $address = $_POST['address'];
 $password = $_POST['password'];
 $username = $_POST['usname'];
 
-//we are using mysql_query function. it returns a resource on true else False on error
+//insert into database
 $sql = "insert into admin_tbl set
 Admin_Id = '$id',
 Admin_Name = '$name',
@@ -25,8 +26,6 @@ Address = '$address',
 Admin_Password = '$password',
 Usename = '$username'
 ";
-
-
 
 $con = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
 $sel = mysqli_query($con, "SELECT * from admin_tbl");

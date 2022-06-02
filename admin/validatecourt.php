@@ -7,7 +7,7 @@ if (mysqli_connect_errno()) {
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-// escape variables for security
+ //assign  variable to form data 
 
 $Nationalid = mysqli_real_escape_string($con, $_POST['Nationalid']);
 //$Filenum = mysqli_real_escape_string($con, $_POST['Filenum']);

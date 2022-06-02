@@ -4,7 +4,8 @@ $con = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
 if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-//escape variable for security here or problem
+
+//assign  variable to form data 
 $id = $_POST['id'];
 $fullname = $_POST['fullname'];
 $address = $_POST['address'];
@@ -19,7 +20,7 @@ $username = $_POST['username'];
 $city = $_POST['city'];
 $prison = $_POST['prison'];
 
-//we are using mysql_query function. it returns a resource on true else False on error
+//insert into database
 $sql = "insert into officerdetails set
                     id = '$id',
                     fullname = '$fullname',
