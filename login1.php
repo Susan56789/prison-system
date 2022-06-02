@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
 </head>
 
@@ -28,7 +28,7 @@
         $status = 'Logged in';
         $time = date('Y/m/d H:i:s');
         $records = mySQLi_num_rows($result);
-        //  $row = mySQLi_fetch_array($result);
+        
         if ($records == 0) {
             echo $records;
             echo '<script type="text/javascript">alert("Wrong UserName or Password");window.location=\'index.php\';</script>';
