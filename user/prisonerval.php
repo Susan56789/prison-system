@@ -1,12 +1,13 @@
 <?php
 $con = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
+
 // Check connection
 if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 
-//escape variable for security here or problem
+//assign  variable to form data
 $Nid = $_POST['Nid'];
 $Fname = $_POST['Fname'];
 $dateofbirth = $_POST['1date'];
@@ -48,8 +49,8 @@ $newFilename = uniqid("IMG-") . "." . $filetype_lc;
 $uploadPath = $targetDir . $newFilename;
 
 if (strtotime($dateout) < strtotime($datein)) {
-  echo "Enter correct Date Out";
-  return false;
+    echo "Enter correct Date Out";
+    return false;
 }
 
 
@@ -58,19 +59,19 @@ if (
   empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum)
   || empty($sentence) || empty($address) || empty($county)
 ) {
-  echo 'Please fill all fields.';
+    echo 'Please fill all fields.';
 
-  return false;
+    return false;
 }
 if (in_array($fileType, $allowTypes)) {
-  $upload = move_uploaded_file($tempname, $uploadPath);
+    $upload = move_uploaded_file($tempname, $uploadPath);
 
 
 
 
-  if ($upload) {
-    //Insert data into database
-    $sql = "INSERT into registration set
+    if ($upload) {
+        //Insert data into database
+        $sql = "INSERT into registration set
 id = '$Nid',
 category='$category',
 photo='$newFilename',
@@ -91,47 +92,47 @@ prison = '$prison'";
 
 
 
-    //insert into court table
-    // $quer = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId) 
-    //VALUES ('$Id', '$FullNames', '$Email', '$Tel', '$Filenum','$Nid');";
+        //insert into court table
+        // $quer = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId)
+        //VALUES ('$Id', '$FullNames', '$Email', '$Tel', '$Filenum','$Nid');";
 
-    //insert into witness table
-    $link = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
+        //insert into witness table
+        $link = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
 VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');";
 
 
-    $sel = mysqli_query($con, "SELECT * from registration");
-    $row = mysqli_fetch_array($sel);
+        $sel = mysqli_query($con, "SELECT * from registration");
+        $row = mysqli_fetch_array($sel);
 
-    if ($Filenum  == $row['File_num']) {
-      echo "Check file number";
-      return false;
+        if ($Filenum  == $row['File_num']) {
+            echo "Check file number";
+            return false;
+        }
+
+        //check if age is greater than 18 years
+        $age = 18;
+
+        if (is_string($dateofbirth)) {
+            $dateofbirth = strtotime($dateofbirth);
+        }
+        if (time() - $dateofbirth < $age * 31536000) {
+            echo "Invalid date of birth ";
+            return false;
+        }
     }
 
-    //check if age is greater than 18 years
-    $age = 18;
 
-    if (is_string($dateofbirth)) {
-      $dateofbirth = strtotime($dateofbirth);
+    if (!mysqli_query($con, $sql)) {
+        die('Error: ' . mysqli_error($con));
     }
-    if (time() - $dateofbirth < $age * 31536000) {
-      echo "Invalid date of birth ";
-      return false;
+    if (!mysqli_query($con, $link)) {
+        die('Error: ' . mysqli_error($con));
     }
-  }
-
-
-  if (!mysqli_query($con, $sql)) {
-    die('Error: ' . mysqli_error($con));
-  }
-  if (!mysqli_query($con, $link)) {
-    die('Error: ' . mysqli_error($con));
-  }
-  if (!mysqli_query($con, $quer)) {
-    die('Error: ' . mysqli_error($con));
-  }
+    if (!mysqli_query($con, $quer)) {
+        die('Error: ' . mysqli_error($con));
+    }
 } else {
-  echo $error;
+    echo $error;
 }
 
 

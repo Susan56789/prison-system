@@ -5,7 +5,7 @@ if (mysqli_connect_errno()) {
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-// escape variables for security
+//assign  variable to form data 
 $prisonid = mysqli_real_escape_string($con, $_POST['prisonid']);
 $prisonname = mysqli_real_escape_string($con, $_POST['prisonname']);
 $location = mysqli_real_escape_string($con, $_POST['location']);

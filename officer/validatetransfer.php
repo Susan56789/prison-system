@@ -10,7 +10,7 @@ if (mysqli_connect_errno()) {
 
 
 
-// escape variables for security
+//assign  variable to form data 
 
 $Nid = mysqli_real_escape_string($con, $_POST['Nid']);
 //$Filenum = mysqli_real_escape_string($con, $_POST['Filenum']);

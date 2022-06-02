@@ -1,11 +1,12 @@
 <?php
 $con = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
+
 // Check connection
 if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-//escape variable for security here or problem
+//assign  variable to form data
 $pno = $_POST['pno'];
 $pname = $_POST['pname'];
 $location = $_POST['location'];
@@ -18,7 +19,7 @@ $contact = $_POST['contact'];
 $capacity = $_POST['capacity'];
 
 
-//we are using mysql_query function. it returns a resource on true else False on error
+//insert into database
 $sql = "insert into newprison set
                     pno = '$pno',
                     pname = '$pname',
@@ -31,19 +32,19 @@ $sql = "insert into newprison set
 
 //record user actions
 if (isset($_POST['signup'])) {
-  $id = $_SESSION['id'];
-  $status = 'Added new prison';
-  $time = date('Y/m/d H:i:s');
-  $UserType = 'Police';
-  $sql = "INSERT INTO userlog (user_id , actions, times, user_type) VALUES ('$id', '$status', '$time','$UserType')";
-  if (!mysqli_query($con, $sql)) {
-    die('Error: ' . mysqli_error($con));
-  }
+    $id = $_SESSION['id'];
+    $status = 'Added new prison';
+    $time = date('Y/m/d H:i:s');
+    $UserType = 'Police';
+    $sql = "INSERT INTO userlog (user_id , actions, times, user_type) VALUES ('$id', '$status', '$time','$UserType')";
+    if (!mysqli_query($con, $sql)) {
+        die('Error: ' . mysqli_error($con));
+    }
 }
 
 
 if (!mysqli_query($con, $sql)) {
-  die('Error: ' . mysqli_error($con));
+    die('Error: ' . mysqli_error($con));
 }
 ?>
 <script type="text/javascript">

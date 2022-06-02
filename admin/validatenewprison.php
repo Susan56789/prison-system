@@ -5,7 +5,7 @@ if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-////assign  variable to form data 
+////assign  variable to form data
 $pno = $_POST['pno'];
 $pname = $_POST['pname'];
 $location = $_POST['location'];
@@ -18,7 +18,7 @@ $contact = $_POST['contact'];
 $capacity = $_POST['capacity'];
 
 
-//we are using mysql_query function. it returns a resource on true else False on error
+//insert into database
 $sql = "insert into newprison set
                     pno = '$pno',
                     pname = '$pname',
