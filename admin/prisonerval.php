@@ -57,22 +57,26 @@ $sel = mysqli_query($con, "SELECT * from registration");
 $row = mysqli_fetch_array($sel);
 
 if ($row['File_num'] == $Filenum) {
-    echo "Check file number";
-    return false;
+    echo '<script type="text/javascript">alert("Check file number!");window.location=\'newPrisoner.php\';</script>';
+    //echo "Check file number";
+    //return false;
 }
 if (strtotime($dateout) < strtotime($datein)) {
-    echo "Enter correct Date Out";
-    return false;
+    echo '<script type="text/javascript">alert("Enter correct date out!");window.location=\'newPrisoner.php\';</script>';
+    //echo "Enter correct Date Out";
+    //return false;
 }
 if (strtotime($datein) > strtotime($today)) {
-    echo "Enter correct date in !";
-    return false;
+    echo '<script type="text/javascript">alert("Enter correct date in !");window.location=\'newPrisoner.php\';</script>';
+    //echo "Enter correct date in !";
+    //return false;
 }
 if (
     empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum) || empty($sentence) || empty($address) || empty($county)
 ) {
-    echo 'Please fill all fields.';
-    return false;
+    echo '<script type="text/javascript">alert("Please fill all fields!");window.location=\'newPrisoner.php\';</script>';
+//echo 'Please fill all fields.';
+    //return false;
 } else {
     $upload = move_uploaded_file($tempname, $uploadPath);
 }
@@ -101,7 +105,7 @@ File_num = '$Filenum',
 prison = '$prison'";
 
     //insert into court table
-    //$quer = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId) 
+    //$quer = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId)
     //VALUES ('$Id', '$FullNames', '$Email', '$Tel', '$Filenum','$Nid');";
 
     //insert into witness table
@@ -117,8 +121,9 @@ VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');
         $dateofbirth = strtotime($dateofbirth);
     }
     if (time() - $dateofbirth < $age * 31536000) {
-        echo "Invalid date of birth !";
-        return false;
+        echo '<script type="text/javascript">alert("Invalid date of birth !");window.location=\'newPrisoner.php\';</script>';
+        //echo "Invalid date of birth !";
+        //return false;
     }
 
 

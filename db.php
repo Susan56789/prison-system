@@ -2,9 +2,9 @@
 <?php
 /* Database config */
 $db_host		= 'localhost';
-$db_user		= 'root';
-$db_pass		= '';
-$db_database	= 'prison_system'; 
+$db_user		= 'prison';
+$db_pass		= 'prison123.';
+$db_database	= 'prison_system';
 
 /* End config */
 

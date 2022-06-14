@@ -31,7 +31,7 @@
         <div class="ex">
 
           <form action="login1.php" method="post">
-            <table width="408" height="142" border="0" bgcolor="silver">
+            <table width="408" height="142" border="0">
               <h2><b>LOGIN MEMBERS </b></h2>
 
               <tr>
@@ -51,8 +51,16 @@
                     <option>Admin</option>
                 </td>
               </tr>
+
               <tr>
-                <td bgcolor="#FFFFFF" height="36" bgcolor="#FFFFFF" align="center"><input type="submit" value="LOGIN" /></td>
+                <td  height="36" bgcolor="#FFFFFF" align="center">
+                  <input type="submit" value="LOGIN" />
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="blue"  align="center">
+                  <a href="forgotPassword.php" >Forgot Password?</a>
+                </td>
               </tr>
           </form>
       </td>

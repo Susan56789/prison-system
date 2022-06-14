@@ -49,8 +49,9 @@ $newFilename = uniqid("IMG-") . "." . $filetype_lc;
 $uploadPath = $targetDir . $newFilename;
 
 if (strtotime($dateout) < strtotime($datein)) {
-    echo "Enter correct Date Out";
-    return false;
+    echo '<script type="text/javascript">alert("Enter correct Date Out !");window.location=\'prisoner.php\';</script>';
+    //echo "Enter correct Date Out";
+   // return false;
 }
 
 
@@ -59,9 +60,10 @@ if (
   empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum)
   || empty($sentence) || empty($address) || empty($county)
 ) {
-    echo 'Please fill all fields.';
+    echo '<script type="text/javascript">alert("All fields are required !");window.location=\'prisoner.php\';</script>';
+    //echo 'Please fill all fields.';
 
-    return false;
+    //return false;
 }
 if (in_array($fileType, $allowTypes)) {
     $upload = move_uploaded_file($tempname, $uploadPath);
@@ -105,8 +107,9 @@ VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');
         $row = mysqli_fetch_array($sel);
 
         if ($Filenum  == $row['File_num']) {
-            echo "Check file number";
-            return false;
+            echo '<script type="text/javascript">alert("Check file number !");window.location=\'prisoner.php\';</script>';
+            //echo "Check file number";
+            //return false;
         }
 
         //check if age is greater than 18 years
@@ -116,8 +119,9 @@ VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');
             $dateofbirth = strtotime($dateofbirth);
         }
         if (time() - $dateofbirth < $age * 31536000) {
-            echo "Invalid date of birth ";
-            return false;
+            echo '<script type="text/javascript">alert("Invalid date of birth !");window.location=\'prisoner.php\';</script>';
+            //echo "Invalid date of birth ";
+            //return false;
         }
     }
 
