@@ -12,6 +12,10 @@ if ($password !== $confirm) {
     echo '<script type="text/javascript">alert("Password do not match!");window.location=\'forgotPassword.php\';</script>';
 }
 
+if (strlen($password) < 6) {
+    echo '<script type="text/javascript">alert("Password Should have at least 6 characters!");window.location=\'forgotPassword.php\';</script>';
+}
+
 if ($Usertype == 'Police') {
     $sql =  "UPDATE  police_tbl SET Password='$password'
      WHERE UserName='$username' and Email='$email'";
