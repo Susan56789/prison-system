@@ -52,6 +52,7 @@ $uploadPath = $targetDir . $newFilename;
 
 
 $today = date('Y/m/d H:i:s');
+
 //Check if file Number is already in database
 $sel = mysqli_query($con, "SELECT * from registration");
 $row = mysqli_fetch_array($sel);

@@ -33,13 +33,16 @@
                     <form id="frmReg" method="POST" action="validatevisitor.php">
                         <h2 id="hdr_title">Visitors Registration Form </h2>
                         <div class="control_input">
-                            <label for="id" class="label">Natioanal Id</label><input type="text" id="id" name="id" size=14 maxlength=8 class="reg_fields" placeholder="12345678" />
+                            <label for="id" class="label">Natioanal Id</label>
+                            <input type="text" id="id" name="id"   class="reg_fields" placeholder="12345678" />
                         </div>
                         <div class="control_input">
-                            <label for="fullname" class="label">Full Name</label><input type="text" id="fullname" name="fullname" class="reg_fields" placeholder="John otieno" />
+                            <label for="fullname" class="label">Full Name</label>
+                            <input type="text" id="fullname" name="fullname" class="reg_fields" placeholder="John otieno" />
                         </div>
                         <div class="control_input">
-                            <label for="address" class="label">Address</label><input type="text" id="address" name="address" class="reg_fields" placeholder="langata" />
+                            <label for="address" class="label">Address</label>
+                            <input type="text" id="address" name="address" class="reg_fields" placeholder="langata" />
                         </div>
 
 
@@ -51,24 +54,8 @@
                                             <label for="uemail" class="label">Date</label>
                                         </td>
                                         <td style="margin: 0; padding: 0;">
-                                            <select id="lMonth" name="lMonth" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
-                                                <option selected="selected" value="01">January</option>
-                                                <option value="02">February</option>
-                                                <option value="03">March</option>
-                                                <option value="04">April</option>
-                                                <option value="05">May</option>
-                                                <option value="06">June</option>
-                                                <option value="07">July</option>
-                                                <option value="08">August</option>
-                                                <option value="09">September</option>
-                                                <option value="10">October</option>
-                                                <option value="11">November</option>
-                                                <option value="12">December</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <input type="text" id="txtDay" name="txtDay" style="width: 40px;" value="DD" class="reg_fields" />
-                                            <input type="text" id="txtYear" name="txtYear" style="width: 60px;" value="YYYY" class="reg_fields" />
+                                            <input type="date" id="date" name="date" class="reg_fields" style="margin: 0 0 0 -5px; height: 36px;  display:block;">
+                                                
                                         </td>
                                     </tr>
                                 </table>

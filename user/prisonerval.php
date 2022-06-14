@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set("Africa/Nairobi");
 $con = mysqli_connect("localhost", "prison", "prison123.", "prison_system");
 
 // Check connection
@@ -47,6 +48,14 @@ $error = $_FILES["photo"]["error"];
 $newFilename = uniqid("IMG-") . "." . $filetype_lc;
 
 $uploadPath = $targetDir . $newFilename;
+
+$today = date('Y/m/d H:i:s');
+
+if (strtotime($datein) > strtotime($today)) {
+    echo '<script type="text/javascript">alert("Enter correct date in !");window.location=\'prisoner.php\';</script>';
+    //echo "Enter correct date in !";
+    //return false;
+}
 
 if (strtotime($dateout) < strtotime($datein)) {
     echo '<script type="text/javascript">alert("Enter correct Date Out !");window.location=\'prisoner.php\';</script>';
