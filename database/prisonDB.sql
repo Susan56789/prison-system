@@ -192,6 +192,8 @@ PRIMARY KEY(User_Id)
 
 ALTER TABLE user_tbl MODIFY COLUMN Password varchar(255) NOT NULL ;
 
+SELECT * FROM user_tbl;
+
     /*Visitors Table*/
     CREATE TABLE visitor
     (
