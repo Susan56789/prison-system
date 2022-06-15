@@ -5,8 +5,8 @@ $searchTerm = trim($_GET["keyname"]);
 
 //check whether the name parsed is empty
 if ($searchTerm == "") {
-	echo "Enter name  you are searching for.";
-	exit();
+    echo "Enter name  you are searching for.";
+    exit();
 }
 
 //database connection info
@@ -26,25 +26,60 @@ $results = mysqli_query($link, $query);
 /* check whethere there were matching records in the table
 by counting the number of results returned */
 if (mysqli_num_rows($results) >= 1) {
-	$output = "";
-	while ($row = mysqli_fetch_array($results)) {
+    echo "<table align='center' width='100%' bgcolor='GREEN' border='0' 
+bgcolor='green' cellpadding='3' cellspacing='2' bgcolor='silver'>
+<caption><h3>PRISONER INFORMATION</h3></caption>
+<tr bgcolor='#CCCCCC'>
+<th width='15%'>Photo</th>
+<th width='10%'>National id</th>
+<th width='10%'>Category</th>
+<th width='15%'>Full Name</th>
+<th width='10%'>Date of Birth</th>
+<th width='15%'>Sentence</th>
+<th width='10%'>Date In</th>
+<th width='10%'>Date Out</th>
+<th width='15%'>Address</th>
+<th width='10%'>County</th>
+<th width='10%'>Gender</th>
+<th width='10%'>Education</th>
+<th width='10%'>Status</th>
+<th width='15%'>Offence</th>
 
-		$output .= "<table>";
+<th width='10%'>File Number</th>
+<th width='10%'>Prison</th>
+</tr>";
+    //$output = "";
+    while ($row = mysqli_fetch_array($results)) {
+        echo "<tr bgcolor='grey'>";
 
-		$output .= "National ID: " . $row['id'] . "<br />";
-		$output .= "Full Name: " . $row['Full_Name'] . "<br />";
-		$output .= "Date of Birth: " . $row['DOB'] . "<br />";
-		$output .= "Date In: " . $row['datein'] . "<br />";
-		$output .= "Date Out: " . $row['dateout'] . "<br />";
-		$output .= "Address: " . $row['Address'] . "<br />";
-		$output .= "County: " . $row['County'] . "<br />";
-		$output .= "Gender: " . $row['Gender'] . "<br />";
-		$output .= "Education: " . $row['Education'] . "<br />";
-		$output .= "Marital: " . $row['Marital'] . "<br />";
-		$output .= "Offence: " . $row['Offence'] . "<br />";
-		$output .= "File_num: " . $row['File_num'] . "<br />";
-		$output .= "</table>";
-	}
-	echo $output;
-} else
-	echo "There was no matching record for the name " . $searchTerm;
+
+        echo "<td><img src='../uploads/" . $row['photo'] . "' width='80' height='80'></td>";
+
+        "</td>";
+        echo  "<td width='10%'>" . $row['id'] . "</td>";
+        echo  "<td width='10%'>" . $row['category'] . "</td>";
+        echo  "<td width='15%'>" . $row['Full_Name'] . "</td>";
+        echo  "<td width='10%'>" . $row['DOB'] . "</td>";
+        echo  "<td width='10%'>" . $row['Sentence'] . "</td>";
+        echo  "<td width='10%'>" . $row['datein'] . "</td>";
+        echo  "<td width='10%'>" . $row['dateout'] . "</td>";
+        echo  "<td width='10%'>" . $row['Address'] . "</td>";
+        echo  "<td width='10%'>" . $row['County'] . "</td>";
+        echo  "<td width='10%'>" . $row['Gender'] . "</td>";
+        echo  "<td width='10%'>" . $row['Education'] . "</td>";
+        echo  "<td width='10%'>" . $row['Marital'] . "</td>";
+        echo  "<td width='10%'>" . $row['Offence'] . "</td>";
+        echo  "<td width='10%'>" . $row['File_num'] . "</td>";
+        echo  "<td width='10%'>" . $row['prison'] . "</td>";
+
+        // echo '<td width="3%"><b><a href="deleteprisoners1.php?id=' . $row['id'] . '">Delete</a></font></b></td>';
+
+
+        echo "</tr>";
+    }
+    echo "</table>";
+    echo '<td width="3%" align="center"><b><a href="search-form.php">Home >>>></a></font></b></td>';
+} else {
+    echo "There was no matching record for the name " . $searchTerm;
+    echo '<br/><td width="3%"><b><a href="search-form.php">Back >>></a></font></b></td>';
+}
