@@ -72,6 +72,10 @@ if (strtotime($datein) > strtotime($today)) {
     //echo "Enter correct date in !";
     //return false;
 }
+if (strlen($Nid) < 8 || strlen($Nid) > 8) {
+    echo '<script type="text/javascript">alert("Enter correct ID number!");window.location=\'newPrisoner.php\';</script>';
+}
+
 if (
     empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum) || empty($sentence) || empty($address) || empty($county)
 ) {

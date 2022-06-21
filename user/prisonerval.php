@@ -63,6 +63,11 @@ if (strtotime($dateout) < strtotime($datein)) {
    // return false;
 }
 
+if (strlen($Nid) < 8 || strlen($Nid) > 8) {
+    echo '<script type="text/javascript">alert("Enter correct ID number!");window.location=\'prisoner.php\';</script>';
+}
+
+
 
 //check if empty
 if (
