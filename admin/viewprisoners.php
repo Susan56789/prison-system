@@ -83,30 +83,29 @@
 
 
         while ($row = mysqli_fetch_array($sel)) {
+            echo "<tr bgcolor='grey'>";
+            echo "<td><img src='../uploads/" . $row['photo'] . "' width='80' height='80'></td>";
+            "</td>";
+            echo  "<td width='7%'>" . $row['id'] . "</td>";
+            echo  "<td width='7%'>" . $row['category'] . "</td>";
+            echo  "<td width='15%'>" . $row['Full_Name'] . "</td>";
+            echo  "<td width='15%'>" . $row['DOB'] . "</td>";
+            echo  "<td width='7%'>" . $row['Sentence'] . "</td>";
+            echo  "<td width='10%'>" . $row['datein'] . "</td>";
+            echo  "<td width='10%'>" . $row['dateout'] . "</td>";
+            echo  "<td width='10%'>" . $row['Address'] . "</td>";
+            echo  "<td width='10%'>" . $row['County'] . "</td>";
+            echo  "<td width='10%'>" . $row['Gender'] . "</td>";
+            echo  "<td width='10%'>" . $row['Education'] . "</td>";
+            echo  "<td width='10%'>" . $row['Marital'] . "</td>";
+            echo  "<td width='10%'>" . $row['Offence'] . "</td>";
+            echo  "<td width='10%'>" . $row['File_num'] . "</td>";
+            echo  "<td width='10%'>" . $row['prison'] . "</td>";
+            //echo '<td width="5%"><b><a href="editprisoner.php?id=' . $row['id'] . '">Edit</a></b></td>';
+            // echo '<td width="5%"><b><a href="deleteprisoners.php?id=' . $row['id'] . '">Delete</a></b></td>';
 
-          echo "<tr bgcolor='grey'>";
-          echo "<td><img src='../uploads/" . $row['photo'] . "' width='80' height='80'></td>";
-          "</td>";
-          echo  "<td width='7%'>" . $row['id'] . "</td>";
-          echo  "<td width='7%'>" . $row['category'] . "</td>";
-          echo  "<td width='15%'>" . $row['Full_Name'] . "</td>";
-          echo  "<td width='15%'>" . $row['DOB'] . "</td>";
-          echo  "<td width='7%'>" . $row['Sentence'] . "</td>";
-          echo  "<td width='10%'>" . $row['datein'] . "</td>";
-          echo  "<td width='10%'>" . $row['dateout'] . "</td>";
-          echo  "<td width='10%'>" . $row['Address'] . "</td>";
-          echo  "<td width='10%'>" . $row['County'] . "</td>";
-          echo  "<td width='10%'>" . $row['Gender'] . "</td>";
-          echo  "<td width='10%'>" . $row['Education'] . "</td>";
-          echo  "<td width='10%'>" . $row['Marital'] . "</td>";
-          echo  "<td width='10%'>" . $row['Offence'] . "</td>";
-          echo  "<td width='10%'>" . $row['File_num'] . "</td>";
-          echo  "<td width='10%'>" . $row['prison'] . "</td>";
-          echo '<td width="5%"><b><a href="editprisoner.php?id=' . $row['id'] . '">Edit</a></b></td>';
-          // echo '<td width="5%"><b><a href="deleteprisoners.php?id=' . $row['id'] . '">Delete</a></b></td>';
 
-
-          echo "</tr>";
+            echo "</tr>";
         }
         echo "</table>";
 

@@ -20,7 +20,7 @@ session_start();
 		<tr>
 			<td colspan="7" bgcolor="brown" height="1" align="center">
 				<h1>
-					<font size="5">
+					
 
 						<a href="Logged.php">Logs</a> |
 						<a href="search-form.php">Search </a> |
@@ -28,7 +28,7 @@ session_start();
 						<a href="transfer.php">Prisoner Transfer</a>|
 						<a href="court.php">Court</a>
 
-					</font>
+					
 				</h1>
 				<h4 style="color:white; display:inline-block;"><?php echo "Hello " . $_SESSION['username'] . "!"  ?></h4>
 			</td>
@@ -109,8 +109,8 @@ session_start();
           <tr>
 			  <td bgcolor=' gold' colspan="4">
 										<?php
-										include("Footer.php");
-										?>
+                                        include("Footer.php");
+                                        ?>
 						</td>
 					</tr>
 				</table>

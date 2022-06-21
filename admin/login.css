@@ -34,16 +34,7 @@ body {
   margin-left: 17%;
   padding: 80px;
   margin-top: 9%;
-  /* gecko based browsers */
-  background: -moz-linear-gradient(top, #55aaee, #003366);
 
-  /* webkit based browsers */
-  background: -webkit-gradient(linear,
-      left top,
-      left bottom,
-      from(#55aaee),
-      to(#003366));
-  background: #2a6da9;
 }
 
 .contact_form li {
@@ -111,14 +102,12 @@ body {
   box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
   border-radius: 2px;
   padding-right: 30px;
-  -moz-transition: padding 0.25s;
-  -webkit-transition: padding 0.25s;
-  -o-transition: padding 0.25s;
+
   transition: padding 0.25s;
 }
 
 .contact_form select:focus {
-  -webkit-box-shadow: 0 0 3px #eb540a;
+
   box-shadow: 0 0 3px #eb540a;
   border: 1px solid #eb540a;
   color: #000;
@@ -191,16 +180,6 @@ body {
 /* === Button Style === */
 button.submit {
   background-color: #68b12f;
-  background: -webkit-gradient(linear,
-      left top,
-      left bottom,
-      from(#68b12f),
-      to(#50911e));
-  background: -webkit-linear-gradient(top, #68b12f, #50911e);
-  background: -moz-linear-gradient(top, #68b12f, #50911e);
-  background: -ms-linear-gradient(top, #68b12f, #50911e);
-  background: -o-linear-gradient(top, #68b12f, #50911e);
-  background: linear-gradient(top, #68b12f, #50911e);
   border: 1px solid #509111;
   border-bottom: 1px solid #5b992b;
   -webkit-border-radius: 3px;
@@ -208,10 +187,6 @@ button.submit {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 1px 0 0 #9fd574 inset;
-  -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
-  -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
-  -o-box-shadow: 0 1px 0 0 #9fd574 inset;
   box-shadow: inset 0 1px 0 0 #9fd574;
   color: white;
   font-weight: bold;
@@ -227,11 +202,7 @@ button.submit:hover {
 
 button.submit:active {
   border: 1px solid #20911e;
-  -webkit-box-shadow: 0 0 10px 5px #356b0b inset;
-  -moz-box-shadow: 0 0 10px 5px #356b0b inset;
-  -ms-box-shadow: 0 0 10px 5px #356b0b inset;
-  -o-box-shadow: 0 0 10px 5px #356b0b inset;
-  box-shadow: 0 0 10px 5px #356b0b inset;
+
 }
 
 a {

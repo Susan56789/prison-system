@@ -1,9 +1,9 @@
 <?Php
 //error_reporting(E_ERROR | E_PARSE | E_CORE_ERROR);
 $dbhost_name = "localhost";
-$database = "prisonpro"; // Change your database nae
-$username = "root";          // Your database user id 
-$password = "";          // Your password
+$database = "prison_system"; // Change your database nae
+$username = "prison";          // Your database user id 
+$password = "prison123.";          // Your password
 
 //////// Do not Edit below /////////
 try {

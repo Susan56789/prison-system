@@ -14,10 +14,10 @@
 	<table border="1" bgcolor="#FFFFFF" align="center" width="54%">
 		<tr bgcolor="#FF0000">
 			<td align="center" border='1' bgcolor='brown'>
-				<font size="5">
+				<>
 					<a href="adminpanel.php">HOME</a>
 					<a href="transfer.php">TRANSFER</a>
-				</font>
+				</>
 			</td>
 		</tr>
 		<tr>

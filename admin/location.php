@@ -19,7 +19,7 @@
 		<tr>
 			<td colspan="7" bgcolor="brown" height="1" align="center">
 				<h1>
-					<font size="5">
+					<>
 						<a href="adminpanel.php">Home</a> |
 
 						<a href="search-form.php">Search </a>|
@@ -28,7 +28,7 @@
 						<a href="transfer.php">Prisoner Trans </a> |
 
 						<a href="court.php">Court</a>
-					</font>
+					</>
 				</h1>
 			</td>
 			</td>
@@ -91,8 +91,8 @@
             <td colspan=' 3' align='center' bgcolor='gold' height='1'>
 
 										<?php
-										include("Footer.php");
-										?>
+                                        include("Footer.php");
+                                        ?>
 					</tr>
 			</td>
 		</tr>

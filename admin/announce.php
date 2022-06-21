@@ -47,7 +47,7 @@
                         <tr>
                             <td><strong><b>Message</b></strong></td>
                             <td bgcolor="#FFFFFF">
-                                <font size="4">
+                                <>
                                     <textarea cols="17" rows="4" name="Message"></textarea>
                         </tr>
                     <td height="36" bgcolor="#FFFFFF" align="center"><input type="submit" value="Save" /></td>

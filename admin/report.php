@@ -56,7 +56,7 @@
                         <li><a href="../officer/visitorep.php"><button>Visitors Report</button></a></li>
                       </td>
                       <td>
-                        <li><a href="Officerrep.php"><button>Officers Report</button></a></li>
+                        <li><a href="Officereport.php"><button>Officers Report</button></a></li>
                       </td>
                       <td>
                         <li><a href="newprisonrep.php"><button>Prisons Report</button></a></li>
