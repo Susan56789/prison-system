@@ -32,6 +32,23 @@
         <div class="ex">
           <h2 class="bg-primary">Online Prison Management System </h2>
 
+<td width='30%' bgcolor='green' valign='top'>
+
+<table border='1' align='center'>
+					<tr>
+						<td width="300" bgcolor="green">
+							<h4> Other Resources: </h4>
+              <ul>
+              <li><a href="#">Clinic</a></li>
+                <li><a href="#">Kitchen</a></li>
+                <li><a href="#">Activities</a></li>
+                <li><a href="#">Duty</a></li>
+              </ul>
+            </td>
+          </tr>
+</table>
+</td>
+</tr>
     <tr>
       <td colspan=' 3' align='center' bgcolor='gold' height='1'>
         <?php

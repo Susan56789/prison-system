@@ -238,3 +238,15 @@ a {
   color: #fff;
   text-decoration: none;
 }
+
+a:hover {
+  color: blue;
+  background: white;
+  cursor: pointer;
+}
+
+li {
+  font-size: 20px;
+  list-style: square;
+
+}
