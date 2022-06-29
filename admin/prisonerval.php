@@ -59,29 +59,22 @@ $row = mysqli_fetch_array($sel);
 
 if ($row['File_num'] == $Filenum) {
     echo '<script type="text/javascript">alert("Check file number!");window.location=\'newPrisoner.php\';</script>';
-    //echo "Check file number";
-    //return false;
 }
 if (strtotime($dateout) < strtotime($datein)) {
     echo '<script type="text/javascript">alert("Enter correct date out!");window.location=\'newPrisoner.php\';</script>';
-    //echo "Enter correct Date Out";
-    //return false;
 }
 if (strtotime($datein) > strtotime($today)) {
     echo '<script type="text/javascript">alert("Enter correct date in !");window.location=\'newPrisoner.php\';</script>';
-    //echo "Enter correct date in !";
-    //return false;
 }
 if (strlen($Nid) < 8 || strlen($Nid) > 8) {
     echo '<script type="text/javascript">alert("Enter correct ID number!");window.location=\'newPrisoner.php\';</script>';
 }
 
+//check if empty field
 if (
     empty($Nid) || empty($Fname) || empty($dateofbirth) || empty($offence) || empty($Filenum) || empty($sentence) || empty($address) || empty($county)
 ) {
     echo '<script type="text/javascript">alert("Please fill all fields!");window.location=\'newPrisoner.php\';</script>';
-//echo 'Please fill all fields.';
-    //return false;
 } else {
     $upload = move_uploaded_file($tempname, $uploadPath);
 }
@@ -109,9 +102,7 @@ Sentence = '$sentence',
 File_num = '$Filenum',
 prison = '$prison'";
 
-    //insert into court table
-    //$quer = "INSERT INTO witness (NationalId, FullNames, Email, Telephone, File_num,PrisonerId)
-    //VALUES ('$Id', '$FullNames', '$Email', '$Tel', '$Filenum','$Nid');";
+    
 
     //insert into witness table
     $link = "INSERT INTO court (id, File_number, Dateoftrial, Sentence, Location, Judge) 
@@ -127,8 +118,6 @@ VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');
     }
     if (time() - $dateofbirth < $age * 31536000) {
         echo '<script type="text/javascript">alert("Invalid date of birth !");window.location=\'newPrisoner.php\';</script>';
-        //echo "Invalid date of birth !";
-        //return false;
     }
 
 
@@ -139,9 +128,6 @@ VALUES ('$Nid', '$Filenum', '$dateoftrial', '$sentence', '$location', '$judge');
     if (!mysqli_query($con, $link)) {
         die('Error: ' . mysqli_error($con));
     }
-    //if (!mysqli_query($con, $quer)) {
-    // die('Error: ' . mysqli_error($con));
-    //}
 } else {
     echo $error;
 }
